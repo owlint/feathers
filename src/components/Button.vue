@@ -22,6 +22,7 @@
 
 <script>
 import { reactive, computed } from 'vue'
+import { COLORS } from '../enums/colors'
 
 export default {
   props: {
@@ -55,32 +56,7 @@ export default {
     color: {
       type: String,
       validator: function (value) {
-        return (
-          [
-            'slate',
-            'gray',
-            'zinc',
-            'neutral',
-            'stone',
-            'red',
-            'orange',
-            'amber',
-            'yellow',
-            'lime',
-            'green',
-            'emerald',
-            'teal',
-            'cyan',
-            'sky',
-            'blue',
-            'indigo',
-            'violet',
-            'purple',
-            'fuchsia',
-            'pink',
-            'rose',
-          ].indexOf(value) !== -1
-        )
+        return COLORS.indexOf(value) !== -1
       },
     },
   },

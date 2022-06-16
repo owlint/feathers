@@ -11,7 +11,7 @@ jobs:
       - run: npm config set "@fortawesome:registry" https://npm.fontawesome.com/
       - run: npm config set "//npm.fontawesome.com/:_authToken" ${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}
       - run: npm install
-      - run: npm test
+      - run: npm build
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}

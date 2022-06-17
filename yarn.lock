@@ -2146,6 +2146,8 @@
     "webpack" ">=4.0.0 <6.0.0"
 
 "@tailwindcss/forms@^0.5.2":
+  "integrity" "sha512-pSrFeJB6Bg1Mrg9CdQW3+hqZXAKsBrSG9MAfFLKy1pVA4Mb4W7C0k7mEhlmS2Dfo/otxrQOET7NJiJ9RrS563w=="
+  "resolved" "https://registry.npmjs.org/@tailwindcss/forms/-/forms-0.5.2.tgz"
   "version" "0.5.2"
   dependencies:
     "mini-svg-data-uri" "^1.2.3"
@@ -6526,6 +6528,8 @@
   "version" "1.0.1"
 
 "mini-svg-data-uri@^1.2.3":
+  "integrity" "sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg=="
+  "resolved" "https://registry.npmjs.org/mini-svg-data-uri/-/mini-svg-data-uri-1.4.4.tgz"
   "version" "1.4.4"
 
 "minimalistic-assert@^1.0.0", "minimalistic-assert@^1.0.1":

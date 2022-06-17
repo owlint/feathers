@@ -80,7 +80,7 @@ export const Icon = (args) => ({
   <div class="space-x-2">
     <Button label="Button with icon">
       <template #icon>
-        <font-awesome-icon :icon="['fad', 'burger-cheese']" />
+        <font-awesome-icon  :icon="['fad', 'burger-cheese']" />
       </template>
     </Button>
     <Button loading label="Button with icon loading">

@@ -80,9 +80,6 @@ const props = defineProps({
 const create = () => {
   popperInstance = createPopper(button.value, tooltip.value, {
     placement: props.placement,
-    // modifiers: [
-    //   { name: 'eventListeners', enabled: true },
-    // ],
   })
 }
 const show = () => {

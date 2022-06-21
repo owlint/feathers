@@ -2,7 +2,6 @@ import Popper from './Popper.vue'
 import Button from './Button.vue'
 export default {
   component: Popper,
-  //👇 Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
   title: 'Components/Popper',
   decorators: [
@@ -37,7 +36,6 @@ const defaultArgs = {
 const Template = (args) => ({
   components: { Popper, Button },
   setup() {
-    //👇 The args will now be passed down to the template
     return { args }
   },
   template: `<Popper v-bind="args" > 

@@ -1297,6 +1297,11 @@
     "node-gyp" "^9.0.0"
     "read-package-json-fast" "^2.0.3"
 
+"@popperjs/core@^2.11.5":
+  "integrity" "sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw=="
+  "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.5.tgz"
+  "version" "2.11.5"
+
 "@rollup/pluginutils@^4.2.1":
   "version" "4.2.1"
   dependencies:
@@ -4300,12 +4305,6 @@
   "integrity" "sha512-EmTr31wppcaIAgblChZiuN/l9Y7DPyw8Xtbg7fIVngn6zMW+IEBJDJngeKC3x6wr0V/vcA2wqeFnaw1bFJbDdA=="
   "resolved" "https://registry.npmjs.org/es6-shim/-/es6-shim-0.35.6.tgz"
   "version" "0.35.6"
-
-"esbuild-darwin-64@0.13.8":
-  "version" "0.13.8"
-
-"esbuild-darwin-64@0.14.43":
-  "version" "0.14.43"
 
 "esbuild@^0.14.27":
   "version" "0.14.43"

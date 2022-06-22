@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.6.5",
+    "@popperjs/core": "^2.11.5",
     "autoprefixer": "^10.4.7",
     "i": "^0.3.7",
     "npm": "^8.12.1",

@@ -1,3 +1,4 @@
+`
 <template>
   <TransitionRoot as="template" :show="displayModal">
     <Dialog as="div" class="relative z-10" @close="$emit('close')">
@@ -11,7 +12,14 @@
         leave-to="opacity-0"
       >
         <div
-          class="fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity"
+          class="
+            fixed
+            inset-0
+            bg-slate-500
+            backdrop-blur
+            bg-opacity-30
+            transition-opacity
+          "
         />
       </TransitionChild>
 

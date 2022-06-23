@@ -5,7 +5,6 @@
       @mouseenter="show()"
       @mouseleave="hide()"
       aria-describedby="tooltip"
-      class="dark:text-white"
     >
       <slot />
     </button>
@@ -17,7 +16,10 @@
       @mouseenter="hover ? show() : null"
       @mouseleave="hover ? hide() : null"
     >
-      <div :class="class" class="mx-2 px-3 py-2 w-max rounded-md">
+      <div
+        :class="class"
+        class="mx-2 px-3 py-2 w-max shadow-xs dark:shadow-md rounded-md"
+      >
         <slot name="tooltip"></slot>
         <div
           v-if="arrow"
@@ -59,7 +61,7 @@ const props = defineProps({
     type: String,
     required: false,
     default: `bg-slate-200
-          dark:bg-slate-700
+          dark:bg-nosferatu-600
           dark:text-white`,
   },
   hover: {

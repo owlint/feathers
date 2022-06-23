@@ -11,7 +11,14 @@
         leave-to="opacity-0"
       >
         <div
-          class="fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity"
+          class="
+            fixed
+            inset-0
+            bg-slate-400/60
+            dark:bg-nosferatu-400/60
+            backdrop-blur
+            transition-opacity
+          "
         />
       </TransitionChild>
 
@@ -42,7 +49,7 @@
               class="
                 relative
                 bg-white
-                dark:bg-slate-800
+                dark:bg-nosferatu-900
                 rounded-lg
                 text-left
                 overflow-hidden
@@ -53,9 +60,7 @@
                 sm:w-full
               "
             >
-              <div
-                class="bg-white dark:bg-slate-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4"
-              >
+              <div class="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div class="sm:flex sm:items-start">
                   <div
                     v-if="!hideIcon"
@@ -89,7 +94,7 @@
                           leading-6
                           font-medium
                           text-slate-900
-                          dark:text-slate-100
+                          dark:text-nosferatu-100
                         "
                       >
                         {{ title }}
@@ -97,7 +102,9 @@
                     </slot>
                     <div class="mt-2">
                       <slot name="description">
-                        <p class="text-sm text-slate-500 dark:text-slate-300">
+                        <p
+                          class="text-sm text-slate-500 dark:text-nosferatu-300"
+                        >
                           {{ description }}
                         </p>
                       </slot>
@@ -108,7 +115,7 @@
               <div
                 class="
                   bg-slate-50
-                  dark:bg-slate-900
+                  dark:bg-nosferatu-800
                   px-4
                   py-3
                   sm:px-6

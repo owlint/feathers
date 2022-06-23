@@ -2,7 +2,6 @@ import Modal from './Modal.vue'
 import Button from './Button.vue'
 import { COLORS } from '../enums/colors'
 import { SIZES } from '../enums/sizes'
-import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Components/Modal',
@@ -189,4 +188,34 @@ export const Sizes = (args) => ({
 })
 Sizes.args = {
   ...defaultArgs,
+}
+export const Dark = (args) => ({
+  components: { Modal, Button },
+  data() {
+    return {
+      displayModal: false,
+    }
+  },
+  setup() {
+    return { args }
+  },
+  template: `<div class="dark">
+              <Button @click="displayModal = true" label="Dialog Dark Mode"/> 
+              <Modal class="dark" @close="displayModal = false" :display-modal="displayModal" v-bind="args" >
+                <template #footer>
+                  <Button @click="displayModal = false" label="Close Dialog"/> 
+                  <Button  @click="displayModal = false" type="tertiary" label="Close"/> 
+                </template>
+              </Modal>
+            </div>
+            `,
+})
+Dark.args = {
+  ...defaultArgs,
+}
+Dark.parameters = {
+  backgrounds: {
+    values: [{ name: 'nosferatu-900', value: '#373a4d' }],
+    default: 'nosferatu-900',
+  },
 }

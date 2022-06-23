@@ -2,7 +2,7 @@ import { COLORS } from '../enums/colors'
 import Button from './Button.vue'
 
 export default {
-  title: 'Example/Button',
+  title: 'Components/Button',
   component: Button,
   argTypes: {
     color: {

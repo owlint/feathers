@@ -98,3 +98,54 @@ export const getBadgeStyle = (color) => {
       return 'text-indigo-900 bg-indigo-100 dark:bg-nosferatu-900 dark:text-dracula-400'
   }
 }
+
+export const getNotificationStyle = (color) => {
+  switch (color) {
+    case 'indigo':
+      return 'text-indigo-400 dark:text-dracula-400'
+    case 'slate':
+      return 'text-salte-400 dark:text-aro-400'
+    case 'gray':
+      return 'text-gray-400 dark:text-gray-400'
+    case 'zinc':
+      return 'text-zinc-400 dark:text-zinc-400/80'
+    case 'neutral':
+      return 'text-neutral-400 dark:text-neutral-400/80'
+    case 'stone':
+      return 'text-stone-400 dark:text-stone-400/80'
+    case 'red':
+      return 'text-red-400 dark:text-marcelin-400'
+    case 'orange':
+      return 'text-orange-400 dark:text-morbius-400'
+    case 'amber':
+      return 'text-amber-400 dark:text-amber-400/80'
+    case 'yellow':
+      return 'text-yellow-400 dark:text-lincoln-400'
+    case 'lime':
+      return 'text-lime-400 dark:text-lime-400/80'
+    case 'green':
+      return 'text-green-400 dark:text-blade-400'
+    case 'emerald':
+      return 'text-emerald-400 dark:text-emerald-400/80'
+    case 'teal':
+      return 'text-teal-400 dark:text-teal-400/80'
+    case 'cyan':
+      return 'text-cyan-400 dark:text-cyan-400/80'
+    case 'sky':
+      return 'text-sky-400 dark:text-sky-400/80'
+    case 'blue':
+      return 'text-blue-400 dark:text-dracula-400'
+    case 'violet':
+      return 'text-violet-400 dark:text-violet-400/80'
+    case 'purple':
+      return 'text-purple-400 dark:text-buffy-400'
+    case 'fuchsia':
+      return 'text-fuchsia-400 dark:text-fuchsia-400/80'
+    case 'pink':
+      return 'text-pink-400 dark:text-pink-400/80'
+    case 'rose':
+      return 'text-rose-400 dark:text-rose-400/80'
+    default:
+      return 'text-blue-400 dark:text-dracula-400'
+  }
+}

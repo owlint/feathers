@@ -8,7 +8,7 @@ export default {
   component: Notification,
   decorators: [
     () => ({
-      template: `<div class="flex gap-2 items-center justify-center"><story/></div> `,
+      template: `<story/>`,
     }),
   ],
   argTypes: {
@@ -16,18 +16,15 @@ export default {
       control: { type: 'select' },
       options: COLORS,
     },
-    size: {
-      control: { type: 'select' },
-      options: SIZES,
-    },
-    hideIcon: {
-      type: { name: 'boolean', required: false },
-    },
     title: {
       type: { name: 'string', required: false },
     },
     description: {
       type: { name: 'string', required: false },
+    },
+    type: {
+      control: { type: 'select' },
+      options: ['warning', 'error', 'success'],
     },
   },
 }
@@ -48,10 +45,7 @@ const Template = (args) => ({
   setup() {
     return { args }
   },
-  template: `
-            <Notification @close="displayNotification = false" :display-Notification="displayNotification" v-bind="args" >
-             
-            </Notification>`,
+  template: `<Notification v-bind="args" />`,
 })
 
 export const Base = Template.bind({})

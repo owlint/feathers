@@ -29,19 +29,39 @@
           "
         >
           <div class="p-4">
-            <div class="flex items-start">
-              <div class="flex-shrink-0">
+            <div
+              class="flex"
+              :class="description ? 'items-start' : ' items-center'"
+            >
+              <div
+                class="w-6 h-6"
+                v-if="type"
+                :class="getNotificationStyle(color)"
+              >
                 <font-awesome-icon
+                  v-if="type === 'success'"
                   class="w-6 h-6"
-                  :class="style"
-                  :icon="['fad', icon]"
-                ></font-awesome-icon>
+                  :icon="['fad', 'circle-check']"
+                />
+                <font-awesome-icon
+                  v-if="type === 'warning'"
+                  class="w-6 h-6"
+                  :icon="['fad', 'circle-exclamation']"
+                />
+                <font-awesome-icon
+                  v-if="type === 'error'"
+                  class="w-6 h-6"
+                  :icon="['fad', 'circle-xmark']"
+                />
               </div>
-              <div class="ml-3 w-0 flex-1 pt-0.5">
+              <div class="w-0 flex-1" :class="{ 'ml-3': type }">
                 <p class="text-sm font-medium text-slate-900 dark:text-white">
                   {{ title }}
                 </p>
-                <p class="text-xs text-slate-500 dark:text-nosferatu-200">
+                <p
+                  v-if="description"
+                  class="text-xs text-slate-500 dark:text-nosferatu-200"
+                >
                   {{ description }}
                 </p>
               </div>
@@ -75,32 +95,30 @@
 
 <script setup>
 import { ref } from 'vue'
-
+import { COLORS } from '../enums/colors'
+import { getNotificationStyle } from '../utils/colors'
 const show = ref(true)
 const props = defineProps({
   title: {
     type: String,
   },
-  icon: {
+  description: {
     type: String,
     required: false,
-    default: 'circle-check',
+  },
+  type: {
+    type: String,
+    required: false,
+    validator: (value) => {
+      return ['warning', 'error', 'success'].indexOf(value) !== -1
+    },
   },
   color: {
     type: String,
     required: false,
-    default: 'green',
     validator(value) {
-      return ['orange', 'red', 'green', 'blue'].indexOf(value) !== -1
+      return COLORS.indexOf(value) !== -1
     },
-  },
-  isClose: {
-    type: Boolean,
-    default: false,
-  },
-  description: {
-    type: String,
-    required: false,
   },
 })
 

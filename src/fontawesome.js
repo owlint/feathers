@@ -4,6 +4,16 @@ import {
   faSpinnerThird,
   faBurgerCheese,
   faQuestion,
+  faCircleCheck,
+  faCircleExclamation,
+  faCircleXmark,
 } from '@fortawesome/pro-duotone-svg-icons'
 
-library.add(faSpinnerThird, faBurgerCheese, faQuestion)
+library.add(
+  faSpinnerThird,
+  faBurgerCheese,
+  faQuestion,
+  faCircleCheck,
+  faCircleExclamation,
+  faCircleXmark
+)

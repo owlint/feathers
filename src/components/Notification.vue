@@ -13,7 +13,6 @@
         leave-to-class="opacity-0"
       >
         <div
-          v-if="show"
           class="
             max-w-sm
             w-full
@@ -65,26 +64,6 @@
                   {{ description }}
                 </p>
               </div>
-              <div class="ml-4 flex-shrink-0 flex" v-if="isClose">
-                <button
-                  @click="show = false"
-                  class="
-                    bg-white
-                    rounded-md
-                    inline-flex
-                    text-slate-400
-                    hover:text-slate-500
-                    focus:outline-none
-                    focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
-                  "
-                >
-                  <span class="sr-only">Close</span>
-                  <font-awesome-icon
-                    class="w-5 h-5"
-                    :icon="['fad', 'xmark']"
-                  ></font-awesome-icon>
-                </button>
-              </div>
             </div>
           </div>
         </div>
@@ -97,10 +76,10 @@
 import { ref } from 'vue'
 import { COLORS } from '../enums/colors'
 import { getNotificationStyle } from '../utils/colors'
-const show = ref(true)
 const props = defineProps({
   title: {
     type: String,
+    required: true,
   },
   description: {
     type: String,
@@ -116,29 +95,9 @@ const props = defineProps({
   color: {
     type: String,
     required: false,
-    validator(value) {
+    validator: (value) => {
       return COLORS.indexOf(value) !== -1
     },
   },
 })
-
-let style = ''
-
-switch (props.color) {
-  case 'red':
-    style = 'text-red-400 dark:text-marcelin-400'
-    break
-  case 'blue':
-    style = 'text-blue-400 dark:text-dracula-400'
-    break
-  case 'orange':
-    style = 'text-orange-400 dark:text-morbius-400'
-    break
-  case 'green':
-    style = 'text-green-400 dark:text-blade-400'
-    break
-  default:
-    style = 'text-blue-400 dark:text-dracula-400'
-    break
-}
 </script>

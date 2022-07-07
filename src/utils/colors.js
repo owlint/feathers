@@ -149,3 +149,53 @@ export const getNotificationStyle = (color) => {
       return 'text-blue-400 dark:text-dracula-400'
   }
 }
+export const getFilterStyle = (color) => {
+  switch (color) {
+    case 'indigo':
+      return 'text-indigo-900 bg-indigo-500/20 ring-indgo-300 dark:bg-nosferatu-900 dark:text-dracula-400 peer-checked:ring-indigo-300 dark:peer-checked:ring-dracula-300 '
+    case 'slate':
+      return 'text-slate-900 bg-slate-500/20 ring-slate-300 dark:bg-nosferatu-900 dark:text-aro-400 peer-checked:ring-slate-300 dark:peer-checked:ring-aro-300'
+    case 'gray':
+      return 'text-gray-900 bg-gray-500/20 ring-gray-300 dark:bg-nosferatu-900 dark:text-aro-400 peer-checked:ring-gray-300 dark:peer-checked:ring-aro-300'
+    case 'zinc':
+      return 'text-zinc-900 bg-zinc-500/20 ring-zinc-300 dark:bg-nosferatu-900 dark:text-aro-400 peer-checked:ring-zinc-300 dark:peer-checked:ring-aro-300'
+    case 'neutral':
+      return 'text-neutral-900 bg-neutral-500/20 ring-neutral-300 dark:bg-nosferatu-900 dark:text-aro-400 peer-checked:ring-neutral-300 dark:peer-checked:ring-aro-300'
+    case 'stone':
+      return 'text-stone-900 bg-stone-500/20 ring-stone-300 dark:bg-nosferatu-900 dark:text-aro-400 peer-checked:ring-stone-300 dark:peer-checked:ring-aro-300'
+    case 'red':
+      return 'text-red-900 bg-red-500/20 ring-red-300 dark:bg-nosferatu-900 dark:text-marcelin-400 peer-checked:ring-red-300 dark:peer-checked:ring-marcelin-300'
+    case 'orange':
+      return 'text-orange-900 bg-orange-500/20 ring-orange-300 dark:bg-nosferatu-900 dark:text-morbius-400 peer-checked:ring-orange-300 dark:peer-checked:ring-morbius-300'
+    case 'amber':
+      return 'text-amber-900 bg-amber-500/20 ring-amber-300 dark:bg-nosferatu-900 dark:text-cullen-400 peer-checked:ring-amber-300 dark:peer-checked:ring-cullen-300'
+    case 'yellow':
+      return 'text-yellow-900 bg-yellow-500/20 ring-yellow-300 dark:bg-nosferatu-900 dark:text-lincoln-400 peer-checked:ring-yellow-300 dark:peer-checked:ring-lincoln-300'
+    case 'lime':
+      return 'text-lime-900 bg-lime-500/20 ring-lime-300 dark:bg-nosferatu-900 dark:text-lime-400 peer-checked:ring-lime-300 dark:peer-checked:ring-lime-300'
+    case 'green':
+      return 'text-green-900 bg-green-500/20 ring-green-300 dark:bg-nosferatu-900 dark:text-blade-400 peer-checked:ring-green-300 dark:peer-checked:ring-blade-300'
+    case 'emerald':
+      return 'text-emerald-900 bg-emerald-500/20 ring-emerald-300 dark:bg-nosferatu-900 dark:text-emerald-400 peer-checked:ring-emerald-300 dark:peer-checked:ring-emerald-300'
+    case 'teal':
+      return 'text-teal-900 bg-teal-500/20 ring-teal-300 dark:bg-nosferatu-900 dark:text-teal-400 peer-checked:ring-teal-300 dark:peer-checked:ring-teal-300'
+    case 'cyan':
+      return 'text-cyan-900 bg-cyan-500/20 ring-cyan-300 dark:bg-nosferatu-900 dark:text-cyan-400 peer-checked:ring-cyan-300 dark:peer-checked:ring-cyan-300'
+    case 'sky':
+      return 'text-sky-900 bg-sky-500/20 ring-sky-300 dark:bg-nosferatu-900 dark:text-sky-400 peer-checked:ring-sky-300 dark:peer-checked:ring-sky-300'
+    case 'blue':
+      return 'text-blue-900 bg-cyan-500/20 ring-cyan-300 dark:bg-nosferatu-900 dark:text-vanHelsing-400 peer-checked:ring-cyan-300 dark:peer-checked:ring-vanHelsing-300'
+    case 'violet':
+      return 'text-violet-900 bg-violet-500/20 ring-violet-300 dark:bg-nosferatu-900 dark:text-violet-400 peer-checked:ring-violet-300 dark:peer-checked:ring-violet-300'
+    case 'purple':
+      return 'text-purple-900 bg-purple-500/20 ring-purple-300 dark:bg-nosferatu-900 dark:text-buffy-400 peer-checked:ring-purple-300 dark:peer-checked:ring-buffy-300'
+    case 'fuchsia':
+      return 'text-fuchsia-900 bg-fuchsia-500/20 ring-fuchsia-300 dark:bg-nosferatu-900 dark:text-fuchsia-400 peer-checked:ring-fuchsia-300 dark:peer-checked:ring-fuchsia-300'
+    case 'pink':
+      return 'text-pink-900 bg-pink-500/20 ring-pink-300 dark:bg-nosferatu-900 dark:text-pink-400 peer-checked:ring-pink-300 dark:peer-checked:ring-pink-300'
+    case 'rose':
+      return 'text-rose-900 bg-rose-500/20 ring-rose-300 dark:bg-nosferatu-900 dark:text-rose-400 peer-checked:ring-rose-300 dark:peer-checked:ring-rose-300'
+    default:
+      return 'text-indigo-900 bg-indigo-500/20 ring-indgo-300 dark:bg-nosferatu-900 dark:text-dracula-400 peer-checked:ring-indigo-300 dark:peer-checked:ring-dracula-300 '
+  }
+}

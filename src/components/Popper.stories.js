@@ -69,7 +69,7 @@ export const Types = (args) => ({
                     <Button label="Tooltip Placement" color="indigo"/>
                     <template #tooltip> Tooltip </template>
                 </Popper>
-                <Popper class="bg-pink-400 dark:bg-pink-600 text-white dark:text-slate-900" > 
+                <Popper class="bg-pink-400 dark:bg-buffy-600 text-white dark:text-slate-900" > 
                     <Button label="Tooltip Custom"  color="pink"/>
                     <template #tooltip> Tooltip </template>
                 </Popper>

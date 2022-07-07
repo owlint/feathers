@@ -199,3 +199,199 @@ export const getFilterStyle = (color) => {
       return 'text-indigo-900 bg-indigo-500/20 ring-indgo-300 dark:bg-nosferatu-900 dark:text-dracula-400 peer-checked:ring-indigo-300 dark:peer-checked:ring-dracula-300 '
   }
 }
+
+export const getColorBackground = (color) => {
+  switch (color) {
+    case 'blue':
+      return `bg-blue-300 dark:bg-blue-500`
+    case 'indigo':
+      return `bg-indigo-300 dark:bg-indigo-500`
+    case 'slate':
+      return `bg-slate-300 dark:bg-slate-500`
+    case 'gray':
+      return `bg-slate-300 dark:bg-slate-500`
+    case 'stone':
+      return `bg-stone-300 dark:bg-stone-500`
+    case 'neutral':
+      return `bg-slate-300 dark:bg-slate-500`
+    case 'red':
+      return `bg-red-300 dark:bg-red-500`
+    case 'yellow':
+      return `bg-yellow-300 dark:bg-yellow-500`
+    case 'amber':
+      return `bg-amber-300 dark:bg-amber-500`
+    case 'orange':
+      return `bg-orange-300 dark:bg-orange-500`
+    case 'lime':
+      return `bg-lime-300 dark:bg-lime-500`
+    case 'green':
+      return `bg-green-300 dark:bg-green-500`
+    case 'emerald':
+      return `bg-emerald-300 dark:bg-emerald-500`
+    case 'cyan':
+      return `bg-cyan-300 dark:bg-cyan-500`
+    case 'sky':
+      return `bg-sky-300 dark:bg-sky-500`
+    case 'teal':
+      return `bg-teal-300 dark:bg-teal-500`
+    case 'fuchsia':
+      return `bg-fuchsia-300 dark:bg-fuchsia-500`
+    case 'purple':
+      return `bg-purple-300 dark:bg-purple-500`
+    case 'violet':
+      return `bg-violet-300 dark:bg-violet-500`
+    case 'pink':
+      return `bg-pink-300 dark:bg-pink-500`
+    case 'rose':
+      return `bg-rose-300 dark:bg-rose-500`
+    default:
+      return ''
+  }
+}
+
+export const getColorPickerText = (color) => {
+  switch (color) {
+    case 'blue':
+      return `text-blue-600 dark:text-blue-300`
+    case 'indigo':
+      return `text-indigo-600 dark:text-indigo-300`
+    case 'slate':
+      return `text-slate-600 dark:text-slate-300`
+    case 'gray':
+      return `text-slate-600 dark:text-slate-300`
+    case 'stone':
+      return `text-stone-600 dark:text-stone-300`
+    case 'neutral':
+      return `text-slate-600 dark:text-slate-300`
+    case 'red':
+      return `text-red-600 dark:text-red-300`
+    case 'yellow':
+      return `text-yellow-600 dark:text-yellow-300`
+    case 'amber':
+      return `text-amber-600 dark:text-amber-300`
+    case 'orange':
+      return `text-orange-600 dark:text-orange-300`
+    case 'lime':
+      return `text-lime-600 dark:text-lime-300`
+    case 'green':
+      return `text-green-600 dark:text-green-300`
+    case 'emerald':
+      return `text-emerald-600 dark:text-emerald-300`
+    case 'cyan':
+      return `text-cyan-600 dark:text-cyan-300`
+    case 'sky':
+      return `text-sky-600 dark:text-sky-300`
+    case 'teal':
+      return `text-teal-600 dark:text-teal-300`
+    case 'fuchsia':
+      return `text-fuchsia-600 dark:text-fuchsia-300`
+    case 'purple':
+      return `text-purple-600 dark:text-purple-300`
+    case 'violet':
+      return `text-violet-600 dark:text-violet-300`
+    case 'pink':
+      return `text-pink-600 dark:text-pink-300`
+    case 'rose':
+      return `text-rose-600 dark:text-rose-300`
+    default:
+      return ''
+  }
+}
+
+export const getColorPickerRing = (color) => {
+  switch (color) {
+    case 'blue':
+      return `ring-blue-300`
+    case 'indigo':
+      return `ring-indigo-300`
+    case 'slate':
+      return `ring-slate-300`
+    case 'gray':
+      return `ring-slate-300`
+    case 'stone':
+      return `ring-stone-300`
+    case 'neutral':
+      return `ring-slate-300`
+    case 'red':
+      return `ring-red-300`
+    case 'yellow':
+      return `ring-yellow-300`
+    case 'amber':
+      return `ring-amber-300`
+    case 'orange':
+      return `ring-orange-300`
+    case 'lime':
+      return `ring-lime-300`
+    case 'green':
+      return `ring-green-300`
+    case 'emerald':
+      return `ring-emerald-300`
+    case 'cyan':
+      return `ring-cyan-300`
+    case 'sky':
+      return `ring-sky-300`
+    case 'teal':
+      return `ring-teal-300`
+    case 'fuchsia':
+      return `ring-fuchsia-300`
+    case 'purple':
+      return `ring-purple-300`
+    case 'violet':
+      return `ring-violet-300`
+    case 'pink':
+      return `ring-pink-300`
+    case 'rose':
+      return `ring-rose-300`
+    default:
+      return ''
+  }
+}
+
+export const getFocusColorPickerRing = (color) => {
+  switch (color) {
+    case 'blue':
+      return `focus:ring-blue-300`
+    case 'indigo':
+      return `focus:ring-indigo-300`
+    case 'slate':
+      return `focus:ring-slate-300`
+    case 'gray':
+      return `focus:ring-slate-300`
+    case 'stone':
+      return `focus:ring-stone-300`
+    case 'neutral':
+      return `focus:ring-slate-300`
+    case 'red':
+      return `focus:ring-red-300`
+    case 'yellow':
+      return `focus:ring-yellow-300`
+    case 'amber':
+      return `focus:ring-amber-300`
+    case 'orange':
+      return `focus:ring-orange-300`
+    case 'lime':
+      return `focus:ring-lime-300`
+    case 'green':
+      return `focus:ring-green-300`
+    case 'emerald':
+      return `focus:ring-emerald-300`
+    case 'cyan':
+      return `focus:ring-cyan-300`
+    case 'sky':
+      return `focus:ring-sky-300`
+    case 'teal':
+      return `focus:ring-teal-300`
+    case 'fuchsia':
+      return `focus:ring-fuchsia-300`
+    case 'purple':
+      return `focus:ring-purple-300`
+    case 'violet':
+      return `focus:ring-violet-300`
+    case 'pink':
+      return `focus:ring-pink-300`
+    case 'rose':
+      return `focus:ring-rose-300`
+    default:
+      return ''
+  }
+}

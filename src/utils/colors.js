@@ -200,7 +200,7 @@ export const getFilterStyle = (color) => {
   }
 }
 
-export const getColorBackground = (color) => {
+export const getColorPickerBackground = (color) => {
   switch (color) {
     case 'blue':
       return `bg-blue-300 dark:bg-blue-500`

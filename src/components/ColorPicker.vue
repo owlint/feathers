@@ -3,9 +3,9 @@
     <div>
       <MenuButton
         :class="[
-          getColorBackground(modelValue),
-          getFocusColorRing(modelValue),
-          getColorText(modelValue),
+          getColorPickerBackground(modelValue),
+          getFocusColorPickerRing(modelValue),
+          getColorPickerText(modelValue),
         ]"
         class="
           flex
@@ -27,7 +27,7 @@
       >
         <font-awesome-icon
           class="text-md fa-fw dark:text-slate-900"
-          :icon="['fad', 'eye-dropper-full']"
+          :icon="['fad', 'burger-cheese']"
         />
       </MenuButton>
     </div>
@@ -64,7 +64,7 @@
       >
         <MenuItem
           v-for="color in colors"
-          :key="color.value"
+          :key="color"
           as="div"
           class="
             cursor-pointer
@@ -80,15 +80,15 @@
             bg-opacity-20
             dark:bg-opacity-30
           "
-          :class="[getColorBackground(color.value)]"
-          @click="$emit('update:modelValue', color.value)"
+          :class="[getColorPickerBackground(color)]"
+          @click="$emit('update:modelValue', color)"
         >
           <div
             :class="[
-              modelValue === color.value
-                ? ` ${getColorRing(color.value)}`
+              modelValue === color
+                ? ` ${getColorPickerRing(color)}`
                 : 'ring-transparent ',
-              getColorBackground(color.value),
+              getColorPickerBackground(color),
             ]"
             class="
               inline-block

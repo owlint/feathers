@@ -1,6 +1,6 @@
 {
   "name": "@owlint/feathers",
-  "version": "0.0.12",
+  "version": "0.0.18",
   "author": "owlint",
   "publishConfig": {
     "access": "public"
@@ -9,8 +9,7 @@
     "dist"
   ],
   "main": "dist/feathers.umd.js",
-  "module": "dist/feathers.esm.js",
-  "unpkg": "dist/feathers.min.js",
+  "module": "dist/feathers.es.js",
   "exports": {
     "./dist/style.css": "./dist/style.css",
     ".": {
@@ -40,7 +39,6 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/pro-duotone-svg-icons": "^6.1.1",
     "@fortawesome/vue-fontawesome": "^3.0.0",
-    "@mdx-js/react": "^1.6.22",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-docs": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",

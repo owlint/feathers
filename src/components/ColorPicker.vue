@@ -24,6 +24,7 @@
           focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-100
           dark:focus:ring-offset-slate-800
         "
+        @click="animate"
       >
         <font-awesome-icon
           class="text-md fa-fw dark:text-slate-900"
@@ -84,6 +85,7 @@
           @click="$emit('update:modelValue', color)"
         >
           <div
+            ref="colorPicked"
             :class="[
               modelValue === color
                 ? ` ${getColorPickerRing(color)}`
@@ -91,6 +93,8 @@
               getColorPickerBackground(color),
             ]"
             class="
+              opacity-0
+              scale-0
               inline-block
               mx-auto
               w-6
@@ -103,7 +107,7 @@
               group-hover:dark:bg-opacity-100
               dark:bg-opacity-70
             "
-          ></div>
+          />
         </MenuItem>
       </MenuItems>
     </transition>
@@ -119,6 +123,8 @@ import {
   getFocusColorPickerRing,
 } from '../utils/colors'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
+import gsap from 'gsap'
+import { ref } from 'vue'
 
 const props = defineProps({
   modelValue: {
@@ -135,4 +141,20 @@ const colors = [
 ]
 
 defineEmits(['update:modelValue'])
+const colorPicked = ref(null)
+
+let tl = null
+
+const animate = () => {
+  // console.log(colorPicked)
+  setTimeout(() => {
+    tl = gsap.to(colorPicked?.value, {
+      opacity: 1,
+      scale: 1,
+      duration: 0.15,
+      stagger: 0.05,
+      ease: 'ease-out',
+    })
+  }, 1)
+}
 </script>

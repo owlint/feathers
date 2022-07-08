@@ -9,22 +9,16 @@ export default {
       template: '<div class="flex h-64 "><story/></div>',
     }),
   ],
-  argTypes: {
-    modelValue: {
-      type: { name: 'string', required: true },
-    },
-  },
 }
 
-const Template = (args) => ({
+const Template = () => ({
   components: { ColorPicker },
-  setup() {
-    return { args }
+  data() {
+    return {
+      color: 'slate',
+    }
   },
-  template: '<ColorPicker v-bind="args" />',
+  template: '<ColorPicker v-model="color" />',
 })
 
 export const Base = Template.bind({})
-Base.args = {
-  modelValue: 'blue',
-}

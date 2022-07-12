@@ -1,0 +1,1 @@
+declare module '@owlint/feathers'

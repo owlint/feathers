@@ -1,4 +1,4 @@
-import { COLORS } from '../enums/colors'
+import { COLORS } from '../../enums/colors'
 import Button from './Button.vue'
 
 export default {

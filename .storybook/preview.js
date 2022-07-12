@@ -1,10 +1,6 @@
 import '../src/style.css'
-import '../src/fontawesome'
 
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { app } from '@storybook/vue3'
-
-app.component('font-awesome-icon', FontAwesomeIcon)
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -43,8 +39,14 @@ export const decorators = [
 
     const dark = background === '#373a4d' || background === '#282a36'
 
+    if (dark) {
+      document.querySelector('html').classList.add('dark')
+    } else {
+      document.querySelector('html').classList.remove('dark')
+    }
+
     return {
-      template: `<div class="${dark ? 'dark' : ''}"><story/></div>`,
+      template: `<story/>`,
     }
   },
 ]

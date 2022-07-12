@@ -1,11 +1,11 @@
 export const getIconStyle = (color) => {
   switch (color) {
     case 'indigo':
-      return 'text-indigo-500 bg-indigo-100 dark:bg-nosferatu-800 dark:text-indigo-500/80'
+      return 'text-indigo-500 bg-indigo-100 dark:bg-nosferatu-800 dark:text-dracula-500/80'
     case 'slate':
-      return 'text-slate-500 bg-slate-100 dark:bg-nosferatu-800 dark:text-slate-500/80'
+      return 'text-slate-500 bg-slate-100 dark:bg-nosferatu-800 dark:text-nosferatu-500/80'
     case 'gray':
-      return 'text-gray-500 bg-gray-100 dark:bg-nosferatu-800 dark:text-gray-500/80'
+      return 'text-gray-500 bg-gray-100 dark:bg-nosferatu-800 dark:text-aro-500/80'
     case 'zinc':
       return 'text-zinc-500 bg-zinc-100 dark:bg-nosferatu-800 dark:text-zinc-500/80'
     case 'neutral':
@@ -17,7 +17,7 @@ export const getIconStyle = (color) => {
     case 'orange':
       return 'text-orange-500 bg-orange-100 dark:bg-nosferatu-800 dark:text-morbius-500/80'
     case 'amber':
-      return 'text-amber-500 bg-amber-100 dark:bg-nosferatu-800 dark:text-amber-500/80'
+      return 'text-amber-500 bg-amber-100 dark:bg-nosferatu-800 dark:text-cullen-500/80'
     case 'yellow':
       return 'text-yellow-500 bg-yellow-100 dark:bg-nosferatu-800 dark:text-lincoln-500/80'
     case 'lime':
@@ -67,7 +67,7 @@ export const getBadgeStyle = (color) => {
     case 'orange':
       return 'text-orange-900 bg-orange-100 dark:bg-nosferatu-900 dark:text-morbius-400'
     case 'amber':
-      return 'text-amber-900 bg-amber-100 dark:bg-nosferatu-900 dark:text-amber-400/80'
+      return 'text-amber-900 bg-amber-100 dark:bg-nosferatu-900 dark:text-cullen-400/80'
     case 'yellow':
       return 'text-yellow-900 bg-yellow-100 dark:bg-nosferatu-900 dark:text-lincoln-400'
     case 'lime':
@@ -83,7 +83,7 @@ export const getBadgeStyle = (color) => {
     case 'sky':
       return 'text-sky-900 bg-sky-100 dark:bg-nosferatu-900 dark:text-sky-400/80'
     case 'blue':
-      return 'text-cyan-900 bg-cyan-100 dark:bg-nosferatu-900 dark:text-vanHelsing-400'
+      return 'text-blue-900 bg-blue-100 dark:bg-nosferatu-900 dark:text-vonCount-400'
     case 'violet':
       return 'text-violet-900 bg-violet-100 dark:bg-nosferatu-900 dark:text-violet-400/80'
     case 'purple':
@@ -118,7 +118,7 @@ export const getNotificationStyle = (color) => {
     case 'orange':
       return 'text-orange-400 dark:text-morbius-400'
     case 'amber':
-      return 'text-amber-400 dark:text-amber-400/80'
+      return 'text-amber-400 dark:text-cullen-400/80'
     case 'yellow':
       return 'text-yellow-400 dark:text-lincoln-400'
     case 'lime':
@@ -134,7 +134,7 @@ export const getNotificationStyle = (color) => {
     case 'sky':
       return 'text-sky-400 dark:text-sky-400/80'
     case 'blue':
-      return 'text-blue-400 dark:text-dracula-400'
+      return 'text-blue-400 dark:text-vonCount-400'
     case 'violet':
       return 'text-violet-400 dark:text-violet-400/80'
     case 'purple':
@@ -180,11 +180,11 @@ export const getFilterStyle = (color) => {
     case 'teal':
       return 'text-teal-900 bg-teal-500/20 ring-teal-300 dark:bg-nosferatu-900 dark:text-teal-400 peer-checked:ring-teal-300 dark:peer-checked:ring-teal-300'
     case 'cyan':
-      return 'text-cyan-900 bg-cyan-500/20 ring-cyan-300 dark:bg-nosferatu-900 dark:text-cyan-400 peer-checked:ring-cyan-300 dark:peer-checked:ring-cyan-300'
+      return 'text-cyan-900 bg-cyan-500/20 ring-cyan-300 dark:bg-nosferatu-900 dark:text-vanHelsing-400 peer-checked:ring-cyan-300 dark:peer-checked:ring-vanHelsing-300'
     case 'sky':
       return 'text-sky-900 bg-sky-500/20 ring-sky-300 dark:bg-nosferatu-900 dark:text-sky-400 peer-checked:ring-sky-300 dark:peer-checked:ring-sky-300'
     case 'blue':
-      return 'text-blue-900 bg-cyan-500/20 ring-cyan-300 dark:bg-nosferatu-900 dark:text-vanHelsing-400 peer-checked:ring-cyan-300 dark:peer-checked:ring-vanHelsing-300'
+      return 'text-blue-900 bg-blue-500/20 ring-blue-300 dark:bg-nosferatu-900 dark:text-vonCount-400 peer-checked:ring-blue-300 dark:peer-checked:ring-vonCount-300'
     case 'violet':
       return 'text-violet-900 bg-violet-500/20 ring-violet-300 dark:bg-nosferatu-900 dark:text-violet-400 peer-checked:ring-violet-300 dark:peer-checked:ring-violet-300'
     case 'purple':
@@ -203,7 +203,7 @@ export const getFilterStyle = (color) => {
 export const getColorPickerBackground = (color) => {
   switch (color) {
     case 'blue':
-      return `bg-blue-300 dark:bg-vanHelsing-500`
+      return `bg-blue-300 dark:bg-vonCount-500`
     case 'indigo':
       return `bg-indigo-300 dark:bg-dracula-500`
     case 'slate':
@@ -231,7 +231,7 @@ export const getColorPickerBackground = (color) => {
     case 'emerald':
       return `bg-emerald-300 dark:bg-emerald-500`
     case 'cyan':
-      return `bg-cyan-300 dark:bg-cyan-500`
+      return `bg-cyan-300 dark:bg-vanHelsing-500`
     case 'sky':
       return `bg-sky-300 dark:bg-sky-500`
     case 'teal':
@@ -254,7 +254,7 @@ export const getColorPickerBackground = (color) => {
 export const getColorPickerText = (color) => {
   switch (color) {
     case 'blue':
-      return `text-blue-600 dark:text-vanHelsing-300`
+      return `text-blue-600 dark:text-vonCount-300`
     case 'indigo':
       return `text-indigo-600 dark:text-dracula-300`
     case 'slate':
@@ -282,7 +282,7 @@ export const getColorPickerText = (color) => {
     case 'emerald':
       return `text-emerald-600 dark:text-emerald-300`
     case 'cyan':
-      return `text-cyan-600 dark:text-cyan-300`
+      return `text-cyan-600 dark:text-vanHelsing-300`
     case 'sky':
       return `text-sky-600 dark:text-sky-300`
     case 'teal':
@@ -305,7 +305,7 @@ export const getColorPickerText = (color) => {
 export const getColorPickerRing = (color) => {
   switch (color) {
     case 'blue':
-      return `ring-blue-300 dark:ring-vanHelsing-500`
+      return `ring-blue-300 dark:ring-vonCount-500`
     case 'indigo':
       return `ring-indigo-300 dark:ring-dracula-500`
     case 'slate':
@@ -333,7 +333,7 @@ export const getColorPickerRing = (color) => {
     case 'emerald':
       return `ring-emerald-300 dark:ring-emerald-500`
     case 'cyan':
-      return `ring-cyan-300 dark:ring-cyan-500`
+      return `ring-cyan-300 dark:ring-vanHelsing-500`
     case 'sky':
       return `ring-sky-300 dark:ring-sky-500`
     case 'teal':
@@ -356,7 +356,7 @@ export const getColorPickerRing = (color) => {
 export const getFocusColorPickerRing = (color) => {
   switch (color) {
     case 'blue':
-      return `focus:ring-blue-300 dark:focus:ring-vanHelsing-300`
+      return `focus:ring-blue-300 dark:focus:ring-vonCount-300`
     case 'indigo':
       return `focus:ring-indigo-300 dark:focus:ring-dracula-300`
     case 'slate':
@@ -384,7 +384,7 @@ export const getFocusColorPickerRing = (color) => {
     case 'emerald':
       return `focus:ring-emerald-300`
     case 'cyan':
-      return `focus:ring-cyan-300`
+      return `focus:ring-cyan-300 dark:focus:ring-vanHelsing-300`
     case 'sky':
       return `focus:ring-sky-300`
     case 'teal':

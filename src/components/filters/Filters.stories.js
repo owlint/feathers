@@ -25,19 +25,16 @@ const defaultArgs = {
     type: 'state',
     data: [
       {
-        icon: 'burger-cheese',
         type: 'green-burgir',
         value: 'green-burgir',
         color: 'green',
       },
       {
-        icon: 'burger-cheese',
         type: 'red-burgir',
         value: 'red-burgir',
         color: 'red',
       },
       {
-        icon: 'burger-cheese',
         type: 'indigo-burgir',
         value: 'indigo-burgir',
         color: 'indigo',

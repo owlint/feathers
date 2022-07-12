@@ -14,9 +14,8 @@
         v-model="modelValue"
         @input:modelValue="filterChoice($event)"
       >
-        <font-awesome-icon
-          :icon="[items.type === 'network' ? 'fab' : 'fad', item.icon]"
-        />
+        <!-- Work In progress -->
+        working
       </FilterItem>
     </div>
   </div>

@@ -143,10 +143,10 @@ import {
   TransitionRoot,
 } from '@headlessui/vue'
 
-import { COLORS } from '../enums/colors'
-import { SIZES } from '../enums/sizes'
-import { getIconStyle } from '../utils/colors'
-import { getMaxWidth } from '../utils/sizes'
+import { COLORS } from '../../enums/colors'
+import { SIZES } from '../../enums/sizes'
+import { getIconStyle } from '../../utils/colors'
+import { getMaxWidth } from '../../utils/sizes'
 
 defineEmits(['close'])
 

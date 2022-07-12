@@ -47,7 +47,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import Notification from '../components/Notification.vue'
+import Notification from '../notification/Notification.vue'
 
 const props = defineProps({
   notifications: {

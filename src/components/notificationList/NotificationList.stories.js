@@ -1,6 +1,6 @@
-import Notification from './Notification.vue'
+import Notification from '../notification/Notification.vue'
 import NotificationList from './NotificationList.vue'
-import Button from './Button.vue'
+import Button from '../button/Button.vue'
 import { ref } from 'vue'
 
 export default {

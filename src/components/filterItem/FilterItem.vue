@@ -29,8 +29,8 @@
 
 <script setup>
 import { computed } from 'vue'
-import { COLORS } from '../enums/colors'
-import { getFilterStyle } from '../utils/colors'
+import { COLORS } from '../../enums/colors'
+import { getFilterStyle } from '../../utils/colors'
 
 defineEmits(['input:modelValue'])
 

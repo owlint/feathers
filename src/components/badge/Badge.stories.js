@@ -1,6 +1,6 @@
 import Badge from './Badge.vue'
-import { COLORS } from '../enums/colors'
-import { SIZES } from '../enums/sizes'
+import { COLORS } from '../../enums/colors'
+import { SIZES } from '../../enums/sizes'
 
 export default {
   component: Badge,

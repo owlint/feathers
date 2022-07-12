@@ -74,8 +74,8 @@
 
 <script setup>
 import { ref } from 'vue'
-import { COLORS } from '../enums/colors'
-import { getNotificationStyle } from '../utils/colors'
+import { COLORS } from '../../enums/colors'
+import { getNotificationStyle } from '../../utils/colors'
 const props = defineProps({
   title: {
     type: String,

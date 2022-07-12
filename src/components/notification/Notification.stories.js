@@ -1,6 +1,5 @@
 import Notification from './Notification.vue'
-// import Button from './Button.vue'
-import { COLORS } from '../enums/colors'
+import { COLORS } from '../../enums/colors'
 
 export default {
   title: 'Components/Notification',

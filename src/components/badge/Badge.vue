@@ -15,10 +15,10 @@
 
 <script setup>
 import { computed } from 'vue'
-import { COLORS } from '../enums/colors'
-import { getBadgeStyle } from '../utils/colors'
-import { SIZES } from '../enums/sizes'
-import { getBadgeSize } from '../utils/sizes'
+import { COLORS } from '../../enums/colors'
+import { getBadgeStyle } from '../../utils/colors'
+import { SIZES } from '../../enums/sizes'
+import { getBadgeSize } from '../../utils/sizes'
 defineProps({
   color: {
     type: String,

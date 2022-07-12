@@ -1,5 +1,5 @@
 import Filters from './Filters.vue'
-import { COLORS } from '../enums/colors'
+import { COLORS } from '../../enums/colors'
 
 export default {
   component: Filters,

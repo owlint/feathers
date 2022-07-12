@@ -251,57 +251,6 @@ export const getColorPickerBackground = (color) => {
   }
 }
 
-export const getColorPickerBackground = (color) => {
-  switch (color) {
-    case 'blue':
-      return `bg-blue-300 dark:bg-vanHelsing-500`
-    case 'indigo':
-      return `bg-indigo-300 dark:bg-dracula-500`
-    case 'slate':
-      return `bg-slate-300 dark:bg-aro-500`
-    case 'gray':
-      return `bg-gray-300 dark:bg-gray-500`
-    case 'zinc':
-      return `bg-zinc-300 dark:bg-zinc-500`
-    case 'stone':
-      return `bg-stone-300 dark:bg-stone-500`
-    case 'neutral':
-      return `bg-neutral-300 dark:bg-neutral-500`
-    case 'red':
-      return `bg-red-300 dark:bg-marcelin-500`
-    case 'yellow':
-      return `bg-yellow-300 dark:bg-lincoln-500`
-    case 'amber':
-      return `bg-amber-300 dark:bg-cullen-500`
-    case 'orange':
-      return `bg-orange-300 dark:bg-morbius-500`
-    case 'lime':
-      return `bg-lime-300 dark:bg-lime-500`
-    case 'green':
-      return `bg-green-300 dark:bg-blade-500`
-    case 'emerald':
-      return `bg-emerald-300 dark:bg-emerald-500`
-    case 'cyan':
-      return `bg-cyan-300 dark:bg-cyan-500`
-    case 'sky':
-      return `bg-sky-300 dark:bg-sky-500`
-    case 'teal':
-      return `bg-teal-300 dark:bg-teal-500`
-    case 'fuchsia':
-      return `bg-fuchsia-300 dark:bg-fuchsia-500`
-    case 'purple':
-      return `bg-purple-300 dark:bg-buffy-500`
-    case 'violet':
-      return `bg-violet-300 dark:bg-violet-500`
-    case 'pink':
-      return `bg-pink-300 dark:bg-pink-500`
-    case 'rose':
-      return `bg-rose-300 dark:bg-rose-500`
-    default:
-      return ''
-  }
-}
-
 export const getColorPickerText = (color) => {
   switch (color) {
     case 'blue':

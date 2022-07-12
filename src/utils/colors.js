@@ -434,11 +434,11 @@ export const getInputStyle = (color) => {
     case 'teal':
       return 'caret-teal-300 dark:caret-teal-300 dark:focus:border-teal-300 dark:focus:ring-teal-300 focus:ring-teal-300 focus:border-teal-300 dark:text-teal-400'
     case 'cyan':
-      return 'caret-cyan-300 dark:caret-cyan-300 dark:focus:border-cyan-300 dark:focus:ring-cyan-300 focus:ring-cyan-300 focus:border-cyan-300 dark:text-cyan-400'
+      return 'caret-cyan-300 dark:caret-vanHelsing-300 dark:focus:border-vanHelsing-300 dark:focus:ring-vanHelsing-300 focus:ring-cyan-300 focus:border-cyan-300 dark:text-vanHelsing-400'
     case 'sky':
       return 'caret-sky-300 dark:caret-sky-300 dark:focus:border-sky-300 dark:focus:ring-sky-300 focus:ring-sky-300 focus:border-sky-300 dark:text-sky-400'
     case 'blue':
-      return 'caret-blue-300 dark:caret-lincoln-300 dark:focus:border-lincoln-300 dark:focus:ring-lincoln-300 focus:ring-blue-300 focus:border-blue-300 dark:text-lincoln-400'
+      return 'caret-blue-300 dark:caret-vonCount-300 dark:focus:border-vonCount-300 dark:focus:ring-vonCount-300 focus:ring-blue-300 focus:border-blue-300 dark:text-vonCount-400'
     case 'violet':
       return 'caret-violet-300 dark:caret-violet-300 dark:focus:border-violet-300 dark:focus:ring-violet-300 focus:ring-violet-300 focus:border-violet-300 dark:text-violet-400'
     case 'purple':
@@ -485,11 +485,11 @@ export const getLabelStyle = (color) => {
     case 'teal':
       return 'text-slate-500 dark:text-teal-300'
     case 'cyan':
-      return 'text-slate-500 dark:text-cyan-300'
+      return 'text-slate-500 dark:text-vanHelsing-300'
     case 'sky':
       return 'text-slate-500 dark:text-sky-300'
     case 'blue':
-      return 'text-slate-500 dark:text-vanHelsing-300'
+      return 'text-slate-500 dark:text-vonCount-300'
     case 'violet':
       return 'text-slate-500 dark:text-violet-300'
     case 'purple':
@@ -502,5 +502,56 @@ export const getLabelStyle = (color) => {
       return 'text-slate-500 dark:text-rose-300'
     default:
       return 'text-slate-500 dark:text-dracula-300'
+  }
+}
+
+export const getInputIconStyle = (color) => {
+  switch (color) {
+    case 'indigo':
+      return 'text-slate-500 peer-focus:text-indigo-400 dark:text-dracula-300/80 dark:peer-focus:text-dracula-300'
+    case 'slate':
+      return 'text-slate-500 peer-focus:text-slate-400 dark:text-nosferatu-300/80 dark:peer-focus:text-nosferatu-300'
+    case 'gray':
+      return 'text-slate-500 peer-focus:text-gray-400 dark:text-aro-300/80 dark:peer-focus:text-aro-300'
+    case 'zinc':
+      return 'text-slate-500 peer-focus:text-zinc-400 dark:text-zinc-300/80 dark:peer-focus:text-zinc-300'
+    case 'neutral':
+      return 'text-slate-500 peer-focus:text-neutral-400 dark:text-neutral-300/80 dark:peer-focus:text-neutral-300'
+    case 'stone':
+      return 'text-slate-500 peer-focus:text-stone-400 dark:text-stone-300/80 dark:peer-focus:text-stone-300'
+    case 'red':
+      return 'text-slate-500 peer-focus:text-red-400 dark:text-marcelin-300/80 dark:peer-focus:text-marcelin-300'
+    case 'orange':
+      return 'text-slate-500 peer-focus:text-orange-400 dark:text-morbius-300/80 dark:peer-focus:text-morbius-300'
+    case 'amber':
+      return 'text-slate-500 peer-focus:text-amber-400 dark:text-cullen-300/80 dark:peer-focus:text-cullen-300'
+    case 'yellow':
+      return 'text-slate-500 peer-focus:text-yellow-400 dark:text-lincoln-300/80 dark:peer-focus:text-lincoln-300'
+    case 'lime':
+      return 'text-slate-500 peer-focus:text-lime-400 dark:text-lime-300/80 dark:peer-focus:text-lime-300'
+    case 'green':
+      return 'text-slate-500 peer-focus:text-green-400 dark:text-blade-300/80 dark:peer-focus:text-blade-300'
+    case 'emerald':
+      return 'text-slate-500 peer-focus:text-emerald-400 dark:text-emerald-300/80 dark:peer-focus:text-emerald-300'
+    case 'teal':
+      return 'text-slate-500 peer-focus:text-teal-400 dark:text-teal-300/80 dark:peer-focus:text-teal-300'
+    case 'cyan':
+      return 'text-slate-500 peer-focus:text-cyan-400 dark:text-vanHelsing-300/80 dark:peer-focus:text-vanHelsing-300'
+    case 'sky':
+      return 'text-slate-500 peer-focus:text-sky-400 dark:text-sky-300/80 dark:peer-focus:text-sky-300'
+    case 'blue':
+      return 'text-slate-500 peer-focus:text-blue-400 dark:text-vonCount-300/80 dark:peer-focus:text-vonCount-300'
+    case 'violet':
+      return 'text-slate-500 peer-focus:text-violet-400 dark:text-violet-300/80 dark:peer-focus:text-violet-300'
+    case 'purple':
+      return 'text-slate-500 peer-focus:text-purple-400 dark:text-buffy-300/80 dark:peer-focus:text-buffy-300'
+    case 'fuchsia':
+      return 'text-slate-500 peer-focus:text-fuchsia-400 dark:text-fuchsia-300/80 dark:peer-focus:text-fuchsia-300'
+    case 'pink':
+      return 'text-slate-500 peer-focus:text-pink-400 dark:text-buffy-300/80 dark:peer-focus:text-buffy-300'
+    case 'rose':
+      return 'text-slate-500 peer-focus:text-rose-400 dark:text-rose-300/80 dark:peer-focus:text-rose-300'
+    default:
+      return 'text-slate-500 peer-focus:text-indigo-400 dark:text-dracula-300/80 dark:peer-focus:text-dracula-300'
   }
 }

@@ -38,13 +38,11 @@ export const decorators = [
     const background = context.globals.backgrounds?.value
 
     const dark = background === '#373a4d' || background === '#282a36'
-
     if (dark) {
       document.querySelector('html').classList.add('dark')
     } else {
       document.querySelector('html').classList.remove('dark')
     }
-
     return {
       template: `<story/>`,
     }

@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import FilterItem from '../components/FilterItem.vue'
+import FilterItem from '../filterItem/FilterItem.vue'
 defineEmits(['update:modelValue'])
 
 const props = defineProps({

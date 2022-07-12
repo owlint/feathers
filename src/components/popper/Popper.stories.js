@@ -1,5 +1,5 @@
 import Popper from './Popper.vue'
-import Button from './Button.vue'
+import Button from '../button/Button.vue'
 export default {
   component: Popper,
   excludeStories: /.*Data$/,

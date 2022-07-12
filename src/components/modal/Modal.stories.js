@@ -1,7 +1,7 @@
 import Modal from './Modal.vue'
-import Button from './Button.vue'
-import { COLORS } from '../enums/colors'
-import { SIZES } from '../enums/sizes'
+import Button from '../button/Button.vue'
+import { COLORS } from '../../enums/colors'
+import { SIZES } from '../../enums/sizes'
 
 export default {
   title: 'Components/Modal',

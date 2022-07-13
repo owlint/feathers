@@ -7,6 +7,7 @@ import Modal from './modal'
 import Notification from './notification'
 import NotificationList from './notificationList'
 import Popper from './popper'
+import Table from './table'
 
 export {
   Badge,
@@ -18,4 +19,5 @@ export {
   Notification,
   NotificationList,
   Popper,
+  Table,
 }

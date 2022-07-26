@@ -22,7 +22,7 @@
     <input
       :id="id"
       :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)"
+      @input="getValue($event.target.value)"
       :autocomplete="autocomplete"
       :step="step"
       :pattern="pattern"
@@ -34,7 +34,7 @@
       :class="[
         { 'pl-8': isIcon },
         {
-          'bg-slate-100 placeholder-slate-400/50 dark:placeholder-nosferatu-100/50 dark:bg-nosferatu-900 border-slate-100 dark:border-nosferatu-900 border focus:outline-none cursor-text':
+          'bg-slate-100 placeholder-slate-400/50 dark:placeholder-nosferatu-100/50 dark:bg-nosferatu-900 border border-slate-100 dark:border-nosferatu-900 focus:border-transparent  focus:outline-none cursor-text':
             !readonly,
         },
 
@@ -43,7 +43,7 @@
         !readonly ? getInputStyle(color) : '',
       ]"
       class="
-        border-transparent
+        border border-transparent
         font-medium
         appearance-none
         block
@@ -51,6 +51,9 @@
         w-full
         px-3
         py-2
+        focus:ring-offset-2 focus:ring-offset-slate-50
+        dark:focus:ring-offset-nosferatu-800
+        focus:ring
         rounded-md
         cursor-auto
         sm:text-sm
@@ -95,9 +98,9 @@ import {
   getLabelStyle,
   getInputIconStyle,
 } from '../../utils/colors'
-defineEmits(['update:modelValue'])
+const emits = defineEmits(['update:modelValue'])
 
-defineProps({
+const props = defineProps({
   modelValue: {
     type: [String, Number],
     required: true,
@@ -164,6 +167,14 @@ defineProps({
     required: false,
   },
 })
+
+const getValue = (value) => {
+  if (props.type === 'number') {
+    emits('update:modelValue', parseFloat(value))
+  } else {
+    emits('update:modelValue', value)
+  }
+}
 </script>
 
 <style>

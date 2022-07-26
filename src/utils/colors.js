@@ -406,51 +406,51 @@ export const getFocusColorPickerRing = (color) => {
 export const getInputStyle = (color) => {
   switch (color) {
     case 'indigo':
-      return 'caret-indigo-300 dark:caret-dracula-300 dark:focus:border-dracula-300 dark:focus:ring-dracula-300 focus:ring-indigo-300 focus:border-indigo-300 dark:text-dracula-400'
+      return 'caret-indigo-300 dark:caret-dracula-300  dark:focus:ring-dracula-300 focus:ring-indigo-300  dark:text-dracula-400'
     case 'slate':
-      return 'caret-slate-300 dark:caret-nosferatu-300 dark:focus:border-nosferatu-300 dark:focus:ring-nosferatu-300 focus:ring-slate-300 focus:border-slate-300 dark:text-nosferatu-400'
+      return 'caret-slate-300 dark:caret-nosferatu-300  dark:focus:ring-nosferatu-300 focus:ring-slate-300  dark:text-nosferatu-400'
     case 'gray':
-      return 'caret-gray-300 dark:caret-gray-300 dark:focus:border-gray-300 dark:focus:ring-gray-300 focus:ring-gray-300 focus:border-gray-300 dark:text-gray-400'
+      return 'caret-gray-300 dark:caret-gray-300  dark:focus:ring-gray-300 focus:ring-gray-300  dark:text-gray-400'
     case 'zinc':
-      return 'caret-zinc-300 dark:caret-zinc-300 dark:focus:border-zinc-300 dark:focus:ring-zinc-300 focus:ring-zinc-300 focus:border-zinc-300 dark:text-zinc-400'
+      return 'caret-zinc-300 dark:caret-zinc-300  dark:focus:ring-zinc-300 focus:ring-zinc-300  dark:text-zinc-400'
     case 'neutral':
-      return 'caret-neutral-300 dark:caret-neutral-300 dark:focus:border-neutral-300 dark:focus:ring-neutral-300 focus:ring-neutral-300 focus:border-neutral-300 dark:text-neutral-400'
+      return 'caret-neutral-300 dark:caret-neutral-300  dark:focus:ring-neutral-300 focus:ring-neutral-300  dark:text-neutral-400'
     case 'stone':
-      return 'caret-stone-300 dark:caret-stone-300 dark:focus:border-stone-300 dark:focus:ring-stone-300 focus:ring-stone-300 focus:border-stone-300 dark:text-stone-400'
+      return 'caret-stone-300 dark:caret-stone-300  dark:focus:ring-stone-300 focus:ring-stone-300  dark:text-stone-400'
     case 'red':
-      return 'caret-red-300 dark:caret-marcelin-300 dark:focus:border-marcelin-300 dark:focus:ring-marcelin-300 focus:ring-red-300 focus:border-red-300 dark:text-marcelin-400'
+      return 'caret-red-300 dark:caret-marcelin-300  dark:focus:ring-marcelin-300 focus:ring-red-300  dark:text-marcelin-400'
     case 'orange':
-      return 'caret-orange-300 dark:caret-morbius-300 dark:focus:border-morbius-300 dark:focus:ring-morbius-300 focus:ring-orange-300 focus:border-orange-300 dark:text-morbius-400'
+      return 'caret-orange-300 dark:caret-morbius-300  dark:focus:ring-morbius-300 focus:ring-orange-300  dark:text-morbius-400'
     case 'amber':
-      return 'caret-amber-300 dark:caret-cullen-300 dark:focus:border-cullen-300 dark:focus:ring-cullen-300 focus:ring-amber-300 focus:border-amber-300 dark:text-cullen-400'
+      return 'caret-amber-300 dark:caret-cullen-300  dark:focus:ring-cullen-300 focus:ring-amber-300  dark:text-cullen-400'
     case 'yellow':
-      return 'caret-yellow-300 dark:caret-lincoln-300 dark:focus:border-lincoln-300 dark:focus:ring-lincoln-300 focus:ring-yellow-300 focus:border-yellow-300 dark:text-lincoln-400'
+      return 'caret-yellow-300 dark:caret-lincoln-300  dark:focus:ring-lincoln-300 focus:ring-yellow-300  dark:text-lincoln-400'
     case 'lime':
-      return 'caret-lime-300 dark:caret-lime-300 dark:focus:border-lime-300 dark:focus:ring-lime-300 focus:ring-lime-300 focus:border-lime-300 dark:text-lime-400'
+      return 'caret-lime-300 dark:caret-lime-300  dark:focus:ring-lime-300 focus:ring-lime-300  dark:text-lime-400'
     case 'green':
-      return 'caret-green-300 dark:caret-blade-300 dark:focus:border-blade-300 dark:focus:ring-blade-300 focus:ring-green-300 focus:border-green-300 dark:text-blade-400'
+      return 'caret-green-300 dark:caret-blade-300  dark:focus:ring-blade-300 focus:ring-green-300  dark:text-blade-400'
     case 'emerald':
-      return 'caret-emerald-300 dark:caret-emerald-300 dark:focus:border-emerald-300 dark:focus:ring-emerald-300 focus:ring-emerald-300 focus:border-emerald-300 dark:text-emerald-400'
+      return 'caret-emerald-300 dark:caret-emerald-300  dark:focus:ring-emerald-300 focus:ring-emerald-300  dark:text-emerald-400'
     case 'teal':
-      return 'caret-teal-300 dark:caret-teal-300 dark:focus:border-teal-300 dark:focus:ring-teal-300 focus:ring-teal-300 focus:border-teal-300 dark:text-teal-400'
+      return 'caret-teal-300 dark:caret-teal-300  dark:focus:ring-teal-300 focus:ring-teal-300  dark:text-teal-400'
     case 'cyan':
-      return 'caret-cyan-300 dark:caret-vanHelsing-300 dark:focus:border-vanHelsing-300 dark:focus:ring-vanHelsing-300 focus:ring-cyan-300 focus:border-cyan-300 dark:text-vanHelsing-400'
+      return 'caret-cyan-300 dark:caret-vanHelsing-300  dark:focus:ring-vanHelsing-300 focus:ring-cyan-300  dark:text-vanHelsing-400'
     case 'sky':
-      return 'caret-sky-300 dark:caret-sky-300 dark:focus:border-sky-300 dark:focus:ring-sky-300 focus:ring-sky-300 focus:border-sky-300 dark:text-sky-400'
+      return 'caret-sky-300 dark:caret-sky-300  dark:focus:ring-sky-300 focus:ring-sky-300  dark:text-sky-400'
     case 'blue':
-      return 'caret-blue-300 dark:caret-vonCount-300 dark:focus:border-vonCount-300 dark:focus:ring-vonCount-300 focus:ring-blue-300 focus:border-blue-300 dark:text-vonCount-400'
+      return 'caret-blue-300 dark:caret-vonCount-300  dark:focus:ring-vonCount-300 focus:ring-blue-300  dark:text-vonCount-400'
     case 'violet':
-      return 'caret-violet-300 dark:caret-violet-300 dark:focus:border-violet-300 dark:focus:ring-violet-300 focus:ring-violet-300 focus:border-violet-300 dark:text-violet-400'
+      return 'caret-violet-300 dark:caret-violet-300  dark:focus:ring-violet-300 focus:ring-violet-300  dark:text-violet-400'
     case 'purple':
-      return 'caret-purple-300 dark:caret-buffy-300 dark:focus:border-buffy-300 dark:focus:ring-buffy-300 focus:ring-purple-300 focus:border-purple-300 dark:text-buffy-400'
+      return 'caret-purple-300 dark:caret-buffy-300  dark:focus:ring-buffy-300 focus:ring-purple-300  dark:text-buffy-400'
     case 'fuchsia':
-      return 'caret-fuchsia-300 dark:caret-fuchsia-300 dark:focus:border-fuchsia-300 dark:focus:ring-fuchsia-300 focus:ring-fuchsia-300 focus:border-fuchsia-300 dark:text-fuchsia-400'
+      return 'caret-fuchsia-300 dark:caret-fuchsia-300  dark:focus:ring-fuchsia-300 focus:ring-fuchsia-300  dark:text-fuchsia-400'
     case 'pink':
-      return 'caret-pink-300 dark:caret-buffy-300 dark:focus:border-buffy-300 dark:focus:ring-buffy-300 focus:ring-pink-300 focus:border-pink-300 dark:text-buffy-400'
+      return 'caret-pink-300 dark:caret-buffy-300  dark:focus:ring-buffy-300 focus:ring-pink-300  dark:text-buffy-400'
     case 'rose':
-      return 'caret-rose-300 dark:caret-rose-300 dark:focus:border-rose-300 dark:focus:ring-rose-300 focus:ring-rose-300 focus:border-rose-300 dark:text-rose-400'
+      return 'caret-rose-300 dark:caret-rose-300  dark:focus:ring-rose-300 focus:ring-rose-300  dark:text-rose-400'
     default:
-      return 'caret-indigo-300 dark:caret-dracula-300 dark:focus:border-dracula-300 dark:focus:ring-dracula-300 focus:ring-indigo-300 focus:border-indigo-300 dark:text-dracula-400'
+      return 'caret-indigo-300 dark:caret-dracula-300  dark:focus:ring-dracula-300 focus:ring-indigo-300  dark:text-dracula-400'
   }
 }
 

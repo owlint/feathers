@@ -152,7 +152,7 @@ export const getNotificationStyle = (color) => {
 export const getFilterStyle = (color) => {
   switch (color) {
     case 'indigo':
-      return 'text-indigo-900 bg-indigo-500/20 ring-indgo-300 dark:bg-nosferatu-900 dark:text-dracula-400 peer-checked:ring-indigo-300 dark:peer-checked:ring-dracula-300'
+      return 'text-indigo-900 bg-indigo-500/20 ring-indgo-300 dark:bg-nosferatu-900 dark:text-dracula-400 peer-checked:ring-indigo-300 dark:peer-checked:ring-dracula-300 '
     case 'slate':
       return 'text-slate-900 bg-slate-500/20 ring-slate-300 dark:bg-nosferatu-900 dark:text-aro-400 peer-checked:ring-slate-300 dark:peer-checked:ring-aro-300'
     case 'gray':

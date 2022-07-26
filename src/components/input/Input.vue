@@ -34,7 +34,7 @@
       :class="[
         { 'pl-8': isIcon },
         {
-          'bg-slate-100 placeholder-slate-400 dark:placeholder-nosferatu-100 dark:bg-nosferatu-900 border-slate-100 dark:border-nosferatu-900 border focus:outline-none cursor-text':
+          'bg-slate-100 placeholder-slate-400/50 dark:placeholder-nosferatu-100/50 dark:bg-nosferatu-900 border-slate-100 dark:border-nosferatu-900 border focus:outline-none cursor-text':
             !readonly,
         },
 

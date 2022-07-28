@@ -1,0 +1,6 @@
+export { default as LoadingIcon } from './LoadingIcon.vue'
+export { default as BurgerIcon } from './BurgerIcon.vue'
+export { default as QuestionIcon } from './QuestionIcon.vue'
+export { default as CircleCheckIcon } from './CircleCheckIcon.vue'
+export { default as CircleExclamationIcon } from './CircleExclamationIcon.vue'
+export { default as CircleXmarkIcon } from './CircleXmarkIcon.vue'

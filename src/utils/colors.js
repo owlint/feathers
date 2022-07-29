@@ -48,6 +48,7 @@ export const getIconStyle = (color) => {
       return 'text-indigo-500 bg-indigo-100 dark:bg-nosferatu-800 dark:text-indigo-500/80'
   }
 }
+
 export const getBadgeStyle = (color) => {
   switch (color) {
     case 'indigo':
@@ -553,5 +554,206 @@ export const getInputIconStyle = (color) => {
       return 'text-slate-500 peer-focus:text-rose-400 dark:text-rose-300/80 dark:peer-focus:text-rose-300'
     default:
       return 'text-slate-500 peer-focus:text-indigo-400 dark:text-dracula-300/80 dark:peer-focus:text-dracula-300'
+  }
+}
+
+export const getAlertIconStyle = (color) => {
+  switch (color) {
+    case 'indigo':
+      return 'text-indigo-500  dark:text-dracula-400'
+    case 'slate':
+      return 'text-slate-500  dark:text-nosferatu-400'
+    case 'gray':
+      return 'text-gray-500  dark:text-aro-400'
+    case 'zinc':
+      return 'text-zinc-500  dark:text-zinc-400'
+    case 'neutral':
+      return 'text-neutral-500  dark:text-neutral-400'
+    case 'stone':
+      return 'text-stone-500  dark:text-stone-400'
+    case 'red':
+      return 'text-red-500  dark:text-marcelin-400'
+    case 'orange':
+      return 'text-orange-500  dark:text-morbius-400'
+    case 'amber':
+      return 'text-amber-500  dark:text-cullen-400'
+    case 'yellow':
+      return 'text-yellow-500  dark:text-lincoln-400'
+    case 'lime':
+      return 'text-lime-500  dark:text-lime-400'
+    case 'green':
+      return 'text-green-500  dark:text-blade-400'
+    case 'emerald':
+      return 'text-emerald-500  dark:text-emerald-400'
+    case 'teal':
+      return 'text-teal-500  dark:text-teal-400'
+    case 'cyan':
+      return 'text-cyan-500  dark:text-vanHelsing-400'
+    case 'sky':
+      return 'text-sky-500  dark:text-sky-400'
+    case 'blue':
+      return 'text-blue-500  dark:text-vonCount-400'
+    case 'violet':
+      return 'text-violet-500  dark:text-violet-400'
+    case 'purple':
+      return 'text-purple-500  dark:text-buffy-400'
+    case 'fuchsia':
+      return 'text-fuchsia-500  dark:text-fuchsia-400'
+    case 'pink':
+      return 'text-pink-500  dark:text-buffy-400'
+    case 'rose':
+      return 'text-rose-500  dark:text-rose-400'
+    default:
+      return 'text-indigo-500  dark:text-indigo-400'
+  }
+}
+export const getAlertTitleStyle = (color) => {
+  switch (color) {
+    case 'indigo':
+      return 'text-indigo-800  dark:text-dracula-400'
+    case 'slate':
+      return 'text-slate-800  dark:text-nosferatu-400'
+    case 'gray':
+      return 'text-gray-800  dark:text-aro-400'
+    case 'zinc':
+      return 'text-zinc-800  dark:text-zinc-400'
+    case 'neutral':
+      return 'text-neutral-800  dark:text-neutral-400'
+    case 'stone':
+      return 'text-stone-800  dark:text-stone-400'
+    case 'red':
+      return 'text-red-800  dark:text-marcelin-400'
+    case 'orange':
+      return 'text-orange-800  dark:text-morbius-400'
+    case 'amber':
+      return 'text-amber-800  dark:text-cullen-400'
+    case 'yellow':
+      return 'text-yellow-800  dark:text-lincoln-400'
+    case 'lime':
+      return 'text-lime-800  dark:text-lime-400'
+    case 'green':
+      return 'text-green-800  dark:text-blade-400'
+    case 'emerald':
+      return 'text-emerald-800  dark:text-emerald-400'
+    case 'teal':
+      return 'text-teal-800  dark:text-teal-400'
+    case 'cyan':
+      return 'text-cyan-800  dark:text-vanHelsing-400'
+    case 'sky':
+      return 'text-sky-800  dark:text-sky-400'
+    case 'blue':
+      return 'text-blue-800  dark:text-vonCount-400'
+    case 'violet':
+      return 'text-violet-800  dark:text-violet-400'
+    case 'purple':
+      return 'text-purple-800  dark:text-buffy-400'
+    case 'fuchsia':
+      return 'text-fuchsia-800  dark:text-fuchsia-400'
+    case 'pink':
+      return 'text-pink-800  dark:text-buffy-400'
+    case 'rose':
+      return 'text-rose-800  dark:text-rose-400'
+    default:
+      return 'text-indigo-800  dark:text-indigo-400'
+  }
+}
+export const getAlertDescriptionStyle = (color) => {
+  switch (color) {
+    case 'indigo':
+      return 'text-indigo-800/70  dark:text-dracula-300'
+    case 'slate':
+      return 'text-slate-800/70  dark:text-nosferatu-300'
+    case 'gray':
+      return 'text-gray-800/70  dark:text-aro-300'
+    case 'zinc':
+      return 'text-zinc-800/70  dark:text-zinc-300'
+    case 'neutral':
+      return 'text-neutral-800/70  dark:text-neutral-300'
+    case 'stone':
+      return 'text-stone-800/70  dark:text-stone-300'
+    case 'red':
+      return 'text-red-800/70  dark:text-marcelin-300'
+    case 'orange':
+      return 'text-orange-800/70  dark:text-morbius-300'
+    case 'amber':
+      return 'text-amber-800/70  dark:text-cullen-300'
+    case 'yellow':
+      return 'text-yellow-800/70  dark:text-lincoln-300'
+    case 'lime':
+      return 'text-lime-800/70  dark:text-lime-300'
+    case 'green':
+      return 'text-green-800/70  dark:text-blade-300'
+    case 'emerald':
+      return 'text-emerald-800/70  dark:text-emerald-300'
+    case 'teal':
+      return 'text-teal-800/70  dark:text-teal-300'
+    case 'cyan':
+      return 'text-cyan-800/70  dark:text-vanHelsing-300'
+    case 'sky':
+      return 'text-sky-800/70  dark:text-sky-300'
+    case 'blue':
+      return 'text-blue-800/70  dark:text-vonCount-300'
+    case 'violet':
+      return 'text-violet-800/70  dark:text-violet-300'
+    case 'purple':
+      return 'text-purple-800/70  dark:text-buffy-300'
+    case 'fuchsia':
+      return 'text-fuchsia-800/70  dark:text-fuchsia-300'
+    case 'pink':
+      return 'text-pink-800/70  dark:text-buffy-300'
+    case 'rose':
+      return 'text-rose-800/70  dark:text-rose-300'
+    default:
+      return 'text-indigo-800/70  dark:text-indigo-300'
+  }
+}
+export const getAlertBgStyle = (color) => {
+  switch (color) {
+    case 'indigo':
+      return 'bg-indigo-500/20 dark:bg-dracula-400/5 dark:bg-nosferatu-900 ring-indigo-500/20  dark:ring-dracula-500/80'
+    case 'slate':
+      return 'bg-slate-500/20 dark:bg-nosferatu-400/5 dark:bg-nosferatu-900 ring-slate-500/20  dark:ring-nosferatu-500/80'
+    case 'gray':
+      return 'bg-gray-500/20 dark:bg-aro-400/5 dark:bg-nosferatu-900 ring-gray-500/20  dark:ring-aro-500/80'
+    case 'zinc':
+      return 'bg-zinc-500/20 dark:bg-zinc-400/5 dark:bg-nosferatu-900 ring-zinc-500/20  dark:ring-zinc-500/80'
+    case 'neutral':
+      return 'bg-neutral-500/20 dark:bg-neutral-400/5 dark:bg-nosferatu-900 ring-neutral-500/20  dark:ring-neutral-500/80'
+    case 'stone':
+      return 'bg-stone-500/20 dark:bg-stone-400/5 dark:bg-nosferatu-900 ring-stone-500/20  dark:ring-stone-500/80'
+    case 'red':
+      return 'bg-red-500/20 dark:bg-marcelin-400/5 dark:bg-nosferatu-900 ring-red-500/20  dark:ring-marcelin-500/80'
+    case 'orange':
+      return 'bg-orange-500/20 dark:bg-morbius-400/5 dark:bg-nosferatu-900 ring-orange-500/20  dark:ring-morbius-500/80'
+    case 'amber':
+      return 'bg-amber-500/20 dark:bg-cullen-400/5 dark:bg-nosferatu-900 ring-amber-500/20  dark:ring-cullen-500/80'
+    case 'yellow':
+      return 'bg-yellow-500/20 dark:bg-lincoln-400/5 dark:bg-nosferatu-900 ring-yellow-500/20  dark:ring-lincoln-500/80'
+    case 'lime':
+      return 'bg-lime-500/20 dark:bg-lime-400/5 dark:bg-nosferatu-900 ring-lime-500/20  dark:ring-lime-500/80'
+    case 'green':
+      return 'bg-green-500/20 dark:bg-blade-400/5 dark:bg-nosferatu-900 ring-green-500/20  dark:ring-blade-500/80'
+    case 'emerald':
+      return 'bg-emerald-500/20 dark:bg-emerald-400/5 dark:bg-nosferatu-900 ring-emerald-500/20  dark:ring-emerald-500/80'
+    case 'teal':
+      return 'bg-teal-500/20 dark:bg-teal-400/5 dark:bg-nosferatu-900 ring-teal-500/20  dark:ring-teal-500/80'
+    case 'cyan':
+      return 'bg-cyan-500/20 dark:bg-vanHelsing-400/5 dark:bg-nosferatu-900 ring-cyan-500/20  dark:ring-vanHelsing-500/80'
+    case 'sky':
+      return 'bg-sky-500/20 dark:bg-sky-400/5 dark:bg-nosferatu-900 ring-sky-500/20  dark:ring-sky-500/80'
+    case 'blue':
+      return 'bg-blue-500/20 dark:bg-vonCount-400/5 dark:bg-nosferatu-900 ring-blue-500/20  dark:ring-vonCount-500/80'
+    case 'violet':
+      return 'bg-violet-500/20 dark:bg-violet-400/5 dark:bg-nosferatu-900 ring-violet-500/20  dark:ring-violet-500/80'
+    case 'purple':
+      return 'bg-purple-500/20 dark:bg-buffy-400/5 dark:bg-nosferatu-900 ring-purple-500/20  dark:ring-buffy-500/80'
+    case 'fuchsia':
+      return 'bg-fuchsia-500/20 dark:bg-fuchsia-400/5 dark:bg-nosferatu-900 ring-fuchsia-500/20  dark:ring-fuchsia-500/80'
+    case 'pink':
+      return 'bg-pink-500/20 dark:bg-buffy-400/5 dark:bg-nosferatu-900 ring-pink-500/20  dark:ring-buffy-500/80'
+    case 'rose':
+      return 'bg-rose-500/20 dark:bg-rose-400/5 dark:bg-nosferatu-900 ring-rose-500/20  dark:ring-rose-500/80'
+    default:
+      return 'bg-indigo-500/20 dark:bg-dracula-400/5 dark:bg-nosferatu-900 ring-indigo-500/20  dark:ring-dracula-500/80'
   }
 }

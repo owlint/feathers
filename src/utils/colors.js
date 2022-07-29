@@ -757,3 +757,53 @@ export const getAlertBgStyle = (color) => {
       return 'bg-indigo-500/20 dark:bg-dracula-400/5 dark:bg-nosferatu-900 ring-indigo-500/20  dark:ring-dracula-500/80'
   }
 }
+export const getIconButtonColorStyle = (color) => {
+  switch (color) {
+    case 'indigo':
+      return 'hover:bg-indigo-400/10 text-indigo-800 hover:text-indigo-900 dark:text-slate-50 hover:dark:bg-dracula-400/20 dark:bg-nosferatu-900 ring-indigo-600/40  dark:ring-dracula-500/80'
+    case 'slate':
+      return 'hover:bg-slate-400/10 text-slate-800 hover:text-slate-900 dark:text-slate-50 hover:dark:bg-nosferatu-400/20 dark:bg-nosferatu-900 ring-slate-600/40  dark:ring-nosferatu-500/80'
+    case 'gray':
+      return 'hover:bg-gray-400/10 text-gray-800 hover:text-gray-900 dark:text-slate-50 hover:dark:bg-aro-400/20 dark:bg-nosferatu-900 ring-gray-600/40  dark:ring-aro-500/80'
+    case 'zinc':
+      return 'hover:bg-zinc-400/10 text-zinc-800 hover:text-zinc-900 dark:text-slate-50 hover:dark:bg-zinc-400/20 dark:bg-nosferatu-900 ring-zinc-600/40  dark:ring-zinc-500/80'
+    case 'neutral':
+      return 'hover:bg-neutral-400/10 text-neutral-800 hover:text-neutral-900 dark:text-slate-50 hover:dark:bg-neutral-400/20 dark:bg-nosferatu-900 ring-neutral-600/40  dark:ring-neutral-500/80'
+    case 'stone':
+      return 'hover:bg-stone-400/10 text-stone-800 hover:text-stone-900 dark:text-slate-50 hover:dark:bg-stone-400/20 dark:bg-nosferatu-900 ring-stone-600/40  dark:ring-stone-500/80'
+    case 'red':
+      return 'hover:bg-red-400/10 text-red-800 hover:text-red-900 dark:text-slate-50 hover:dark:bg-marcelin-400/20 dark:bg-nosferatu-900 ring-red-600/40  dark:ring-marcelin-500/80'
+    case 'orange':
+      return 'hover:bg-orange-400/10 text-orange-800 hover:text-orange-900 dark:text-slate-50 hover:dark:bg-morbius-400/20 dark:bg-nosferatu-900 ring-orange-600/40  dark:ring-morbius-500/80'
+    case 'amber':
+      return 'hover:bg-amber-400/10 text-amber-800 hover:text-amber-900 dark:text-slate-50 hover:dark:bg-cullen-400/20 dark:bg-nosferatu-900 ring-amber-600/40  dark:ring-cullen-500/80'
+    case 'yellow':
+      return 'hover:bg-yellow-400/10 text-yellow-800 hover:text-yellow-900 dark:text-slate-50 hover:dark:bg-lincoln-400/20 dark:bg-nosferatu-900 ring-yellow-600/40  dark:ring-lincoln-500/80'
+    case 'lime':
+      return 'hover:bg-lime-400/10 text-lime-800 hover:text-lime-900 dark:text-slate-50 hover:dark:bg-lime-400/20 dark:bg-nosferatu-900 ring-lime-600/40  dark:ring-lime-500/80'
+    case 'green':
+      return 'hover:bg-green-400/10 text-green-800 hover:text-green-900 dark:text-slate-50 hover:dark:bg-blade-400/20 dark:bg-nosferatu-900 ring-green-600/40  dark:ring-blade-500/80'
+    case 'emerald':
+      return 'hover:bg-emerald-400/10 text-emerald-800 hover:text-emerald-900 dark:text-slate-50 hover:dark:bg-emerald-400/20 dark:bg-nosferatu-900 ring-emerald-600/40  dark:ring-emerald-500/80'
+    case 'teal':
+      return 'hover:bg-teal-400/10 text-teal-800 hover:text-teal-900 dark:text-slate-50 hover:dark:bg-teal-400/20 dark:bg-nosferatu-900 ring-teal-600/40  dark:ring-teal-500/80'
+    case 'cyan':
+      return 'hover:bg-cyan-400/10 text-cyan-800 hover:text-cyan-900 dark:text-slate-50 hover:dark:bg-vanHelsing-400/20 dark:bg-nosferatu-900 ring-cyan-600/40  dark:ring-vanHelsing-500/80'
+    case 'sky':
+      return 'hover:bg-sky-400/10 text-sky-800 hover:text-sky-900 dark:text-slate-50 hover:dark:bg-sky-400/20 dark:bg-nosferatu-900 ring-sky-600/40  dark:ring-sky-500/80'
+    case 'blue':
+      return 'hover:bg-blue-400/10 text-blue-800 hover:text-blue-900 dark:text-slate-50 hover:dark:bg-vonCount-400/20 dark:bg-nosferatu-900 ring-blue-600/40  dark:ring-vonCount-500/80'
+    case 'violet':
+      return 'hover:bg-violet-400/10 text-violet-800 hover:text-violet-900 dark:text-slate-50 hover:dark:bg-violet-400/20 dark:bg-nosferatu-900 ring-violet-600/40  dark:ring-violet-500/80'
+    case 'purple':
+      return 'hover:bg-purple-400/10 text-purple-800 hover:text-purple-900 dark:text-slate-50 hover:dark:bg-buffy-400/20 dark:bg-nosferatu-900 ring-purple-600/40  dark:ring-buffy-500/80'
+    case 'fuchsia':
+      return 'hover:bg-fuchsia-400/10 text-fuchsia-800 hover:text-fuchsia-900 dark:text-slate-50 hover:dark:bg-fuchsia-400/20 dark:bg-nosferatu-900 ring-fuchsia-600/40  dark:ring-fuchsia-500/80'
+    case 'pink':
+      return 'hover:bg-pink-400/10 text-pink-800 hover:text-pink-900 dark:text-slate-50 hover:dark:bg-buffy-400/20 dark:bg-nosferatu-900 ring-pink-600/40  dark:ring-buffy-500/80'
+    case 'rose':
+      return 'hover:bg-rose-400/10 text-rose-800 hover:text-rose-900 dark:text-slate-50 hover:dark:bg-rose-400/20 dark:bg-nosferatu-900 ring-rose-600/40  dark:ring-rose-500/80'
+    default:
+      return 'hover:bg-indigo-400/10 text-indigo-800 hover:text-indigo-900  dark:text-slate-50 hover:dark:bg-dracula-400/20 dark:bg-nosferatu-900 ring-indigo-600/40  dark:ring-dracula-500/80'
+  }
+}

@@ -1,3 +1,4 @@
+import Alert from './alert'
 import Badge from './badge'
 import Button from './button'
 import ColorPicker from './colorPicker'
@@ -10,6 +11,7 @@ import Popper from './popper'
 import Table from './table'
 
 export {
+  Alert,
   Badge,
   Button,
   ColorPicker,

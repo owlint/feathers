@@ -27,6 +27,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'OTable',
+}
+</script>
+
 <script setup>
 defineProps({
   loading: {

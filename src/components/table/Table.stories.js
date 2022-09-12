@@ -1,8 +1,8 @@
-import Table from './Table.vue'
-import Button from '../button/Button.vue'
+import OTable from './OTable.vue'
+import OButton from '../button/OButton.vue'
 export default {
-  title: 'Components/Table',
-  component: Table,
+  title: 'Components/OTable',
+  component: OTable,
   decorators: [
     () => ({
       template: '<story/>',
@@ -28,12 +28,12 @@ const defaultArgs = {
 }
 
 const Template = (args) => ({
-  components: { Table, Button },
+  components: { OTable, OButton },
   setup() {
     return { args }
   },
   template: `
-    <Table  v-bind="args">
+    <OTable  v-bind="args">
         <template #header>
             <th scope="col" class="py-3.5">
                 <span class="sr-only">Réseau Social</span>
@@ -85,11 +85,11 @@ const Template = (args) => ({
                 <td
                     class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6"
                 >
-                <Button type="tertiary" label="Voir" />
+                <OButton type="tertiary" label="Voir" />
                 </td>
             </tr>
         </template>
-    </Table>
+    </OTable>
     `,
 })
 
@@ -97,12 +97,12 @@ export const Default = Template.bind({})
 Default.args = defaultArgs
 
 export const Loading = (args) => ({
-  components: { Table, Button },
+  components: { OTable, OButton },
   setup() {
     return { args }
   },
   template: `
-    <Table :loading="true" >
+    <OTable :loading="true" >
         <template #header>
             <th scope="col" class="py-3.5">
                 <span class="sr-only">Réseau Social</span>
@@ -135,17 +135,17 @@ export const Loading = (args) => ({
                 </td>
             </tr>
         </template>
-    </Table>
+    </OTable>
     `,
 })
 
 export const Transparent = (args) => ({
-  components: { Table, Button },
+  components: { OTable, OButton },
   setup() {
     return { args }
   },
   template: `
-    <Table transparent >
+    <OTable transparent >
         <template #header>
             <th scope="col" class="py-3.5">
                 <span class="sr-only">Réseau Social</span>
@@ -176,10 +176,10 @@ export const Transparent = (args) => ({
                 <td
                     class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6"
                 >
-                <Button type="tertiary" label="Voir" />
+                <OButton type="tertiary" label="Voir" />
                 </td>
             </tr>
         </template>
-    </Table>
+    </OTable>
     `,
 })

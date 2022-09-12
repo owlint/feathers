@@ -1,8 +1,8 @@
-import ColorPicker from './ColorPicker.vue'
+import OColorPicker from './OColorPicker.vue'
 
 export default {
-  title: 'Components/ColorPicker',
-  component: ColorPicker,
+  title: 'Components/OColorPicker',
+  component: OColorPicker,
   decorators: [
     () => ({
       template: '<div class="flex h-64 "><story/></div>',
@@ -11,13 +11,13 @@ export default {
 }
 
 const Template = () => ({
-  components: { ColorPicker },
+  components: { OColorPicker },
   data() {
     return {
       color: 'slate',
     }
   },
-  template: '<ColorPicker v-model="color" />',
+  template: '<OColorPicker v-model="color" />',
 })
 
 export const Base = Template.bind({})

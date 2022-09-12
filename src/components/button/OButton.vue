@@ -22,7 +22,7 @@ import { reactive, computed } from 'vue'
 import { COLORS } from '../../enums/colors'
 import { LoadingIcon } from '../../components/svg/'
 export default {
-  name: 'Button',
+  name: 'OButton',
   props: {
     label: {
       type: String,

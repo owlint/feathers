@@ -1,12 +1,12 @@
-import FilterItem from './FilterItem.vue'
+import OFilterItem from './OFilterItem.vue'
 import { COLORS } from '../../enums/colors'
-import { BurgerIcon } from '../../components/svg'
+import { BurgerIcon } from '../svg'
 
 export default {
-  component: FilterItem,
+  component: OFilterItem,
   //👇 Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
-  title: 'Components/FilterItem',
+  title: 'Components/OFilterItem',
   decorators: [() => ({ template: '<div class="flex"><story/></div>' })],
   argTypes: {
     color: {
@@ -38,63 +38,63 @@ const defaultArgs = {
 }
 
 const Template = (args) => ({
-  components: { FilterItem, BurgerIcon },
+  components: { OFilterItem, BurgerIcon },
   setup() {
     return { args }
   },
-  template: `<FilterItem v-bind="args" >
+  template: `<OFilterItem v-bind="args" >
             <BurgerIcon/>
-        </FilterItem>`,
+        </OFilterItem>`,
 })
 
 export const Default = Template.bind({})
 Default.args = defaultArgs
 
 export const Types = (args) => ({
-  components: { FilterItem, BurgerIcon },
+  components: { OFilterItem, BurgerIcon },
   setup() {
     return { args }
   },
   template: `<div class="flex gap-4 flex-wrap">
-              <FilterItem v-bind="args" >
+              <OFilterItem v-bind="args" >
                 <BurgerIcon/>
-              </FilterItem>
-              <FilterItem v-bind="args" >
+              </OFilterItem>
+              <OFilterItem v-bind="args" >
                 <div class=" flex items-center gap-2">
                   <BurgerIcon/>
                   <span class="text-xs">With Text</span>
                 </div>
-              </FilterItem>
-              <FilterItem tile v-bind="args" >
+              </OFilterItem>
+              <OFilterItem tile v-bind="args" >
                 <div class=" flex items-center gap-2">
                   <BurgerIcon/>
                   <span class="text-xs">Tile</span>
                 </div>
-              </FilterItem>
-              <FilterItem v-bind="args" :modelValue="['Burgir']">
+              </OFilterItem>
+              <OFilterItem v-bind="args" :modelValue="['Burgir']">
                 <div class=" flex items-center gap-2">
                   <BurgerIcon/>
                   <span class="text-xs">Active</span>
                 </div>
-              </FilterItem>
+              </OFilterItem>
             </div>`,
 })
 Types.args = defaultArgs
 
 export const Colors = (args) => ({
-  components: { FilterItem, BurgerIcon },
+  components: { OFilterItem, BurgerIcon },
   setup() {
     const colors = COLORS
     return { args, colors }
   },
   template: `<div class="space-y-4">
               <div v-for="color in colors" :key="color" class="flex gap-4">
-                <FilterItem  :color="color" v-bind="args">
+                <OFilterItem  :color="color" v-bind="args">
                   <BurgerIcon/>
-                </FilterItem>
-                <FilterItem  :color="color" v-bind="args" :modelValue="['Burgir']">
+                </OFilterItem>
+                <OFilterItem  :color="color" v-bind="args" :modelValue="['Burgir']">
                   <BurgerIcon/>
-                </FilterItem>
+                </OFilterItem>
               </div>
             </div>`,
 })

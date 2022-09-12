@@ -60,15 +60,17 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'ONotification',
+}
+</script>
+
 <script setup>
 import { ref } from 'vue'
 import { COLORS } from '../../enums/colors'
 import { getNotificationStyle } from '../../utils/colors'
-import {
-  CircleCheckIcon,
-  CircleExclamationIcon,
-  CircleXmarkIcon,
-} from '../../components/svg'
+import { CircleCheckIcon, CircleExclamationIcon, CircleXmarkIcon } from '../svg'
 const props = defineProps({
   title: {
     type: String,

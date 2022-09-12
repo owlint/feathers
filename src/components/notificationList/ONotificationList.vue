@@ -45,9 +45,15 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'ONotificationList',
+}
+</script>
+
 <script setup>
 import { computed } from 'vue'
-import Notification from '../notification/Notification.vue'
+import Notification from '../notification/ONotification.vue'
 
 const props = defineProps({
   notifications: {

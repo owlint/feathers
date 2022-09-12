@@ -1,10 +1,10 @@
-import Input from './Input.vue'
-import { BurgerIcon } from '../../components/svg/'
+import OInput from './OInput.vue'
+import { BurgerIcon } from '../svg'
 import { COLORS } from '../../enums/colors'
 
 export default {
-  component: Input,
-  title: 'Components/Input',
+  component: OInput,
+  title: 'Components/OInput',
   argTypes: {
     id: {
       type: { name: 'string', required: true },
@@ -35,57 +35,57 @@ export default {
 }
 
 const defaultArgs = {
-  id: 'storybook-input',
+  id: 'storybook-OInput',
   label: 'Label',
   placeholder: 'Placeholder',
   modelValue: '',
 }
 
 const Template = (args) => ({
-  components: { Input },
+  components: { OInput },
   setup() {
     return { args }
   },
-  template: `<Input v-bind="args" />`,
+  template: `<OInput v-bind="args" />`,
 })
 
 export const Default = Template.bind({})
 Default.args = defaultArgs
 
 export const Icon = (args) => ({
-  components: { Input, BurgerIcon },
+  components: { OInput, BurgerIcon },
   setup() {
     return { args }
   },
   template: `
-    <Input v-bind="args" >
+    <OInput v-bind="args" >
         <template #icon>
           <BurgerIcon/>
         </template>
-    </Input>
+    </OInput>
   `,
 })
 Icon.args = {
   ...defaultArgs,
-  id: 'storybook-input-icon',
+  id: 'storybook-OInput-icon',
   modelValue: '',
   isIcon: true,
 }
 
 export const Loading = (args) => ({
-  components: { Input, BurgerIcon },
+  components: { OInput, BurgerIcon },
   setup() {
     return { args }
   },
   template: `
   <div class="space-y-4">
-    <Input label="No loading" placeholder="No Loading" id="id-no-loading-storybook" v-bind="args"/>
-    <Input loading label="Loading" placeholder="Loading" id="id-loading-storybook" v-bind="args"/>
-    <Input isIcon loading label="Loading w/ Icon" placeholder="Loading Icon" id="id-loading-icon-storybook" v-bind="args">
+    <OInput label="No loading" placeholder="No Loading" id="id-no-loading-storybook" v-bind="args"/>
+    <OInput loading label="Loading" placeholder="Loading" id="id-loading-storybook" v-bind="args"/>
+    <OInput isIcon loading label="Loading w/ Icon" placeholder="Loading Icon" id="id-loading-icon-storybook" v-bind="args">
       <template #icon>
         <BurgerIcon/>
       </template>
-    </Input>
+    </OInput>
   </div>
   `,
 })
@@ -94,17 +94,17 @@ Loading.args = {
 }
 
 export const Colors = (args) => ({
-  components: { Input, BurgerIcon },
+  components: { OInput, BurgerIcon },
   setup() {
     const colors = COLORS
     return { args, colors }
   },
   template: `
-    <Input isIcon v-for="color in colors" :key="color" :color="color" :label="color" :id="color" v-bind="args" >
+    <OInput isIcon v-for="color in colors" :key="color" :color="color" :label="color" :id="color" v-bind="args" >
     <template #icon>
           <BurgerIcon/>
         </template>
-    </Input>
+    </OInput>
   `,
 })
 Colors.args = {
@@ -114,7 +114,7 @@ Colors.args = {
 }
 
 export const Type = (args) => ({
-  components: { Input },
+  components: { OInput },
   data() {
     return {
       button: 'Button',
@@ -130,12 +130,12 @@ export const Type = (args) => ({
   },
   template: `
   <div class="space-y-4">
-    <Input type="text" label="Text" v-model="text" id="id-text-storybook"/>
-    <Input type="number" label="Number" v-model="number" id="id-number-storybook"/>
-    <Input type="email" label="Email" v-model="email" id="id-email-storybook"/>
-    <Input type="password" label="Password" v-model="password" id="id-password-storybook"/>
-    <Input type="submit" v-model="submit" id="id-submit-storybook"/>
-    <Input type="button" v-model="button" id="id-button-storybook"/>
+    <OInput type="text" label="Text" v-model="text" id="id-text-storybook"/>
+    <OInput type="number" label="Number" v-model="number" id="id-number-storybook"/>
+    <OInput type="email" label="Email" v-model="email" id="id-email-storybook"/>
+    <OInput type="password" label="Password" v-model="password" id="id-password-storybook"/>
+    <OInput type="submit" v-model="submit" id="id-submit-storybook"/>
+    <OInput type="button" v-model="button" id="id-button-storybook"/>
   </div>
   `,
 })

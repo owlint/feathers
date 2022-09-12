@@ -27,6 +27,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'OFilterItem',
+}
+</script>
+
 <script setup>
 import { computed } from 'vue'
 import { COLORS } from '../../enums/colors'

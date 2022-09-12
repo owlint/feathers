@@ -1,11 +1,11 @@
-import Filters from './Filters.vue'
+import OFilters from './OFilters.vue'
 import { COLORS } from '../../enums/colors'
 
 export default {
-  component: Filters,
+  component: OFilters,
   //👇 Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
-  title: 'Components/Filters',
+  title: 'Components/OFilters',
   decorators: [() => ({ template: '<div class="flex"><story/></div>' })],
   argTypes: {
     items: {
@@ -46,11 +46,11 @@ const defaultArgs = {
 }
 
 const Template = (args) => ({
-  components: { Filters },
+  components: { OFilters },
   setup() {
     return { args }
   },
-  template: `<Filters v-bind="args"/>`,
+  template: `<OFilters v-bind="args"/>`,
 })
 
 export const Default = Template.bind({})

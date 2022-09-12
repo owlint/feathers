@@ -133,6 +133,12 @@
   </TransitionRoot>
 </template>
 
+<script>
+export default {
+  name: 'OModal',
+}
+</script>
+
 <script setup>
 import { ref } from 'vue'
 import {
@@ -147,7 +153,7 @@ import { COLORS } from '../../enums/colors'
 import { SIZES } from '../../enums/sizes'
 import { getIconStyle } from '../../utils/colors'
 import { getMaxWidth } from '../../utils/sizes'
-import { QuestionIcon } from '../../components/svg/'
+import { QuestionIcon } from '../svg'
 
 defineEmits(['close'])
 

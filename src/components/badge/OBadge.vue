@@ -13,6 +13,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'OBadge',
+}
+</script>
+
 <script setup>
 import { computed } from 'vue'
 import { COLORS } from '../../enums/colors'

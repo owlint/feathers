@@ -1,9 +1,9 @@
-import Notification from './Notification.vue'
+import ONotification from './ONotification.vue'
 import { COLORS } from '../../enums/colors'
 
 export default {
-  title: 'Components/Notification',
-  component: Notification,
+  title: 'Components/ONotification',
+  component: ONotification,
   decorators: [
     () => ({
       template: `<story/>`,
@@ -28,37 +28,37 @@ export default {
 }
 
 const defaultArgs = {
-  title: 'Notification title',
+  title: 'ONotification title',
   description:
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perspiciatis doloremque veritatis facilis velit! Corrupti ea ullam enim facere, sed, commodi adipisci ex quos itaque culpa inventore sapiente asperiores consequuntur.',
 }
 
 const Template = (args) => ({
-  components: { Notification },
+  components: { ONotification },
   data() {
     return {
-      displayNotification: false,
+      displayONotification: false,
     }
   },
   setup() {
     return { args }
   },
-  template: `<Notification v-bind="args" />`,
+  template: `<ONotification v-bind="args" />`,
 })
 
 export const Base = Template.bind({})
 Base.args = defaultArgs
 
 export const Types = (args) => ({
-  components: { Notification },
+  components: { ONotification },
   setup() {
     return { args }
   },
   template: ` <div class="space-y-4">
-                <Notification v-bind="args" />
-                <Notification type="success" color="green" v-bind="args" />
-                <Notification title="Solo Notification title" />
-                <Notification type="error" color="red" title="Solo Notification title" />
+                <ONotification v-bind="args" />
+                <ONotification type="success" color="green" v-bind="args" />
+                <ONotification title="Solo ONotification title" />
+                <ONotification type="error" color="red" title="Solo ONotification title" />
               </div>
             `,
 })
@@ -67,14 +67,14 @@ Types.args = {
 }
 
 export const Icon = (args) => ({
-  components: { Notification },
+  components: { ONotification },
   setup() {
     return { args }
   },
   template: ` <div class="space-y-4">
-                <Notification type="success" color="green" v-bind="args" />
-                <Notification type="error" color="red" v-bind="args" />
-                <Notification type="warning" color="orange" v-bind="args" />
+                <ONotification type="success" color="green" v-bind="args" />
+                <ONotification type="error" color="red" v-bind="args" />
+                <ONotification type="warning" color="orange" v-bind="args" />
               </div>
             `,
 })
@@ -82,13 +82,13 @@ Icon.args = {
   ...defaultArgs,
 }
 export const Colors = (args) => ({
-  components: { Notification },
+  components: { ONotification },
   setup() {
     const colors = COLORS
     return { args, colors }
   },
   template: ` <div class="space-y-4">
-                <Notification v-for="color in colors" :key="color" type="success" :color="color" v-bind="args" />
+                <ONotification v-for="color in colors" :key="color" type="success" :color="color" v-bind="args" />
               </div>
             `,
 })

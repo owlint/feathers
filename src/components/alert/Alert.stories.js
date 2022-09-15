@@ -1,12 +1,12 @@
-import Alert from './Alert.vue'
+import OAlert from './OAlert.vue'
 import { COLORS } from '../../enums/colors'
 import { BurgerIcon } from '../../components/svg'
 
 export default {
-  component: Alert,
+  component: OAlert,
   //👇 Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
-  title: 'Components/Alert',
+  title: 'Components/OAlert',
   decorators: [
     () => ({
       template:
@@ -38,24 +38,24 @@ const defaultArgs = {
 }
 
 const Template = (args) => ({
-  components: { Alert },
+  components: { OAlert },
   setup() {
     //👇 The args will now be passed down to the template
     return { args }
   },
-  template: `<Alert v-bind="args" />`,
+  template: `<OAlert v-bind="args" />`,
 })
 
 export const Default = Template.bind({})
 Default.args = defaultArgs
 
 export const Icon = (args) => ({
-  components: { Alert, BurgerIcon },
+  components: { OAlert, BurgerIcon },
   setup() {
     return { args }
   },
   template: `
-            <Alert isIcon v-bind="args" >
+            <OAlert isIcon v-bind="args" >
               <template #icon>
                 <BurgerIcon/>
               </template>
@@ -66,29 +66,29 @@ Icon.args = {
   title: 'Alert Icon Title',
 }
 export const Action = (args) => ({
-  components: { Alert, BurgerIcon },
+  components: { OAlert, BurgerIcon },
   setup() {
     return { args }
   },
   template: `
-            <Alert title="Alert Action Title" action="Action" v-bind="args" />
-            <Alert loading title="Alert Action Loading Title" action="Action"  v-bind="args" />
+            <OAlert title="Alert Action Title" action="Action" v-bind="args" />
+            <OAlert loading title="Alert Action Loading Title" action="Action"  v-bind="args" />
             `,
 })
 
 export const Description = (args) => ({
-  components: { Alert, BurgerIcon },
+  components: { OAlert, BurgerIcon },
   setup() {
     return { args }
   },
   template: `
-            <Alert title="Alert Description Title" v-bind="args" />
-            <Alert isIcon title="Alert Description Icon Title" v-bind="args" >
+            <OAlert title="Alert Description Title" v-bind="args" />
+            <OAlert isIcon title="Alert Description Icon Title" v-bind="args" >
                 <template #icon>
                     <BurgerIcon/>
                 </template>
             </Alert>
-            <Alert  title="Alert Description Action Title" action="Action" @click="" v-bind="args" />
+            <OAlert  title="Alert Description Action Title" action="Action" @click="" v-bind="args" />
             `,
 })
 Description.args = {
@@ -97,13 +97,13 @@ Description.args = {
 }
 
 export const Colors = (args) => ({
-  components: { Alert, BurgerIcon },
+  components: { OAlert, BurgerIcon },
   setup() {
     const colors = COLORS
     return { args, colors }
   },
   template: `<div class="space-y-8 w-full">
-                <Alert v-for="color in colors" isIcon action="Action" title="Alert Color Title" loading :key="color" :color="color" v-bind="args">
+                <OAlert v-for="color in colors" isIcon action="Action" title="Alert Color Title" loading :key="color" :color="color" v-bind="args">
                     <template #icon>
                         <BurgerIcon/>
                     </template>

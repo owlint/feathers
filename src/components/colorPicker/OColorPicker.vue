@@ -111,9 +111,15 @@
   </Menu>
 </template>
 
+<script>
+export default {
+  name: 'OColorPicker',
+}
+</script>
+
 <script setup>
 import { COLORS } from '../../enums/colors'
-import { BurgerIcon } from '../../components/svg/'
+import { BurgerIcon } from '../svg'
 import {
   getColorPickerBackground,
   getColorPickerText,

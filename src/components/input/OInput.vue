@@ -76,6 +76,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'OInput',
+}
+</script>
+
 <script setup>
 import { COLORS } from '../../enums/colors'
 import {
@@ -83,7 +89,7 @@ import {
   getLabelStyle,
   getInputIconStyle,
 } from '../../utils/colors'
-import { LoadingIcon } from '../../components/svg/'
+import { LoadingIcon } from '../svg'
 const emits = defineEmits(['update:modelValue'])
 
 const props = defineProps({

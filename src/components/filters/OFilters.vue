@@ -4,7 +4,7 @@
       {{ label }} :
     </h4>
     <div class="flex items-center gap-4 ml-2">
-      <FilterItem
+      <OFilterItem
         v-for="item in items.data"
         :key="item.type"
         :id="`${items.type}-type-${item.type}`"
@@ -16,13 +16,19 @@
       >
         <!-- Work In progress -->
         working
-      </FilterItem>
+      </OFilterItem>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'OFilters',
+}
+</script>
+
 <script setup>
-import FilterItem from '../filterItem/FilterItem.vue'
+import OFilterItem from '../filterItem/OFilterItem.vue'
 defineEmits(['update:modelValue'])
 
 const props = defineProps({

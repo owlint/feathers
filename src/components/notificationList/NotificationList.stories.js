@@ -1,11 +1,11 @@
-import Notification from '../notification/Notification.vue'
-import NotificationList from './NotificationList.vue'
-import Button from '../button/Button.vue'
+import ONotification from '../notification/ONotification.vue'
+import ONotificationList from './ONotificationList.vue'
+import OButton from '../button/OButton.vue'
 import { ref } from 'vue'
 
 export default {
-  title: 'Components/NotificationList',
-  component: Notification,
+  title: 'Components/ONotificationList',
+  component: ONotification,
   decorators: [
     () => ({
       template: `<story/>`,
@@ -19,7 +19,7 @@ export default {
 }
 
 const Template = () => ({
-  components: { NotificationList, Button },
+  components: { ONotificationList, OButton },
 
   setup() {
     const notifications = ref([])
@@ -52,11 +52,11 @@ const Template = () => ({
     }
   },
   template: `<div class="flex gap-2">
-                <Button @click="newNotificationDefault" label="New Notification" /> 
-                <Button @click="newNotificationNoIcon" label="Notification No Icon" /> 
-                <Button @click="newNotificationDescription" label="Notification Description" /> 
+                <OButton @click="newNotificationDefault" label="New Notification" /> 
+                <OButton @click="newNotificationNoIcon" label="Notification No Icon" /> 
+                <OButton @click="newNotificationDescription" label="Notification Description" /> 
             </div>
-            <NotificationList :notifications="notifications"  />`,
+            <ONotificationList :notifications="notifications"  />`,
 })
 
 export const Base = Template.bind({})

@@ -1,13 +1,13 @@
-import Badge from './Badge.vue'
+import OBadge from './OBadge.vue'
 import { COLORS } from '../../enums/colors'
 import { SIZES } from '../../enums/sizes'
-import { BurgerIcon } from '../../components/svg/'
+import { BurgerIcon } from '../svg'
 
 export default {
-  component: Badge,
+  component: OBadge,
   //👇 Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
-  title: 'Components/Badge',
+  title: 'Components/OBadge',
   decorators: [
     () => ({
       template:
@@ -40,58 +40,58 @@ const defaultArgs = {
 }
 
 const Template = (args) => ({
-  components: { Badge },
+  components: { OBadge },
   setup() {
     //👇 The args will now be passed down to the template
     return { args }
   },
-  template: `<Badge v-bind="args" > ${args.text} </Badge>`,
+  template: `<OBadge v-bind="args" > ${args.text} </OBadge>`,
 })
 
 export const Default = Template.bind({})
 Default.args = defaultArgs
 
 export const Tile = (args) => ({
-  components: { Badge },
+  components: { OBadge },
   setup() {
     return { args }
   },
   template: `
-    <Badge > Badge Default </Badge>
-    <Badge tile > Badge Tile </Badge>
+    <OBadge > Badge Default </OBadge>
+    <OBadge tile > Badge Tile </OBadge>
   `,
 })
 export const Icon = (args) => ({
-  components: { Badge, BurgerIcon },
+  components: { OBadge, BurgerIcon },
   setup() {
     return { args }
   },
   template: `
-    <Badge> Badge Default </Badge>
-    <Badge> 
+    <OBadge> Badge Default </OBadge>
+    <OBadge> 
       <BurgerIcon/>
 
       <span> Burger </span>
-    </Badge>
+    </OBadge>
   `,
 })
 
 export const Sizes = (args) => ({
-  components: { Badge },
+  components: { OBadge },
   setup() {
     return { args }
   },
-  template: `<Badge v-for="size in ['xs', 'sm', 'md', 'lg', 'xl']" :key="size" :size="size" >
+  template: `<OBadge v-for="size in ['xs', 'sm', 'md', 'lg', 'xl']" :key="size" :size="size" >
                 Badge {{size}}
-            </Badge>`,
+            </OBadge>`,
 })
 export const Colors = (args) => ({
-  components: { Badge },
+  components: { OBadge },
   setup() {
     const colors = COLORS
     return { args, colors }
   },
-  template: `<Badge v-for="color in colors" :key="color" :color="color" >
+  template: `<OBadge v-for="color in colors" :key="color" :color="color" >
                 Badge {{color}}
-            </Badge>`,
+            </OBadge>`,
 })

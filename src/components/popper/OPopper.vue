@@ -43,6 +43,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'OPopper',
+}
+</script>
+
 <script setup>
 import { createPopper } from '@popperjs/core'
 import { ref } from 'vue'

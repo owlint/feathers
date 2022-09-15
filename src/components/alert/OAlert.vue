@@ -55,13 +55,15 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'OAlert',
+}
+</script>
+
 <script setup>
-import {
-  CircleCheckIcon,
-  CircleExclamationIcon,
-  CircleXmarkIcon,
-} from '../../components/svg'
-import Button from '../../components/button/Button.vue'
+import { CircleCheckIcon, CircleExclamationIcon, CircleXmarkIcon } from '../svg'
+import OButton from '../button/OButton.vue'
 import { COLORS } from '../../enums/colors'
 import {
   getAlertIconStyle,

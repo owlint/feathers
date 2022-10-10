@@ -42,17 +42,17 @@ const Template = (args) => ({
   components: { OModal, OButton },
   data() {
     return {
-      displayOModal: false,
+      displayModal: false,
     }
   },
   setup() {
     return { args }
   },
-  template: `<OButton @click="displayOModal = true" label="Open Dialog"/> 
-            <OModal @close="displayOModal = false" :display-OModal="displayOModal" v-bind="args" >
+  template: `<OButton @click="displayModal = true" label="Open Dialog"/> 
+            <OModal @close="displayModal = false" :display-modal="displayModal" v-bind="args" >
               <template #footer>
-                <OButton @click="displayOModal = false" label="Close Dialog"/> 
-                <OButton  @click="displayOModal = false" type="tertiary" label="Close"/> 
+                <OButton @click="displayModal = false" label="Close Dialog"/> 
+                <OButton  @click="displayModal = false" type="tertiary" label="Close"/> 
               </template>
             </OModal>`,
 })
@@ -65,14 +65,14 @@ export const Icon = (args) => ({
   data() {
     return {
       displayOModalIcon: false,
-      displayOModal: false,
+      displayModal: false,
     }
   },
   setup() {
     return { args }
   },
   template: `<OButton @click="displayOModalIcon = true" label="Dialog Icon" color="fuchsia" /> 
-            <OModal @close="displayOModalIcon = false" :display-OModal="displayOModalIcon" v-bind="args" >
+            <OModal @close="displayOModalIcon = false" :display-modal="displayOModalIcon" v-bind="args" >
               <template #icon>
                 <BurgerIcon/>
               </template>
@@ -81,11 +81,11 @@ export const Icon = (args) => ({
                 <OButton  @click="displayOModalIcon = false" color="fuchsia" type="tertiary" label="Close"/> 
               </template>
             </OModal>
-            <OButton @click="displayOModal = true" label="Dialog No Icon" color="fuchsia" /> 
-            <OModal @close="displayOModal = false" :display-OModal="displayOModal" v-bind="args" title="Dialog Without Icon" hide-icon   >
+            <OButton @click="displayModal = true" label="Dialog No Icon" color="fuchsia" /> 
+            <OModal @close="displayModal = false" :display-modal="displayModal" v-bind="args" title="Dialog Without Icon" hide-icon   >
               <template #footer>
-                <OButton @click="displayOModal = false" color="fuchsia" label="Close Dialog No Icon"/> 
-                <OButton  @click="displayOModal = false" color="fuchsia" type="tertiary" label="Close"/> 
+                <OButton @click="displayModal = false" color="fuchsia" label="Close Dialog No Icon"/> 
+                <OButton  @click="displayModal = false" color="fuchsia" type="tertiary" label="Close"/> 
               </template>
             </OModal>
             `,
@@ -100,7 +100,7 @@ export const ColorsIcon = (args) => ({
   components: { OModal, OButton },
   data() {
     return {
-      displayOModal: false,
+      displayModal: false,
       displayOModalGreen: false,
       displayOModalRed: false,
       displayOModalOrange: false,
@@ -109,29 +109,29 @@ export const ColorsIcon = (args) => ({
   setup() {
     return { args }
   },
-  template: `<OButton @click="displayOModal = true" label="Dialog"/> 
-            <OModal @close="displayOModal = false" :display-OModal="displayOModal" v-bind="args" >
+  template: `<OButton @click="displayModal = true" label="Dialog"/> 
+            <OModal @close="displayModal = false" :display-modal="displayModal" v-bind="args" >
               <template #footer>
-                <OButton @click="displayOModal = false"  label="Close Dialog"/> 
-                <OButton  @click="displayOModal = false"  type="tertiary" label="Close"/> 
+                <OButton @click="displayModal = false"  label="Close Dialog"/> 
+                <OButton  @click="displayModal = false"  type="tertiary" label="Close"/> 
               </template>
             </OModal>
             <OButton @click="displayOModalGreen = true" label="Dialog Green" color="green" /> 
-            <OModal @close="displayOModalGreen = false" color="green" :display-OModal="displayOModalGreen" v-bind="args"  >
+            <OModal @close="displayOModalGreen = false" color="green" :display-modal="displayOModalGreen" v-bind="args"  >
               <template #footer>
                 <OButton @click="displayOModalGreen = false" color="green" label="Close Dialog"/> 
                 <OButton  @click="displayOModalGreen = false" color="green" type="tertiary" label="Close"/> 
               </template>
             </OModal>
             <OButton @click="displayOModalRed = true" label="Dialog Red" color="red" /> 
-            <OModal @close="displayOModalRed = false" color="red" :display-OModal="displayOModalRed" v-bind="args"  >
+            <OModal @close="displayOModalRed = false" color="red" :display-modal="displayOModalRed" v-bind="args"  >
               <template #footer>
                 <OButton @click="displayOModalRed = false" color="red" label="Close Dialog "/> 
                 <OButton  @click="displayOModalRed = false" color="red" type="tertiary" label="Close"/> 
               </template>
             </OModal>
             <OButton @click="displayOModalOrange = true" label="Dialog Orange" color="orange" /> 
-            <OModal @close="displayOModalOrange = false" color="orange" :display-OModal="displayOModalOrange" v-bind="args"  >
+            <OModal @close="displayOModalOrange = false" color="orange" :display-modal="displayOModalOrange" v-bind="args"  >
               <template #footer>
                 <OButton @click="displayOModalOrange = false" color="orange" label="Close Dialog No Icon"/> 
                 <OButton  @click="displayOModalOrange = false" color="orange" type="tertiary" label="Close"/> 
@@ -147,7 +147,7 @@ export const Sizes = (args) => ({
   components: { OModal, OButton },
   data() {
     return {
-      displayOModal: false,
+      displayModal: false,
       displayOModalXs: false,
       displayOModalXl: false,
       displayOModal7xl: false,
@@ -156,29 +156,29 @@ export const Sizes = (args) => ({
   setup() {
     return { args }
   },
-  template: `<OButton @click="displayOModal = true" label="Dialog"/> 
-            <OModal @close="displayOModal = false" :display-OModal="displayOModal" v-bind="args" >
+  template: `<OButton @click="displayModal = true" label="Dialog"/> 
+            <OModal @close="displayModal = false" :display-modal="displayModal" v-bind="args" >
               <template #footer>
-                <OButton @click="displayOModal = false" label="Close Dialog"/> 
-                <OButton  @click="displayOModal = false" type="tertiary" label="Close"/> 
+                <OButton @click="displayModal = false" label="Close Dialog"/> 
+                <OButton  @click="displayModal = false" type="tertiary" label="Close"/> 
               </template>
             </OModal>
             <OButton @click="displayOModalXs = true" label="Dialog xs" /> 
-            <OModal @close="displayOModalXs = false" :display-OModal="displayOModalXs" size="xs" v-bind="args"  >
+            <OModal @close="displayOModalXs = false" :display-modal="displayOModalXs" size="xs" v-bind="args"  >
               <template #footer>
                 <OButton @click="displayOModalXs = false" label="Close Dialog"/> 
                 <OButton  @click="displayOModalXs = false" type="tertiary" label="Close"/> 
               </template>
             </OModal>
             <OButton @click="displayOModalXl = true" label="Dialog xl" /> 
-            <OModal @close="displayOModalXl = false" :display-OModal="displayOModalXl" size="xl" v-bind="args"  >
+            <OModal @close="displayOModalXl = false" :display-modal="displayOModalXl" size="xl" v-bind="args"  >
               <template #footer>
                 <OButton @click="displayOModalXl = false" label="Close Dialog "/> 
                 <OButton  @click="displayOModalXl = false" type="tertiary" label="Close"/> 
               </template>
             </OModal>
             <OButton @click="displayOModal7xl = true" label="Dialog 7xl" /> 
-            <OModal @close="displayOModal7xl = false" :display-OModal="displayOModal7xl" size="7xl" v-bind="args"  >
+            <OModal @close="displayOModal7xl = false" :display-modal="displayOModal7xl" size="7xl" v-bind="args"  >
               <template #footer>
                 <OButton @click="displayOModal7xl = false" label="Close Dialog No Icon"/> 
                 <OButton  @click="displayOModal7xl = false" type="tertiary" label="Close"/> 
@@ -193,18 +193,18 @@ export const Dark = (args) => ({
   components: { OModal, OButton },
   data() {
     return {
-      displayOModal: false,
+      displayModal: false,
     }
   },
   setup() {
     return { args }
   },
   template: `<div class="dark">
-              <OButton @click="displayOModal = true" label="Dialog Dark Mode"/> 
-              <OModal class="dark" @close="displayOModal = false" :display-OModal="displayOModal" v-bind="args" >
+              <OButton @click="displayModal = true" label="Dialog Dark Mode"/> 
+              <OModal class="dark" @close="displayModal = false" :display-modal="displayModal" v-bind="args" >
                 <template #footer>
-                  <OButton @click="displayOModal = false" label="Close Dialog"/> 
-                  <OButton  @click="displayOModal = false" type="tertiary" label="Close"/> 
+                  <OButton @click="displayModal = false" label="Close Dialog"/> 
+                  <OButton  @click="displayModal = false" type="tertiary" label="Close"/> 
                 </template>
               </OModal>
             </div>

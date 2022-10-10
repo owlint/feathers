@@ -25,6 +25,8 @@
       @input="getValue($event.target.value)"
       :autocomplete="autocomplete"
       :step="step"
+      :min="min"
+      :max="max"
       :pattern="pattern"
       :required="required"
       :placeholder="placeholder"
@@ -120,6 +122,14 @@ const props = defineProps({
     required: false,
   },
   step: {
+    type: Number,
+    required: false,
+  },
+  min: {
+    type: Number,
+    required: false,
+  },
+  max: {
     type: Number,
     required: false,
   },

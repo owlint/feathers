@@ -1,5 +1,9 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+    class="w-full h-full"
+  >
     <path
       class="fa-primary"
       d="M481.9 270.1C490.9 279.1 496 291.3 496 304C496 316.7 490.9 328.9 481.9 337.9C472.9 346.9 460.7 352 448 352H64C51.27 352 39.06 346.9 30.06 337.9C21.06 328.9 16 316.7 16 304C16 291.3 21.06 279.1 30.06 270.1C39.06 261.1 51.27 256 64 256H224L320 320L416 256H448C460.7 256 472.9 261.1 481.9 270.1z"
@@ -13,4 +17,14 @@
   </svg>
 </template>
 
-<script setup></script>
+<script setup>
+import { getIconSize } from '../../utils/sizes'
+
+defineProps({
+  size: {
+    type: String,
+    required: false,
+    default: 'md',
+  },
+})
+</script>

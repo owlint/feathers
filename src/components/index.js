@@ -4,6 +4,7 @@ import OButton from './button/OButton.vue'
 import OColorPicker from './colorPicker/OColorPicker.vue'
 import OFilterItem from './filterItem/OFilterItem.vue'
 import OFilters from './filters/OFilters.vue'
+import OIconButton from './input/OIconButton.vue'
 import OInput from './input/OInput.vue'
 import OModal from './modal/OModal.vue'
 import ONotification from './notification/ONotification.vue'
@@ -18,6 +19,7 @@ export {
   OColorPicker,
   OFilterItem,
   OFilters,
+  OIconButton,
   OInput,
   OModal,
   ONotification,

@@ -757,3 +757,53 @@ export const getAlertBgStyle = (color) => {
       return 'bg-indigo-500/20 dark:bg-dracula-400/5 dark:bg-nosferatu-900 ring-indigo-500/20  dark:ring-dracula-500/80'
   }
 }
+export const getIconButtonStyle = (color) => {
+  switch (color) {
+    case 'indigo':
+      return 'text-indigo-400 hover:text-indigo-500 hover:bg-indigo-600 focus:text-indigo-500 focus:bg-indigo-100 focus:ring-indigo-400 dark:hover:text-dracula-400 dark:focus:text-dracula-400 dark:focus:ring-dracula-400'
+    case 'slate':
+      return 'text-slate-400 hover:text-slate-500 hover:bg-slate-600 focus:text-slate-500 focus:bg-slate-100 focus:ring-slate-400 dark:hover:text-nosferatu-400 dark:hover:bg-nosferatu-100 dark:focus:bg-nosferatu-700 dark:focus:text-nosferatu-400 dark:focus:ring-nosferatu-400'
+    case 'gray':
+      return 'text-gray-400 hover:text-gray-500 hover:bg-gray-600 focus:text-gray-500 focus:bg-gray-100 focus:ring-gray-400 dark:hover:text-aro-400 dark:focus:text-aro-400 dark:focus:ring-aro-400'
+    case 'zinc':
+      return 'text-zinc-400 hover:text-zinc-500 hover:bg-zinc-600 focus:text-zinc-500 focus:bg-zinc-100 focus:ring-zinc-400 dark:hover:text-zinc-400 dark:focus:text-zinc-400 dark:focus:ring-zinc-400'
+    case 'neutral':
+      return 'text-neutral-400 hover:text-neutral-500 hover:bg-neutral-600 focus:text-neutral-500 focus:bg-neutral-100 focus:ring-neutral-400 dark:hover:text-neutral-400 dark:focus:text-neutral-400 dark:focus:ring-neutral-400'
+    case 'stone':
+      return 'text-stone-400 hover:text-stone-500 hover:bg-stone-600 focus:text-stone-500 focus:bg-stone-100 focus:ring-stone-400 dark:hover:text-stone-400 dark:focus:text-stone-400 dark:focus:ring-stone-400'
+    case 'red':
+      return 'text-red-400 hover:text-red-500 hover:bg-red-600 focus:text-red-500 focus:bg-red-100 focus:ring-red-400 dark:hover:text-marcelin-400 dark:focus:text-marcelin-400 dark:focus:ring-marcelin-400'
+    case 'orange':
+      return 'text-orange-400 hover:text-orange-500 hover:bg-orange-600 focus:text-orange-500 focus:bg-orange-100 focus:ring-orange-400 dark:hover:text-morbius-400 dark:focus:text-morbius-400 dark:focus:ring-morbius-400'
+    case 'amber':
+      return 'text-amber-400 hover:text-amber-500 hover:bg-amber-600 focus:text-amber-500 focus:bg-amber-100 focus:ring-amber-400 dark:hover:text-cullen-400 dark:focus:text-cullen-400 dark:focus:ring-cullen-400'
+    case 'yellow':
+      return 'text-yellow-400 hover:text-yellow-500 hover:bg-yellow-600 focus:text-yellow-500 focus:bg-yellow-100 focus:ring-yellow-400 dark:hover:text-lincoln-400 dark:focus:text-lincoln-400 dark:focus:ring-lincoln-400'
+    case 'lime':
+      return 'text-lime-400 hover:text-lime-500 hover:bg-lime-600 focus:text-lime-500 focus:bg-lime-100 focus:ring-lime-400 dark:hover:text-lime-400 dark:focus:text-lime-400 dark:focus:ring-lime-400'
+    case 'green':
+      return 'text-green-400 hover:text-green-500 hover:bg-green-600 focus:text-green-500 focus:bg-green-100 focus:ring-green-400 dark:hover:text-blade-400 dark:focus:text-blade-400 dark:focus:ring-blade-400'
+    case 'emerald':
+      return 'text-emerald-400 hover:text-emerald-500 hover:bg-emerald-600 focus:text-emerald-500 focus:bg-emerald-100 focus:ring-emerald-400 dark:hover:text-emerald-400 dark:focus:text-emerald-400 dark:focus:ring-emerald-400'
+    case 'teal':
+      return 'text-teal-400 hover:text-teal-500 hover:bg-teal-600 focus:text-teal-500 focus:bg-teal-100 focus:ring-teal-400 dark:hover:text-teal-400 dark:focus:text-teal-400 dark:focus:ring-teal-400'
+    case 'cyan':
+      return 'text-cyan-400 hover:text-cyan-500 hover:bg-cyan-600 focus:text-cyan-500 focus:bg-cyan-100 focus:ring-cyan-400 dark:hover:text-vanHelsing-400 dark:focus:text-vanHelsing-400 dark:focus:ring-vanHelsing-400'
+    case 'sky':
+      return 'text-sky-400 hover:text-sky-500 hover:bg-sky-600 focus:text-sky-500 focus:bg-sky-100 focus:ring-sky-400 dark:hover:text-sky-400 dark:focus:text-sky-400 dark:focus:ring-sky-400'
+    case 'blue':
+      return 'text-blue-400 hover:text-blue-500 hover:bg-blue-600 focus:text-blue-500 focus:bg-blue-100 focus:ring-blue-400 dark:hover:text-vonCount-400 dark:focus:text-vonCount-400 dark:focus:ring-vonCount-400'
+    case 'violet':
+      return 'text-violet-400 hover:text-violet-500 hover:bg-violet-600 focus:text-violet-500 focus:bg-violet-100 focus:ring-violet-400 dark:hover:text-violet-400 dark:focus:text-violet-400 dark:focus:ring-violet-400'
+    case 'purple':
+      return 'text-purple-400 hover:text-purple-500 hover:bg-purple-600 focus:text-purple-500 focus:bg-purple-100 focus:ring-purple-400 dark:hover:text-buffy-400 dark:focus:text-buffy-400 dark:focus:ring-buffy-400'
+    case 'fuchsia':
+      return 'text-fuchsia-400 hover:text-fuchsia-500 hover:bg-fuchsia-600 focus:text-fuchsia-500 focus:bg-fuchsia-100 focus:ring-fuchsia-400 dark:hover:text-fuchsia-400 dark:focus:text-fuchsia-400 dark:focus:ring-fuchsia-400'
+    case 'pink':
+      return 'text-pink-400 hover:text-pink-500 hover:bg-pink-600 focus:text-pink-500 focus:bg-pink-100 focus:ring-pink-400 dark:hover:text-dracula-400 dark:focus:text-dracula-400 dark:focus:ring-dracula-400'
+    case 'rose':
+      return 'text-rose-400 hover:text-rose-500 hover:bg-rose-600 focus:text-rose-500 focus:bg-rose-100 focus:ring-rose-400 dark:hover:text-rose-400 dark:focus:text-rose-400 dark:focus:ring-rose-400'
+    default:
+      return 'text-indigo-400 hover:text-indigo-500 hover:bg-indigo-600 focus:text-indigo-500 focus:bg-indigo-100 focus:ring-indigo-400 dark:hover:text-dracula-400 dark:focus:text-dracula-400 dark:focus:ring-dracula-400'
+  }
+}

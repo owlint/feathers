@@ -15,7 +15,7 @@
             fixed
             inset-0
             bg-slate-400/60
-            dark:bg-nosferatu-400/60
+            dark:bg-slate-400/60
             backdrop-blur
             transition-opacity
           "
@@ -49,7 +49,7 @@
               class="
                 relative
                 bg-white
-                dark:bg-nosferatu-900
+                dark:bg-slate-900
                 rounded-lg
                 text-left
                 overflow-hidden
@@ -96,7 +96,7 @@
                           leading-6
                           font-medium
                           text-slate-900
-                          dark:text-nosferatu-100
+                          dark:text-slate-100
                         "
                       >
                         {{ title }}
@@ -104,9 +104,7 @@
                     </slot>
                     <div class="mt-2">
                       <slot name="description">
-                        <p
-                          class="text-sm text-slate-500 dark:text-nosferatu-300"
-                        >
+                        <p class="text-sm text-slate-500 dark:text-slate-300">
                           {{ description }}
                         </p>
                       </slot>
@@ -117,7 +115,7 @@
               <div
                 class="
                   bg-slate-50
-                  dark:bg-nosferatu-800
+                  dark:bg-slate-800
                   px-4
                   py-3
                   sm:px-6

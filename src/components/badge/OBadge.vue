@@ -1,7 +1,7 @@
 <template>
   <div class="inline-block">
     <div
-      class="flex items-center font-medium gap-2"
+      class="flex items-center font-medium gap-2 dark:border"
       :class="[
         getBadgeStyle(color),
         getBadgeSize(size),

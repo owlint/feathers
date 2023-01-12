@@ -70,7 +70,7 @@ export const Types = (args) => ({
                     <OButton label="Tooltip Placement" color="indigo"/>
                     <template #tooltip> Tooltip </template>
                 </OPopper>
-                <OPopper class="bg-pink-400 dark:bg-buffy-600 text-white dark:text-slate-900" > 
+                <OPopper class="bg-pink-400 dark:bg-pink-600 text-white dark:text-slate-900" > 
                     <OButton label="Tooltip Custom"  color="pink"/>
                     <template #tooltip> Tooltip </template>
                 </OPopper>

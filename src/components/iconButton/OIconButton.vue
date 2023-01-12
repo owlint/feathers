@@ -12,9 +12,9 @@
       disabled:opacity-25
       disabled:hover:bg-transparent
       disabled:cursor-not-allowed
-      dark:text-nosferatu-300
-      dark:hover:bg-nosferatu-100
-      dark:focus:bg-nosferatu-700
+      dark:text-slate-300
+      dark:hover:bg-slate-100
+      dark:focus:bg-slate-700
     "
     :class="[
       getIconButtonStyle(color),

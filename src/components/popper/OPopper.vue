@@ -67,7 +67,7 @@ const props = defineProps({
     type: String,
     required: false,
     default: `bg-slate-200
-          dark:bg-nosferatu-600
+          dark:bg-slate-600
           dark:text-white`,
   },
   hover: {

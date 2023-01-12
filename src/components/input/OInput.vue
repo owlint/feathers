@@ -15,8 +15,8 @@
       relative
       focus-within:text-slate-700
       text-slate-700
-      dark:text-nosferatu-100
-      dark:focus-within:text-nosferatu-700
+      dark:text-slate-100
+      dark:focus-within:text-slate-700
     "
   >
     <input
@@ -36,11 +36,11 @@
       :class="[
         { 'pl-8': isIcon },
         {
-          'bg-slate-100 placeholder-slate-400/50 dark:placeholder-nosferatu-100/50 dark:bg-nosferatu-900 border border-slate-100 dark:border-nosferatu-900 focus:border-transparent  focus:outline-none cursor-text':
+          'bg-slate-100 placeholder-slate-400/50 dark:placeholder-slate-100/50 dark:bg-slate-900 border border-slate-100 dark:border-slate-900 focus:border-transparent  focus:outline-none cursor-text':
             !readonly,
         },
 
-        { 'dark:bg-nosferatu-800': readonly },
+        { 'dark:bg-slate-800': readonly },
         { 'cursor-not-allowed': disabled },
         !readonly ? getInputStyle(color) : '',
       ]"
@@ -54,7 +54,7 @@
         px-3
         py-2
         focus:ring-offset-2 focus:ring-offset-slate-50
-        dark:focus:ring-offset-nosferatu-800
+        dark:focus:ring-offset-slate-800
         focus:ring
         rounded-md
         cursor-auto

@@ -7,7 +7,7 @@ export default {
   //👇 Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
   title: 'Components/OFilterItem',
-  decorators: [() => ({ template: '<div class="flex"><story/></div>' })],
+  decorators: [() => ({ template: '<div class="of-flex"><story/></div>' })],
   argTypes: {
     color: {
       options: COLORS,
@@ -55,26 +55,26 @@ export const Types = (args) => ({
   setup() {
     return { args }
   },
-  template: `<div class="flex gap-4 flex-wrap">
+  template: `<div class="of-flex of-gap-4 of-flex-wrap">
               <OFilterItem v-bind="args" >
                 <BurgerIcon/>
               </OFilterItem>
               <OFilterItem v-bind="args" >
-                <div class=" flex items-center gap-2">
+                <div class=" of-flex of-items-center of-gap-2">
                   <BurgerIcon/>
-                  <span class="text-xs">With Text</span>
+                  <span class="of-text-xs">With Text</span>
                 </div>
               </OFilterItem>
               <OFilterItem tile v-bind="args" >
-                <div class=" flex items-center gap-2">
+                <div class=" of-flex of-items-center of-gap-2">
                   <BurgerIcon/>
-                  <span class="text-xs">Tile</span>
+                  <span class="of-text-xs">Tile</span>
                 </div>
               </OFilterItem>
               <OFilterItem v-bind="args" :modelValue="['Burgir']">
-                <div class=" flex items-center gap-2">
+                <div class=" of-flex of-items-center of-gap-2">
                   <BurgerIcon/>
-                  <span class="text-xs">Active</span>
+                  <span class="of-text-xs">Active</span>
                 </div>
               </OFilterItem>
             </div>`,
@@ -87,8 +87,8 @@ export const Colors = (args) => ({
     const colors = COLORS
     return { args, colors }
   },
-  template: `<div class="space-y-4">
-              <div v-for="color in colors" :key="color" class="flex gap-4">
+  template: `<div class="of-space-y-4">
+              <div v-for="color in colors" :key="color" class="of-flex of-gap-4">
                 <OFilterItem  :color="color" v-bind="args">
                   <BurgerIcon/>
                 </OFilterItem>

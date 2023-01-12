@@ -54,7 +54,7 @@ export const Types = (args) => ({
   setup() {
     return { args }
   },
-  template: ` <div class="space-y-4">
+  template: ` <div class="of-space-y-4">
                 <ONotification v-bind="args" />
                 <ONotification type="success" color="green" v-bind="args" />
                 <ONotification title="Solo ONotification title" />
@@ -71,7 +71,7 @@ export const Icon = (args) => ({
   setup() {
     return { args }
   },
-  template: ` <div class="space-y-4">
+  template: ` <div class="of-space-y-4">
                 <ONotification type="success" color="green" v-bind="args" />
                 <ONotification type="error" color="red" v-bind="args" />
                 <ONotification type="warning" color="orange" v-bind="args" />
@@ -87,7 +87,7 @@ export const Colors = (args) => ({
     const colors = COLORS
     return { args, colors }
   },
-  template: ` <div class="space-y-4">
+  template: ` <div class="of-space-y-4">
                 <ONotification v-for="color in colors" :key="color" type="success" :color="color" v-bind="args" />
               </div>
             `,

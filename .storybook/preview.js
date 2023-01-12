@@ -40,9 +40,9 @@ export const decorators = [
     const dark = background === '#1e293b' || background === '#0f172a'
 
     if (dark) {
-      document.querySelector('html').classList.add('dark')
+      document.querySelector('html').classList.add('of-dark')
     } else {
-      document.querySelector('html').classList.remove('dark')
+      document.querySelector('html').classList.remove('of-dark')
     }
 
     return {

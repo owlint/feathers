@@ -2,37 +2,37 @@
   <div>
     <div
       class="
-        z-50
-        fixed
-        inset-0
-        flex
-        items-start
-        justify-end
-        right-6
-        px-4
-        py-6
-        pointer-events-none
+        of-z-50
+        of-fixed
+        of-inset-0
+        of-flex
+        of-items-start
+        of-justify-end
+        of-right-6
+        of-px-4
+        of-py-6
+        of-pointer-events-none
       "
     >
-      <div class="max-w-sm w-full">
+      <div class="of-max-w-sm of-w-full">
         <transition-group
           tag="div"
           :enter-active-class="
             sortedNotification.length > 1
-              ? 'transform ease-out delay-300 duration-300 transition'
-              : 'transform ease-out duration-300 transition'
+              ? 'of-transform of-ease-out delay-300 of-duration-300 transition'
+              : 'of-transform of-ease-out of-duration-300 of-transition'
           "
-          enter-from-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
-          enter-to-class="translate-y-0 opacity-100 sm:translate-x-0"
-          leave-active-class="transition ease-in duration-500"
-          leave-from-class="opacity-100"
-          leave-to-class="opacity-0"
-          move-class="transition ease-in-out duration-300"
+          enter-from-class="of-translate-y-2 of-opacity-0 sm:of-translate-y-0 sm:of-translate-x-2"
+          enter-to-class="of-translate-y-0 of-opacity-100 sm:of-translate-x-0"
+          leave-active-class="of-transition of-ease-in of-duration-500"
+          leave-from-class="of-opacity-100"
+          leave-to-class="of-opacity-0"
+          move-class="of-transition of-ease-in-out of-duration-300"
         >
           <Notification
             v-for="(notification, index) in sortedNotification"
             :key="`${notification.id}_notification`"
-            :class="index > 0 ? 'mt-4' : ''"
+            :class="index > 0 ? 'of-mt-4' : ''"
             :title="notification.title"
             :description="notification.description"
             :color="notification.color"

@@ -6,7 +6,7 @@ export default {
   //👇 Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
   title: 'Components/OFilters',
-  decorators: [() => ({ template: '<div class="flex"><story/></div>' })],
+  decorators: [() => ({ template: '<div class="of-flex"><story/></div>' })],
   argTypes: {
     items: {
       type: { name: 'object', required: true },

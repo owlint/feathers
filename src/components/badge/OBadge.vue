@@ -1,11 +1,11 @@
 <template>
-  <div class="inline-block">
+  <div class="of-inline-block">
     <div
-      class="flex items-center font-medium gap-2 dark:border"
+      class="of-flex of-items-center of-font-medium of-gap-2 dark:of-border"
       :class="[
         getBadgeStyle(color),
         getBadgeSize(size),
-        tile ? ' rounded ' : ' rounded-full ',
+        tile ? ' of-rounded ' : ' of-rounded-full ',
       ]"
     >
       <slot></slot>

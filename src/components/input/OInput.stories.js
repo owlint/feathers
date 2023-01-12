@@ -78,7 +78,7 @@ export const Loading = (args) => ({
     return { args }
   },
   template: `
-  <div class="space-y-4">
+  <div class="of-space-y-4">
     <OInput label="No loading" placeholder="No Loading" id="id-no-loading-storybook" v-bind="args"/>
     <OInput loading label="Loading" placeholder="Loading" id="id-loading-storybook" v-bind="args"/>
     <OInput isIcon loading label="Loading w/ Icon" placeholder="Loading Icon" id="id-loading-icon-storybook" v-bind="args">
@@ -129,7 +129,7 @@ export const Type = (args) => ({
     return { args }
   },
   template: `
-  <div class="space-y-4">
+  <div class="of-space-y-4">
     <OInput type="text" label="Text" v-model="text" id="id-text-storybook"/>
     <OInput type="number" label="Number" v-model="number" id="id-number-storybook"/>
     <OInput type="email" label="Email" v-model="email" id="id-email-storybook"/>

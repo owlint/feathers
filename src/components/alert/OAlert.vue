@@ -1,28 +1,32 @@
 <template>
   <div
     class="
-      rounded-md
-      py-4
-      px-6
-      w-full
-      ring-4 ring-offset-4 ring-offset-slate-50
-      dark:ring-offset-slate-800
+      of-rounded-md
+      of-py-4
+      of-px-6
+      of-w-full
+      of-ring-4
+      of-ring-offset-4
+      of-ring-offset-slate-50
+      dark:of-ring-offset-slate-800
     "
     :class="getAlertBgStyle(color)"
   >
-    <div class="flex items-center space-x-3">
-      <div v-if="isIcon" :class="getAlertIconStyle(color)" class="shrink-0">
+    <div class="of-flex of-items-center of-space-x-3">
+      <div v-if="isIcon" :class="getAlertIconStyle(color)" class="of-shrink-0">
         <slot name="icon">
           <CircleCheckIcon v-if="color === 'green'" />
           <CircleExclamationIcon v-if="color === 'orange'" />
           <CircleXmarkIcon v-if="color === 'red'" />
         </slot>
       </div>
-      <div class="grow">
-        <div class="flex items-center justify-between gap-2 h-full">
+      <div class="of-grow">
+        <div
+          class="of-flex of-items-center of-justify-between of-gap-2 of-h-full"
+        >
           <div>
             <h3
-              class="text-base font-medium"
+              class="of-text-base of-font-medium"
               :class="getAlertTitleStyle(color)"
             >
               {{ title }}
@@ -30,7 +34,7 @@
             <slot name="description">
               <div v-if="description">
                 <p
-                  class="text-sm dark:text-opacity-70"
+                  class="of-text-sm dark:of-text-opacity-70"
                   :class="getAlertDescriptionStyle(color)"
                 >
                   {{ description }}
@@ -39,13 +43,13 @@
             </slot>
           </div>
 
-          <!-- <div class="-my-1.5 flex justify-end"> -->
-          <Button
+          <!-- <div class="of-my-1.5 of-flex of-justify-end"> -->
+          <OButton
             v-if="action"
             :color="color"
             :label="action"
             :loading="loading"
-            class="relative"
+            class="of-relative"
             @click="loading ? null : $emit('click')"
           />
           <!-- </div> -->

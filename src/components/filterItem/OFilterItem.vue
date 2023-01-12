@@ -1,8 +1,8 @@
 <template>
-  <div class="cursor-pointer">
+  <div class="of-cursor-pointer">
     <input
       type="checkbox"
-      class="peer absolute opacity-0 w-0 h-0"
+      class="of-peer of-absolute of-opacity-0 of-w-0 of-h-0"
       :id="id"
       :name="name"
       :value="value"
@@ -11,15 +11,18 @@
     />
     <label
       class="
-        peer-checked:ring-2
-        flex
-        p-2
-        items-center
-        transition
-        duration-300
-        cursor-pointer
+        peer-checked:of-ring-2
+        of-flex
+        of-p-2
+        of-items-center
+        of-transition
+        of-duration-300
+        of-cursor-pointer
       "
-      :class="[getFilterStyle(color), tile ? ' rounded ' : ' rounded-full ']"
+      :class="[
+        getFilterStyle(color),
+        tile ? ' of-rounded ' : ' of-rounded-full ',
+      ]"
       :for="id"
     >
       <slot></slot>

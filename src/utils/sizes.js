@@ -1,114 +1,114 @@
 export const getMaxWidth = (width) => {
   switch (width) {
     case 'sm':
-      return 'sm:max-w-sm'
+      return 'sm:of-max-w-sm'
     case 'xs':
-      return 'sm:max-w-xs'
+      return 'sm:of-max-w-xs'
     case 'md':
-      return 'sm:max-w-md'
+      return 'sm:of-max-w-md'
     case 'lg':
-      return 'sm:max-w-lg'
+      return 'sm:of-max-w-lg'
     case 'xl':
-      return 'sm:max-w-xl'
+      return 'sm:of-max-w-xl'
     case '2xl':
-      return 'sm:max-w-2xl'
+      return 'sm:of-max-w-2xl'
     case '4xl':
-      return 'sm:max-w-4xl'
+      return 'sm:of-max-w-4xl'
     case '5xl':
-      return 'sm:max-w-5xl'
+      return 'sm:of-max-w-5xl'
     case '6xl':
-      return 'sm:max-w-6xl'
+      return 'sm:of-max-w-6xl'
     case '7xl':
-      return 'sm:max-w-7xl'
+      return 'sm:of-max-w-7xl'
     default:
       console.log(`modal size of ${width} not implemented yet`)
-      return 'sm:max-w-md'
+      return 'sm:of-max-w-md'
   }
 }
 export const getBadgeSize = (width) => {
   switch (width) {
     case 'xs':
-      return 'text-xs py-1 px-2'
+      return 'of-text-xs of-py-1 of-px-2'
     case 'sm':
-      return 'text-sm py-2 px-3'
+      return 'of-text-sm of-py-2 of-px-3'
     case 'md':
-      return 'text-base py-3 px-4'
+      return 'of-text-base of-py-3 of-px-4'
     case 'lg':
-      return 'text-lg py-4 px-5'
+      return 'of-text-lg of-py-4 of-px-5'
     case 'xl':
-      return 'text-xl py-5 px-6'
+      return 'of-text-xl of-py-5 of-px-6'
     case '2xl':
-      return 'text-2xl py-6 px-7'
+      return 'of-text-2xl of-py-6 of-px-7'
     case '3xl':
-      return 'text-2xl py-7 px-8'
+      return 'of-text-2xl of-py-7 of-px-8'
     case '4xl':
-      return 'text-4xl py-8 px-9'
+      return 'of-text-4xl of-py-8 of-px-9'
     case '5xl':
-      return 'text-5xl py-9 px-10'
+      return 'of-text-5xl of-py-9 of-px-10'
     case '6xl':
-      return 'text-6xl py-10 px-11'
+      return 'of-text-6xl of-py-10 of-px-11'
     case '7xl':
-      return 'text-7xl py-11 px-12'
+      return 'of-text-7xl of-py-11 of-px-12'
     default:
       console.log(`Size ${width} not implemented yet`)
-      return ' text-xs py-1 px-2'
+      return ' of-text-xs of-py-1 of-px-2'
   }
 }
 export const getIconButtonSize = (width) => {
   switch (width) {
     case 'xs':
-      return 'w-6 h-6 focus:ring-1'
+      return 'of-w-6 of-h-6 focus:of-ring-1'
     case 'sm':
-      return 'w-7 h-7 focus:ring-2'
+      return 'of-w-7 of-h-7 focus:of-ring-2'
     case 'md':
-      return 'w-8 h-8 focus:ring-2'
+      return 'of-w-8 of-h-8 focus:of-ring-2'
     case 'lg':
-      return 'w-9 h-9 focus:ring-2'
+      return 'of-w-9 of-h-9 focus:of-ring-2'
     case 'xl':
-      return 'w-10 h-10 focus:ring-2'
+      return 'of-w-10 of-h-10 focus:of-ring-2'
     case '2xl':
-      return 'w-11 h-11 focus:ring-4'
+      return 'of-w-11 of-h-11 focus:of-ring-4'
     case '3xl':
-      return 'w-12 h-12 focus:ring-4'
+      return 'of-w-12 of-h-12 focus:of-ring-4'
     case '4xl':
-      return 'w-14 h-14 focus:ring-4'
+      return 'of-w-14 of-h-14 focus:of-ring-4'
     case '5xl':
-      return 'w-16 h-16 focus:ring-4'
+      return 'of-w-16 of-h-16 focus:of-ring-4'
     case '6xl':
-      return 'w-20 h-20 focus:ring-4'
+      return 'of-w-20 of-h-20 focus:of-ring-4'
     case '7xl':
-      return 'w-24 h-24 focus:ring-8'
+      return 'of-w-24 of-h-24 focus:of-ring-8'
     default:
       console.log(`Size ${width} not implemented yet`)
-      return 'w-8 h-8 focus:ring-2'
+      return 'of-w-8 of-h-8 focus:of-ring-2'
   }
 }
 export const getIconSize = (width) => {
   switch (width) {
     case 'xs':
-      return 'w-3 h-3'
+      return 'of-w-3 of-h-3'
     case 'sm':
-      return 'w-3.5 h-3.5'
+      return 'of-w-3.5 of-h-3.5'
     case 'md':
-      return 'w-4 h-4'
+      return 'of-w-4 of-h-4'
     case 'lg':
-      return 'w-5 h-5'
+      return 'of-w-5 of-h-5'
     case 'xl':
-      return 'w-6 h-6'
+      return 'of-w-6 of-h-6'
     case '2xl':
-      return 'w-7 h-7'
+      return 'of-w-7 of-h-7'
     case '3xl':
-      return 'w-8 h-8'
+      return 'of-w-8 of-h-8'
     case '4xl':
-      return 'w-9 h-9'
+      return 'of-w-9 of-h-9'
     case '5xl':
-      return 'w-10 h-10'
+      return 'of-w-10 of-h-10'
     case '6xl':
-      return 'w-11 h-11'
+      return 'of-w-11 of-h-11'
     case '7xl':
-      return 'w-14 h-14'
+      return 'of-w-14 of-h-14'
     default:
       console.log(`Size ${width} not implemented yet`)
-      return 'w-4 h-4'
+      return 'of-w-4 of-h-4'
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="of-relative">
     <button
       ref="button"
       @mouseenter="show()"
@@ -9,7 +9,7 @@
       <slot />
     </button>
     <div
-      class="tooltip z-10 py-2 hidden"
+      class="tooltip of-z-10 of-py-2 of-hidden"
       ref="tooltip"
       id="tooltip"
       role="tooltip"
@@ -18,23 +18,24 @@
     >
       <div
         :class="class"
-        class="mx-2 px-3 py-2 w-max shadow-xs dark:shadow-md rounded-md"
+        class="
+          of-mx-2 of-px-3 of-py-2 of-w-max of-shadow-xs
+          dark:of-shadow-md
+          of-rounded-md
+        "
       >
         <slot name="tooltip"></slot>
         <div
           v-if="arrow"
           id="arrow"
           class="
-            absolute
-            invisible
-            before:visible
-            before:absolute
-            w-3
-            h-3
-            before:w-3
-            before:h-3
-            before:content-['']
-            before:rotate-45
+            of-absolute of-invisible
+            before:of-visible before:of-absolute
+            of-w-3 of-h-3
+            before:of-w-3
+            before:of-h-3
+            before:of-content-['']
+            before:of-rotate-45
           "
           data-popper-arrow
         />
@@ -66,9 +67,9 @@ const props = defineProps({
   class: {
     type: String,
     required: false,
-    default: `bg-slate-200
-          dark:bg-slate-600
-          dark:text-white`,
+    default: `of-bg-slate-200
+          dark:of-bg-slate-600
+          dark:of-text-white`,
   },
   hover: {
     type: Boolean,
@@ -91,12 +92,12 @@ const create = () => {
   })
 }
 const show = () => {
-  tooltip.value.classList.toggle('hidden')
+  tooltip.value.classList.toggle('of-hidden')
   create()
 }
 
 const hide = () => {
-  tooltip.value.classList.toggle('hidden')
+  tooltip.value.classList.toggle('of-hidden')
   destroy()
 }
 const destroy = () => {

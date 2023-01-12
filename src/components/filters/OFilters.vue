@@ -1,9 +1,9 @@
 <template>
-  <div class="space-y-4">
-    <h4 v-if="label" class="font-medium dark:text-white text-sm">
+  <div class="of-space-y-4">
+    <h4 v-if="label" class="of-font-medium dark:of-text-white of-text-sm">
       {{ label }} :
     </h4>
-    <div class="flex items-center gap-4 ml-2">
+    <div class="of-flex of-items-center of-gap-4 of-ml-2">
       <OFilterItem
         v-for="item in items.data"
         :key="item.type"

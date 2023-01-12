@@ -1,83 +1,73 @@
 <template>
   <TransitionRoot as="template" :show="displayModal">
-    <Dialog as="div" class="relative z-10" @close="$emit('close')">
+    <Dialog as="div" class="of-relative of-z-10" @close="$emit('close')">
       <TransitionChild
         as="template"
-        enter="ease-out duration-300"
-        enter-from="opacity-0"
-        enter-to="opacity-100"
-        leave="ease-in duration-200"
-        leave-from="opacity-100"
-        leave-to="opacity-0"
+        enter="of-ease-out of-duration-300"
+        enter-from="of-opacity-0"
+        enter-to="of-opacity-100"
+        leave="of-ease-in of-duration-200"
+        leave-from="of-opacity-100"
+        leave-to="of-opacity-0"
       >
         <div
           class="
-            fixed
-            inset-0
-            bg-slate-400/60
-            dark:bg-slate-400/60
-            backdrop-blur
-            transition-opacity
+            of-fixed of-inset-0 of-bg-slate-400/60
+            dark:of-bg-slate-400/60
+            of-backdrop-blur of-transition-opacity
           "
         />
       </TransitionChild>
 
-      <div class="fixed z-10 inset-0 overflow-y-auto">
+      <div class="of-fixed of-z-10 of-inset-0 of-overflow-y-auto">
         <div
           class="
-            flex
-            items-end
-            sm:items-center
-            justify-center
-            min-h-full
-            p-4
-            text-center
-            sm:p-0
+            of-flex of-items-end
+            sm:of-items-center
+            of-justify-center of-min-h-full of-p-4 of-text-center
+            sm:of-p-0
           "
         >
           <TransitionChild
             as="template"
-            enter="ease-out duration-300"
-            enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enter-to="opacity-100 translate-y-0 sm:scale-100"
-            leave="ease-in duration-200"
-            leave-from="opacity-100 translate-y-0 sm:scale-100"
-            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            enter="of-ease-out of-duration-300"
+            enter-from="of-opacity-0 of-translate-y-4 sm:of-translate-y-0 sm:of-scale-95"
+            enter-to="of-opacity-100 of-translate-y-0 sm:of-scale-100"
+            leave="of-ease-in of-duration-200"
+            leave-from="of-opacity-100 of-translate-y-0 sm:of-scale-100"
+            leave-to="of-opacity-0 of-translate-y-4 sm:of-translate-y-0 sm:of-scale-95"
           >
             <DialogPanel
               :class="getMaxWidth(size)"
               class="
-                relative
-                bg-white
-                dark:bg-slate-900
-                rounded-lg
-                text-left
-                overflow-hidden
-                shadow-xl
-                transform
-                transition-all
-                sm:my-8
-                sm:w-full
+                of-relative of-bg-white
+                dark:of-bg-slate-900
+                of-rounded-lg
+                of-text-left
+                of-overflow-hidden
+                of-shadow-xl
+                of-transform
+                of-transition-all
+                sm:of-my-8 sm:of-w-full
               "
             >
-              <div class="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <div class="sm:flex sm:items-start">
+              <div class="of-px-4 of-pt-5 of-pb-4 sm:of-p-6 sm:of-pb-4">
+                <div class="sm:of-flex sm:of-items-start">
                   <div
                     v-if="!hideIcon"
                     :class="getIconStyle(color)"
                     class="
-                      mx-auto
-                      flex-shrink-0 flex
-                      items-center
-                      justify-center
-                      h-12
-                      w-12
-                      rounded-full
-                      sm:mx-0
-                      sm:h-10
-                      sm:w-10
-                      text-3xl
-                      sm:text-2xl
+                      of-mx-auto
+                      of-flex-shrink-0
+                      of-flex
+                      of-items-center
+                      of-justify-center
+                      of-h-12
+                      of-w-12
+                      of-rounded-full
+                      sm:of-mx-0 sm:of-h-10 sm:of-w-10
+                      of-text-3xl
+                      sm:of-text-2xl
                     "
                   >
                     <slot name="icon">
@@ -86,25 +76,34 @@
                   </div>
 
                   <div
-                    class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left grow"
+                    class="
+                      of-mt-3 of-text-center
+                      sm:of-mt-0 sm:of-ml-4 sm:of-text-left
+                      of-grow
+                    "
                   >
                     <slot name="title">
                       <DialogTitle
                         as="h3"
                         class="
-                          text-lg
-                          leading-6
-                          font-medium
-                          text-slate-900
-                          dark:text-slate-100
+                          of-text-lg
+                          of-leading-6
+                          of-font-medium
+                          of-text-slate-900
+                          dark:of-text-slate-100
                         "
                       >
                         {{ title }}
                       </DialogTitle>
                     </slot>
-                    <div class="mt-2">
+                    <div class="of-mt-2">
                       <slot name="description">
-                        <p class="text-sm text-slate-500 dark:text-slate-300">
+                        <p
+                          class="
+                            of-text-sm of-text-slate-500
+                            dark:of-text-slate-300
+                          "
+                        >
                           {{ description }}
                         </p>
                       </slot>
@@ -114,13 +113,11 @@
               </div>
               <div
                 class="
-                  bg-slate-50
-                  dark:bg-slate-800
-                  px-4
-                  py-3
-                  sm:px-6
-                  sm:flex sm:flex-row-reverse
-                  gap-4
+                  of-bg-slate-50
+                  dark:of-bg-slate-800
+                  of-px-4 of-py-3
+                  sm:of-px-6 sm:of-flex sm:of-flex-row-reverse
+                  of-gap-4
                 "
               >
                 <slot name="footer" />

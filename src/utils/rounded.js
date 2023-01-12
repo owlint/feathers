@@ -1,21 +1,21 @@
 export const getRounded = (rounded) => {
-  switch (rounded) {
+  switch (of - rounded) {
     case 'sm':
-      return 'rounded-sm'
+      return 'of-rounded-sm'
     case 'rounded':
-      return 'rounded'
+      return 'of-rounded'
     case 'md':
-      return 'rounded-md'
+      return 'of-rounded-md'
     case 'lg':
-      return 'rounded-lg'
+      return 'of-rounded-lg'
     case 'xl':
-      return 'rounded-xl'
+      return 'of-rounded-xl'
     case '2xl':
-      return 'rounded-2xl'
+      return 'of-rounded-2xl'
     case '3xl':
-      return 'rounded-3xl'
+      return 'of-rounded-3xl'
     case 'full':
-      return 'rounded-full'
+      return 'of-rounded-full'
     default:
       return ''
   }

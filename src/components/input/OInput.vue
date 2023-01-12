@@ -34,7 +34,7 @@
       :type="type"
       :disabled="disabled"
       :class="[
-        { 'pl-8': isIcon },
+        isIcon ? 'pl-8 pr-3' : 'px-3',
         {
           'bg-slate-100 placeholder-slate-400/50 dark:placeholder-slate-100/50 dark:bg-slate-900 border border-slate-100 dark:border-slate-900 focus:border-transparent  focus:outline-none cursor-text':
             !readonly,

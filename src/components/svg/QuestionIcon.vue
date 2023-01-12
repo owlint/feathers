@@ -2,7 +2,7 @@
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 320 512"
-    class="w-full h-full"
+    class="of-w-full of-h-full"
   >
     <path
       class="fa-primary"
@@ -11,7 +11,7 @@
     />
     <path
       d="M144 400c-22.09 0-40 17.91-40 40s17.91 39.1 40 39.1 40-17.9 40-39.1-17.9-40-40-40z"
-      class="fa-secondary opacity-40"
+      class="fa-secondary of-opacity-40"
       fill="currentColor"
     />
   </svg>

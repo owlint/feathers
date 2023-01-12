@@ -2,24 +2,22 @@
   <button
     :aria-label="label"
     class="
-      flex
-      items-center
-      justify-center
-      hover:bg-opacity-10
-      focus:outline-none
-      dark:hover:bg-opacity-10
-      dark:bg-transparent
-      disabled:opacity-25
-      disabled:hover:bg-transparent
-      disabled:cursor-not-allowed
-      dark:text-slate-300
-      dark:hover:bg-slate-100
-      dark:focus:bg-slate-700
+      of-flex of-items-center of-justify-center
+      hover:of-bg-opacity-10
+      focus:of-outline-none
+      dark:hover:of-bg-opacity-10
+      dark:of-bg-transparent
+      disabled:of-opacity-25
+      disabled:hover:of-bg-transparent
+      disabled:of-cursor-not-allowed
+      dark:of-text-slate-300
+      dark:hover:of-bg-slate-100
+      dark:focus:of-bg-slate-700
     "
     :class="[
       getIconButtonStyle(color),
       getIconButtonSize(size),
-      tile ? 'rounded-md' : 'rounded-full',
+      tile ? 'of-rounded-md' : 'of-rounded-full',
     ]"
     :disabled="disabled"
   >
@@ -28,7 +26,7 @@
     <div v-else :class="getIconSize(size)">
       <slot>
         <QuestionIcon />
-        <!-- <font-awesome-icon :icon="['fad', icon]"/> -->
+        <!-- <of-font-awesome-icon :icon="['fad', icon]"/> -->
       </slot>
     </div>
   </button>

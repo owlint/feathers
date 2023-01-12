@@ -2,21 +2,18 @@
   <label
     v-if="label"
     :for="id"
-    class="block text-base font-semibold"
+    class="of-block of-text-base of-font-semibold"
     :class="getLabelStyle(color)"
   >
     {{ label }}
   </label>
   <div
     class="
-      mt-1
-      flex
-      items-center
-      relative
-      focus-within:text-slate-700
-      text-slate-700
-      dark:text-slate-100
-      dark:focus-within:text-slate-700
+      of-mt-1 of-flex of-items-center of-relative
+      focus-within:of-text-slate-700
+      of-text-slate-700
+      dark:of-text-slate-100
+      dark:focus-within:of-text-slate-700
     "
   >
     <input
@@ -34,44 +31,44 @@
       :type="type"
       :disabled="disabled"
       :class="[
-        isIcon ? 'pl-8 pr-3' : 'px-3',
+        isIcon ? 'of-pl-8 of-pr-3' : 'of-px-3',
         {
-          'bg-slate-100 placeholder-slate-400/50 dark:placeholder-slate-100/50 dark:bg-slate-900 border border-slate-100 dark:border-slate-900 focus:border-transparent  focus:outline-none cursor-text':
+          'of-bg-slate-100 of-placeholder-slate-400/50 dark:placeholder-slate-100/50 dark:of-bg-slate-900 of-border of-border-slate-100 dark:of-border-slate-900 focus:of-border-transparent  focus:of-outline-none of-cursor-text':
             !readonly,
         },
 
-        { 'dark:bg-slate-800': readonly },
-        { 'cursor-not-allowed': disabled },
+        { 'dark:of-bg-slate-800': readonly },
+        { 'of-cursor-not-allowed': disabled },
         !readonly ? getInputStyle(color) : '',
       ]"
       class="
-        border border-transparent
-        font-medium
-        appearance-none
-        block
-        peer
-        w-full
-        px-3
-        py-2
-        focus:ring-offset-2 focus:ring-offset-slate-50
-        dark:focus:ring-offset-slate-800
-        focus:ring
-        rounded-md
-        cursor-auto
-        sm:text-sm
+        of-border
+        of-border-transparent
+        of-font-medium
+        of-appearance-none
+        of-block
+        of-peer
+        of-w-full
+        of-px-3
+        of-py-2
+        focus:of-ring-offset-2 focus:of-ring-offset-slate-50
+        dark:focus:of-ring-offset-slate-800
+        focus:of-ring
+        of-rounded-md of-cursor-auto
+        sm:of-text-sm
       "
     />
     <div
       v-if="isIcon"
       :class="getInputIconStyle(color)"
-      class="absolute left-0 ml-3"
+      class="of-absolute of-left-0 of-ml-3"
     >
       <slot name="icon"></slot>
     </div>
     <div
       v-if="loading"
       :class="getInputIconStyle(color)"
-      class="absolute mr-2 right-0"
+      class="of-absolute of-mr-2 of-right-0"
     >
       <LoadingIcon />
     </div>

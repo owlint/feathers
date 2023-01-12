@@ -1,39 +1,42 @@
 <template>
   <div
     aria-live="assertive"
-    class="flex items-end pointer-events-none sm:items-start"
+    class="of-flex of-items-end of-pointer-events-none sm:of-items-start"
   >
-    <div class="w-full flex flex-col items-center space-y-4 sm:items-end">
+    <div
+      class="
+        of-w-full of-flex of-flex-col of-items-center of-space-y-4
+        sm:of-items-end
+      "
+    >
       <transition
-        enter-active-class="transform ease-out duration-300 transition"
-        enter-from-class="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
-        enter-to-class="translate-y-0 opacity-100 sm:translate-x-0"
-        leave-active-class="transition ease-in duration-100"
-        leave-from-class="opacity-100"
-        leave-to-class="opacity-0"
+        enter-active-class="of-transform of-ease-out of-duration-300 of-transition"
+        enter-from-class="of-translate-y-2 of-opacity-0 sm:of-translate-y-0 sm:of-translate-x-2"
+        enter-to-class="of-translate-y-0 of-opacity-100 sm:of-translate-x-0"
+        leave-active-class="of-transition of-ease-in of-duration-100"
+        leave-from-class="of-opacity-100"
+        leave-to-class="of-opacity-0"
       >
         <div
           class="
-            max-w-sm
-            w-full
-            bg-white
-            dark:bg-slate-800
-            shadow-lg
-            rounded-lg
-            pointer-events-auto
-            ring-2 ring-black
-            dark:ring-indigo-400
-            ring-opacity-5
-            overflow-hidden
+            of-max-w-sm of-w-full of-bg-white
+            dark:of-bg-slate-800
+            of-shadow-lg
+            of-rounded-lg
+            of-pointer-events-auto
+            of-ring-2
+            of-ring-black
+            dark:of-ring-indigo-400
+            of-ring-opacity-5 of-overflow-hidden
           "
         >
-          <div class="p-4">
+          <div class="of-p-4">
             <div
-              class="flex"
-              :class="description ? 'items-start' : ' items-center'"
+              class="of-flex"
+              :class="description ? 'of-items-start' : ' of-items-center'"
             >
               <div
-                class="w-6 h-6"
+                class="of-w-6 of-h-6"
                 v-if="type"
                 :class="getNotificationStyle(color)"
               >
@@ -41,13 +44,18 @@
                 <CircleExclamationIcon v-if="type === 'warning'" />
                 <CircleXmarkIcon v-if="type === 'error'" />
               </div>
-              <div class="w-0 flex-1" :class="{ 'ml-3': type }">
-                <p class="text-sm font-medium text-slate-900 dark:text-white">
+              <div class="of-w-0 of-flex-1" :class="{ 'of-ml-3': type }">
+                <p
+                  class="
+                    of-text-sm of-font-medium of-text-slate-900
+                    dark:of-text-white
+                  "
+                >
                   {{ title }}
                 </p>
                 <p
                   v-if="description"
-                  class="text-xs text-slate-500 dark:text-slate-200"
+                  class="of-text-xs of-text-slate-500 dark:of-text-slate-200"
                 >
                   {{ description }}
                 </p>

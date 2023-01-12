@@ -8,7 +8,7 @@ export default {
   component: OModal,
   decorators: [
     () => ({
-      template: `<div class="flex gap-2 items-center justify-center"><story/></div> `,
+      template: `<div class="of-flex of-gap-2 of-items-center of-justify-center"><story/></div> `,
     }),
   ],
   argTypes: {

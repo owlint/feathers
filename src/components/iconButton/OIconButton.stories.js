@@ -12,7 +12,7 @@ export default {
   decorators: [
     () => ({
       template:
-        '<div class="flex items-center gap-4 flex-wrap "><story/></div>',
+        '<div class="of-flex of-items-center of-gap-4 of-flex-wrap "><story/></div>',
     }),
   ],
   argTypes: {

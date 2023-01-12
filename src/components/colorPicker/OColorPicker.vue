@@ -1,5 +1,5 @@
 <template>
-  <Menu as="div" class="relative text-left max-w-lg">
+  <Menu as="div" class="of-relative of-text-left of-max-w-lg">
     <div>
       <MenuButton
         :class="[
@@ -8,21 +8,20 @@
           getColorPickerText(modelValue),
         ]"
         class="
-          flex
-          items-center
-          justify-center
-          bg-opacity-70
-          hover:bg-opacity-100
-          w-8
-          h-8
-          rounded-full
-          px-2
-          py-1
-          text-sm
-          font-medium
-          focus:outline-none
-          focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-100
-          dark:focus:ring-offset-slate-800
+          of-flex of-items-center of-justify-center of-bg-opacity-70
+          hover:of-bg-opacity-100
+          of-w-8
+          of-h-8
+          of-rounded-full
+          of-px-2
+          of-py-1
+          of-text-sm
+          of-font-medium
+          focus:of-outline-none
+          focus:of-ring-2
+          focus:of-ring-offset-2
+          focus:of-ring-offset-slate-100
+          dark:focus:of-ring-offset-slate-800
         "
         @click="animate"
       >
@@ -31,33 +30,34 @@
     </div>
 
     <transition
-      enter-active-class="transition ease-out duration-100"
-      enter-from-class="transform opacity-0 scale-95"
-      enter-to-class="transform opacity-100 scale-100"
-      leave-active-class="transition ease-in duration-75"
-      leave-from-class="transform opacity-100 scale-100"
-      leave-to-class="transform opacity-0 scale-95"
+      enter-active-class="of-transition of-ease-out of-duration-100"
+      enter-from-class="of-transform of-opacity-0 of-scale-95"
+      enter-to-class="of-transform of-opacity-100 of-scale-100"
+      leave-active-class="of-transition of-ease-in of-duration-75"
+      leave-from-class="of-transform of-opacity-100 of-scale-100"
+      leave-to-class="of-transform of-opacity-0 of-scale-95"
     >
       <MenuItems
         class="
-          p-1
-          gap-1
-          grid grid-cols-6
-          overflow-hidden
-          z-50
-          max-h-64
-          overflow-y-auto
-          origin-top-left
-          absolute
-          left-0
-          mt-2
-          w-64
-          rounded-md
-          shadow-lg
-          bg-white
-          dark:bg-slate-700
-          ring-1 ring-black ring-opacity-5
-          focus:outline-none
+          of-p-1
+          of-gap-1
+          of-grid
+          of-grid-cols-6
+          of-overflow-hidden
+          of-z-50
+          of-max-h-64
+          of-overflow-y-auto
+          of-origin-top-left
+          of-absolute
+          of-left-0
+          of-mt-2
+          of-w-64
+          of-rounded-md
+          of-shadow-lg
+          of-bg-white
+          dark:of-bg-slate-700
+          of-ring-1 of-ring-black of-ring-opacity-5
+          focus:of-outline-none
         "
       >
         <MenuItem
@@ -65,18 +65,18 @@
           :key="color"
           as="div"
           class="
-            cursor-pointer
+            of-cursor-pointer
             lock
-            px-1
-            py-2
-            text-sm
-            flex
-            items-center
-            group
-            rounded
-            hover:bg-opacity-50
-            bg-opacity-20
-            dark:bg-opacity-30
+            of-px-1
+            of-py-2
+            of-text-sm
+            of-flex
+            of-items-center
+            of-group
+            of-rounded
+            hover:of-bg-opacity-50
+            of-bg-opacity-20
+            dark:of-bg-opacity-30
           "
           :class="[getColorPickerBackground(color)]"
           @click="$emit('update:modelValue', color)"
@@ -86,23 +86,24 @@
             :class="[
               modelValue === color
                 ? ` ${getColorPickerRing(color)}`
-                : 'ring-transparent ',
+                : 'of-ring-transparent ',
               getColorPickerBackground(color),
             ]"
             class="
-              opacity-0
-              scale-0
-              inline-block
-              mx-auto
-              w-6
-              h-6
-              rounded-full
-              ring-2 ring-offset-2
-              dark:ring-offset-slate-700
-              group-hover:bg-opacity-100
-              bg-opacity-70
-              group-hover:dark:bg-opacity-100
-              dark:bg-opacity-70
+              of-opacity-0
+              of-scale-0
+              of-inline-block
+              of-mx-auto
+              of-w-6
+              of-h-6
+              of-rounded-full
+              of-ring-2
+              of-ring-offset-2
+              dark:of-ring-offset-slate-700
+              group-hover:of-bg-opacity-100
+              of-bg-opacity-70
+              group-hover:dark:of-bg-opacity-100
+              dark:of-bg-opacity-70
             "
           />
         </MenuItem>
@@ -153,7 +154,7 @@ const animate = () => {
       scale: 1,
       duration: 0.15,
       stagger: 0.05,
-      ease: 'ease-out',
+      ease: 'of-ease-out',
     })
   }, 1)
 }

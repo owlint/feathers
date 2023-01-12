@@ -1,20 +1,31 @@
 <template>
-  <div class="-my-2 -mx-4 sm:-mx-6 lg:-mx-8 rounded-lg">
-    <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-      <table class="min-w-full divide-y divide-slate-200 dark:divide-slate-900">
+  <div class="-of-my-2 -of-mx-4 sm:-of-mx-6 lg:-of-mx-8 of-rounded-lg">
+    <div
+      class="
+        of-inline-block of-min-w-full of-py-2 of-align-middle
+        md:of-px-6
+        lg:of-px-8
+      "
+    >
+      <table
+        class="
+          of-min-w-full of-divide-y of-divide-slate-200
+          dark:of-divide-slate-900
+        "
+      >
         <thead>
-          <tr class="text-slate-900 dark:text-white">
+          <tr class="of-text-slate-900 dark:of-text-white">
             <slot name="header"></slot>
           </tr>
         </thead>
         <tbody
           class="
-            divide-y divide-slate-100
-            dark:divide-slate-900
-            text-slate-800
-            dark:text-slate-50
+            of-divide-y of-divide-slate-100
+            dark:of-divide-slate-900
+            of-text-slate-800
+            dark:of-text-slate-50
           "
-          :class="{ 'bg-white dark:bg-slate-800': !transparent }"
+          :class="{ 'of-bg-white dark:of-bg-slate-800': !transparent }"
         >
           <slot name="skeleton" v-if="loading"></slot>
           <slot name="body" v-else></slot>
@@ -24,12 +35,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'OTable',
-}
-</script>
 
 <script setup>
 defineProps({

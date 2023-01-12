@@ -10,7 +10,7 @@ export default {
   decorators: [
     () => ({
       template:
-        '<div class="flex items-center gap-8 flex-wrap "><story/></div>',
+        '<div class="of-flex of-items-center of-gap-8 of-flex-wrap "><story/></div>',
     }),
   ],
   argTypes: {
@@ -59,7 +59,7 @@ export const Icon = (args) => ({
               <template #icon>
                 <BurgerIcon/>
               </template>
-            </Alert>
+            </OAlert>
             `,
 })
 Icon.args = {
@@ -87,7 +87,7 @@ export const Description = (args) => ({
                 <template #icon>
                     <BurgerIcon/>
                 </template>
-            </Alert>
+            </OAlert>
             <OAlert  title="Alert Description Action Title" action="Action" @click="" v-bind="args" />
             `,
 })
@@ -102,12 +102,12 @@ export const Colors = (args) => ({
     const colors = COLORS
     return { args, colors }
   },
-  template: `<div class="space-y-8 w-full">
+  template: `<div class="of-space-y-8 of-w-full">
                 <OAlert v-for="color in colors" isIcon action="Action" title="Alert Color Title" loading :key="color" :color="color" v-bind="args">
                     <template #icon>
                         <BurgerIcon/>
                     </template>
-                </Alert>
+                </OAlert>
             </div>`,
 })
 Colors.args = {

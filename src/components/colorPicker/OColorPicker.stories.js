@@ -5,7 +5,7 @@ export default {
   component: OColorPicker,
   decorators: [
     () => ({
-      template: '<div class="flex h-64 "><story/></div>',
+      template: '<div class="of-flex of-h-64 "><story/></div>',
     }),
   ],
 }

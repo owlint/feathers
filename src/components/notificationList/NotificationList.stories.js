@@ -51,7 +51,7 @@ const Template = () => ({
       newNotificationDescription,
     }
   },
-  template: `<div class="flex gap-2">
+  template: `<div class="of-flex of-gap-2">
                 <OButton @click="newNotificationDefault" label="New Notification" /> 
                 <OButton @click="newNotificationNoIcon" label="Notification No Icon" /> 
                 <OButton @click="newNotificationDescription" label="Notification Description" /> 

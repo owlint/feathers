@@ -7,7 +7,7 @@ export default {
   title: 'Components/OPopper',
   decorators: [
     () => ({
-      template: `<div class="flex items-center justify-center my-8" > <story /></div> `,
+      template: `<div class="of-flex of-items-center of-justify-center of-my-8" > <story /></div> `,
     }),
   ],
   argTypes: {
@@ -53,7 +53,7 @@ export const Types = (args) => ({
   setup() {
     return { args }
   },
-  template: `<div class="flex items-center gap-2">
+  template: `<div class="of-flex of-items-center of-gap-2">
                 <OPopper > 
                     <OButton label="Default Tooltip"  color="indigo"/>
                     <template #tooltip> Tooltip </template>
@@ -70,7 +70,7 @@ export const Types = (args) => ({
                     <OButton label="Tooltip Placement" color="indigo"/>
                     <template #tooltip> Tooltip </template>
                 </OPopper>
-                <OPopper class="bg-pink-400 dark:bg-pink-600 text-white dark:text-slate-900" > 
+                <OPopper class="of-bg-pink-400 dark:of-bg-pink-600 of-text-white dark:of-text-slate-900" > 
                     <OButton label="Tooltip Custom"  color="pink"/>
                     <template #tooltip> Tooltip </template>
                 </OPopper>
@@ -82,7 +82,7 @@ export const Placements = (args) => ({
   setup() {
     return { args }
   },
-  template: `<div class="flex items-center gap-2">
+  template: `<div class="of-flex of-items-center of-gap-2">
                 <OPopper > 
                     <OButton label="Default Placement"  color="indigo"/>
                     <template #tooltip> Tooltip Top </template>

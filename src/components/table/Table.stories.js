@@ -49,20 +49,20 @@ const Template = (args) => ({
             <tr v-for="i in 5" :key="i" class="animate-pulse">
                 <td class="py-3.5">
                     <div class="flex justify-end items-center">
-                        <div class="bg-slate-100 dark:bg-nosferatu-900 w-6 h-6 rounded-full " />
+                        <div class="bg-slate-100 dark:bg-slate-900 w-6 h-6 rounded-full " />
                     </div>
                 </td>
                 <td class="px-3 py-3.5 space-y-2">
-                    <div class="bg-slate-100 dark:bg-nosferatu-900 w-24 h-4 rounded-full" />
+                    <div class="bg-slate-100 dark:bg-slate-900 w-24 h-4 rounded-full" />
                 </td>
                 <td class="px-3 py-3.5">
-                    <div class="bg-slate-100 dark:bg-nosferatu-900 w-28 h-4 rounded-full"></div>
+                    <div class="bg-slate-100 dark:bg-slate-900 w-28 h-4 rounded-full"></div>
                 </td>
                 <td class="px-3 py-3.5">
-                    <div class="bg-slate-100 dark:bg-nosferatu-900 w-28 h-4 rounded-full"></div>
+                    <div class="bg-slate-100 dark:bg-slate-900 w-28 h-4 rounded-full"></div>
                 </td>
                 <td class="px-3 py-3.5">
-                    <div class="bg-slate-100 dark:bg-nosferatu-900 w-12 h-4 rounded-full"></div>
+                    <div class="bg-slate-100 dark:bg-slate-900 w-12 h-4 rounded-full"></div>
                 </td>
             </tr>
         </template>
@@ -70,7 +70,7 @@ const Template = (args) => ({
             <tr v-for="i in 5" :key="i">
                 <td class="whitespace-nowrap py-3.5">
                     <div class="flex justify-end items-center">
-                        <div class="w-6 h-6 rounded-full bg-indigo-200 dark:bg-dracula-200" />
+                        <div class="w-6 h-6 rounded-full bg-indigo-200 dark:bg-indigo-200" />
                     </div>
                 </td>
                 <td class="whitespace-nowrap px-3 py-3.5 text-sm">
@@ -118,20 +118,20 @@ export const Loading = (args) => ({
             <tr v-for="i in 5" :key="i" class="animate-pulse">
                 <td class="py-3.5">
                     <div class="flex justify-end items-center">
-                        <div class="bg-slate-100 dark:bg-nosferatu-900 w-6 h-6 rounded-full " />
+                        <div class="bg-slate-100 dark:bg-slate-900 w-6 h-6 rounded-full " />
                     </div>
                 </td>
                 <td class="px-3 py-3.5 space-y-2">
-                    <div class="bg-slate-100 dark:bg-nosferatu-900 w-24 h-4 rounded-full" />
+                    <div class="bg-slate-100 dark:bg-slate-900 w-24 h-4 rounded-full" />
                 </td>
                 <td class="px-3 py-3.5">
-                    <div class="bg-slate-100 dark:bg-nosferatu-900 w-28 h-4 rounded-full"></div>
+                    <div class="bg-slate-100 dark:bg-slate-900 w-28 h-4 rounded-full"></div>
                 </td>
                 <td class="px-3 py-3.5">
-                    <div class="bg-slate-100 dark:bg-nosferatu-900 w-28 h-4 rounded-full"></div>
+                    <div class="bg-slate-100 dark:bg-slate-900 w-28 h-4 rounded-full"></div>
                 </td>
                 <td class="px-3 py-3.5">
-                    <div class="bg-slate-100 dark:bg-nosferatu-900 w-12 h-4 rounded-full"></div>
+                    <div class="bg-slate-100 dark:bg-slate-900 w-12 h-4 rounded-full"></div>
                 </td>
             </tr>
         </template>
@@ -161,7 +161,7 @@ export const Transparent = (args) => ({
             <tr v-for="i in 5" :key="i">
                 <td class="whitespace-nowrap py-3.5">
                     <div class="flex justify-end items-center">
-                        <div class="w-6 h-6 rounded-full bg-indigo-200 dark:bg-dracula-200" />
+                        <div class="w-6 h-6 rounded-full bg-indigo-200 dark:bg-indigo-200" />
                     </div>
                 </td>
                 <td class="whitespace-nowrap px-3 py-3.5 text-sm">

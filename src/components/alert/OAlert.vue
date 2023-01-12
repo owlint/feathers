@@ -6,7 +6,7 @@
       px-6
       w-full
       ring-4 ring-offset-4 ring-offset-slate-50
-      dark:ring-offset-nosferatu-800
+      dark:ring-offset-slate-800
     "
     :class="getAlertBgStyle(color)"
   >

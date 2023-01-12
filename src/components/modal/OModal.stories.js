@@ -215,7 +215,7 @@ Dark.args = {
 }
 Dark.parameters = {
   backgrounds: {
-    values: [{ name: 'nosferatu-900', value: '#373a4d' }],
-    default: 'nosferatu-900',
+    values: [{ name: 'slate-900', value: '#373a4d' }],
+    default: 'slate-900',
   },
 }

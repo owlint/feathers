@@ -17,12 +17,12 @@
             max-w-sm
             w-full
             bg-white
-            dark:bg-nosferatu-800
+            dark:bg-slate-800
             shadow-lg
             rounded-lg
             pointer-events-auto
             ring-2 ring-black
-            dark:ring-dracula-400
+            dark:ring-indigo-400
             ring-opacity-5
             overflow-hidden
           "
@@ -47,7 +47,7 @@
                 </p>
                 <p
                   v-if="description"
-                  class="text-xs text-slate-500 dark:text-nosferatu-200"
+                  class="text-xs text-slate-500 dark:text-slate-200"
                 >
                   {{ description }}
                 </p>

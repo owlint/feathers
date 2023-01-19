@@ -23,7 +23,11 @@
   >
     <!-- @click="$emit('click')" -->
     <LoadingIcon v-if="loading" :class="getIconSize(size)" />
-    <div v-else :class="getIconSize(size)">
+    <div
+      class="flex of-items-center of-justify-center"
+      v-else
+      :class="getIconSize(size)"
+    >
       <slot>
         <QuestionIcon />
         <!-- <of-font-awesome-icon :icon="['fad', icon]"/> -->

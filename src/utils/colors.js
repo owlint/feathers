@@ -800,7 +800,7 @@ export const getIconButtonStyle = (color) => {
     case 'fuchsia':
       return 'of-text-fuchsia-400 hover:of-text-fuchsia-500 hover:of-bg-fuchsia-600 focus:of-text-fuchsia-500 focus:of-bg-fuchsia-100 focus:of-ring-fuchsia-400 dark:hover:of-text-fuchsia-400 dark:focus:of-text-fuchsia-400 dark:focus:of-ring-fuchsia-400'
     case 'pink':
-      return 'of-text-pink-400 hover:of-text-pink-500 hover:of-bg-pink-600 focus:of-text-pink-500 focus:of-bg-pink-100 focus:of-ring-pink-400 dark:hover:of-text-indigo-400 dark:focus:of-text-indigo-400 dark:focus:of-ring-indigo-400'
+      return 'of-text-pink-400 hover:of-text-pink-500 hover:of-bg-pink-600 focus:of-text-pink-500 focus:of-bg-pink-100 focus:of-ring-pink-400 dark:hover:of-text-pink-400 dark:focus:of-text-pink-400 dark:focus:of-ring-pink-400'
     case 'rose':
       return 'of-text-rose-400 hover:of-text-rose-500 hover:of-bg-rose-600 focus:of-text-rose-500 focus:of-bg-rose-100 focus:of-ring-rose-400 dark:hover:of-text-rose-400 dark:focus:of-text-rose-400 dark:focus:of-ring-rose-400'
     default:

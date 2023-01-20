@@ -273,13 +273,13 @@ export default {
 }
 
 .button--primary.button--purple {
-  @apply of-shadow-md of-fill-white dark:of-fill-slate-900 of-bg-purple-500 enabled:hover:of-bg-purple-600 dark:enabled:hover:of-bg-pink-600 of-text-white dark:of-text-slate-900 dark:of-bg-pink-500 hover:of-shadow-none focus:of-ring-2 focus:of-ring-purple-400 dark:focus:of-ring-pink-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
+  @apply of-shadow-md of-fill-white dark:of-fill-slate-900 of-bg-purple-500 enabled:hover:of-bg-purple-600 dark:enabled:hover:of-bg-purple-600 of-text-white dark:of-text-slate-900 dark:of-bg-purple-500 hover:of-shadow-none focus:of-ring-2 focus:of-ring-purple-400 dark:focus:of-ring-purple-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
 }
 .button--secondary.button--purple {
-  @apply dark:of-fill-white of-fill-purple-500 of-text-purple-500 of-bg-white of-border of-border-purple-300 dark:of-border-pink-300 enabled:hover:of-shadow-sm enabled:hover:of-shadow-purple-300 dark:enabled:hover:of-shadow-pink-300 dark:enabled:hover:of-shadow-none dark:of-text-white dark:of-bg-white/10 dark:hover:of-bg-white/20 dark:of-border-none focus:of-ring-2 focus:of-ring-purple-400 dark:focus:of-ring-pink-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
+  @apply dark:of-fill-white of-fill-purple-500 of-text-purple-500 of-bg-white of-border of-border-purple-300 dark:of-border-purple-300 enabled:hover:of-shadow-sm enabled:hover:of-shadow-purple-300 dark:enabled:hover:of-shadow-purple-300 dark:enabled:hover:of-shadow-none dark:of-text-white dark:of-bg-white/10 dark:hover:of-bg-white/20 dark:of-border-none focus:of-ring-2 focus:of-ring-purple-400 dark:focus:of-ring-purple-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
 }
 .button--tertiary.button--purple {
-  @apply dark:of-fill-white of-fill-purple-500 of-text-purple-500 dark:of-text-white enabled:hover:of-bg-purple-500/20 dark:enabled:hover:of-bg-pink-500/30 focus:of-ring-2 focus:of-ring-purple-400 dark:focus:of-ring-pink-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
+  @apply dark:of-fill-white of-fill-purple-500 of-text-purple-500 dark:of-text-white enabled:hover:of-bg-purple-500/20 dark:enabled:hover:of-bg-purple-500/30 focus:of-ring-2 focus:of-ring-purple-400 dark:focus:of-ring-purple-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
 }
 
 .button--primary.button--fuchsia {

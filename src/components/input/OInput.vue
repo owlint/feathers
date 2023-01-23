@@ -1,76 +1,78 @@
 <template>
-  <label
-    v-if="label"
-    :for="id"
-    class="of-block of-text-base of-font-semibold"
-    :class="getLabelStyle(color)"
-  >
-    {{ label }}
-  </label>
-  <div
-    class="
-      of-mt-1 of-flex of-items-center of-relative
-      focus-within:of-text-slate-700
-      of-text-slate-700
-      dark:of-text-slate-100
-      dark:focus-within:of-text-slate-700
-    "
-  >
-    <input
-      :id="id"
-      :value="modelValue"
-      @input="getValue($event.target.value)"
-      :autocomplete="autocomplete"
-      :step="step"
-      :min="min"
-      :max="max"
-      :pattern="pattern"
-      :required="required"
-      :placeholder="placeholder"
-      :readonly="readonly"
-      :type="type"
-      :disabled="disabled"
-      :class="[
-        isIcon ? 'of-pl-8 of-pr-3' : 'of-px-3',
-        {
-          'of-bg-slate-100 of-placeholder-slate-400/50 dark:placeholder-slate-100/50 dark:of-bg-slate-900 of-border of-border-slate-100 dark:of-border-slate-900 focus:of-border-transparent  focus:of-outline-none of-cursor-text':
-            !readonly,
-        },
-
-        { 'dark:of-bg-slate-800': readonly },
-        { 'of-cursor-not-allowed': disabled },
-        !readonly ? getInputStyle(color) : '',
-      ]"
+  <div>
+    <label
+      v-if="label"
+      :for="id"
+      class="of-block of-text-base of-font-semibold"
+      :class="getLabelStyle(color)"
+    >
+      {{ label }}
+    </label>
+    <div
       class="
-        of-border
-        of-border-transparent
-        of-font-medium
-        of-appearance-none
-        of-block
-        of-peer
-        of-w-full
-        of-px-3
-        of-py-2
-        focus:of-ring-offset-2 focus:of-ring-offset-slate-50
-        dark:focus:of-ring-offset-slate-800
-        focus:of-ring
-        of-rounded-md of-cursor-auto
-        sm:of-text-sm
+        of-mt-1 of-flex of-items-center of-relative
+        focus-within:of-text-slate-700
+        of-text-slate-700
+        dark:of-text-slate-100
+        dark:focus-within:of-text-slate-700
       "
-    />
-    <div
-      v-if="isIcon"
-      :class="getInputIconStyle(color)"
-      class="of-absolute of-left-0 of-ml-3"
     >
-      <slot name="icon"></slot>
-    </div>
-    <div
-      v-if="loading"
-      :class="getInputIconStyle(color)"
-      class="of-absolute of-mr-2 of-right-0"
-    >
-      <LoadingIcon />
+      <input
+        :id="id"
+        :value="modelValue"
+        @input="getValue($event.target.value)"
+        :autocomplete="autocomplete"
+        :step="step"
+        :min="min"
+        :max="max"
+        :pattern="pattern"
+        :required="required"
+        :placeholder="placeholder"
+        :readonly="readonly"
+        :type="type"
+        :disabled="disabled"
+        :class="[
+          isIcon ? 'of-pl-8 of-pr-3' : 'of-px-3',
+          {
+            'of-bg-slate-100 of-placeholder-slate-400/50 dark:placeholder-slate-100/50 dark:of-bg-slate-900 of-border of-border-slate-100 dark:of-border-slate-900 focus:of-border-transparent  focus:of-outline-none of-cursor-text':
+              !readonly,
+          },
+
+          { 'dark:of-bg-slate-800': readonly },
+          { 'of-cursor-not-allowed': disabled },
+          !readonly ? getInputStyle(color) : '',
+        ]"
+        class="
+          of-border
+          of-border-transparent
+          of-font-medium
+          of-appearance-none
+          of-block
+          of-peer
+          of-w-full
+          of-px-3
+          of-py-2
+          focus:of-ring-offset-2 focus:of-ring-offset-slate-50
+          dark:focus:of-ring-offset-slate-800
+          focus:of-ring
+          of-rounded-md of-cursor-auto
+          sm:of-text-sm
+        "
+      />
+      <div
+        v-if="isIcon"
+        :class="getInputIconStyle(color)"
+        class="of-absolute of-left-0 of-ml-3"
+      >
+        <slot name="icon"></slot>
+      </div>
+      <div
+        v-if="loading"
+        :class="getInputIconStyle(color)"
+        class="of-absolute of-mr-2 of-right-0"
+      >
+        <LoadingIcon />
+      </div>
     </div>
   </div>
 </template>

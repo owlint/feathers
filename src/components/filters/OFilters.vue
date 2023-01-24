@@ -15,7 +15,7 @@
         @input:modelValue="filterChoice($event)"
       >
         <!-- Work In progress -->
-        working
+        {{ item.value }}
       </OFilterItem>
     </div>
   </div>

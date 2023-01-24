@@ -44,7 +44,6 @@
                 dark:of-bg-slate-900
                 of-rounded-lg
                 of-text-left
-                of-overflow-hidden
                 of-shadow-xl
                 of-transform
                 of-transition-all

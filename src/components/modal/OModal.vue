@@ -116,7 +116,7 @@
                   dark:of-bg-slate-800
                   of-px-4 of-py-3
                   sm:of-px-6 sm:of-flex sm:of-flex-row-reverse
-                  of-gap-4
+                  of-gap-4 of-rounded-b-lg
                 "
               >
                 <slot name="footer" />

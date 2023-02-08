@@ -1,7 +1,7 @@
 <template>
   <button
     :disabled="disabled"
-    type="button"
+    :type="buttonType"
     :class="classes"
     @click="onClick"
     class="of-rounded of-font-semibold disabled:of-opacity-50 of-outline-none"
@@ -37,6 +37,11 @@ export default {
       type: Boolean,
       required: false,
       default: false,
+    },
+    buttonType: {
+      type: String,
+      required: false,
+      default: 'button',
     },
     type: {
       type: String,

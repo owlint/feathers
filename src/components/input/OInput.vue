@@ -21,6 +21,8 @@
         :id="id"
         :value="modelValue"
         @input="getValue($event.target.value)"
+        @keydown.enter="$emit('key-down')"
+        :data-form-type="dataFormType"
         :autocomplete="autocomplete"
         :step="step"
         :min="min"
@@ -29,10 +31,13 @@
         :required="required"
         :placeholder="placeholder"
         :readonly="readonly"
-        :type="type"
+        :type="
+          type === 'password' ? (showPassword ? 'text' : 'password') : type
+        "
         :disabled="disabled"
         :class="[
           isIcon ? 'of-pl-8 of-pr-3' : 'of-px-3',
+          type === 'password' ? 'of-pr-8 of-pl-3' : 'of-px-3',
           {
             'of-bg-slate-100 of-placeholder-slate-400/50 dark:placeholder-slate-100/50 dark:of-bg-slate-900 of-border of-border-slate-100 dark:of-border-slate-900 focus:of-border-transparent  focus:of-outline-none of-cursor-text':
               !readonly,
@@ -67,11 +72,21 @@
         <slot name="icon"></slot>
       </div>
       <div
-        v-if="loading"
+        class="of-absolute of-mr-2 of-right-0 of-flex of-items-center of-gap-2"
         :class="getInputIconStyle(color)"
-        class="of-absolute of-mr-2 of-right-0"
+        v-if="true || type === 'password'"
       >
-        <LoadingIcon />
+        <button
+          v-if="type === 'password'"
+          type="button"
+          @click="showPassword = !showPassword"
+        >
+          <EyeSlashIcon v-if="showPassword" />
+          <EyeIcon v-else />
+        </button>
+        <div v-if="true" :class="getInputIconStyle(color)">
+          <LoadingIcon />
+        </div>
       </div>
     </div>
   </div>
@@ -84,13 +99,14 @@ export default {
 </script>
 
 <script setup>
+import { ref } from 'vue'
 import { COLORS } from '../../enums/colors'
 import {
   getInputStyle,
   getLabelStyle,
   getInputIconStyle,
 } from '../../utils/colors'
-import { LoadingIcon } from '../svg'
+import { LoadingIcon, EyeSlashIcon, EyeIcon } from '../svg'
 const emits = defineEmits(['update:modelValue'])
 
 const props = defineProps({
@@ -167,7 +183,14 @@ const props = defineProps({
     type: Boolean,
     required: false,
   },
+  dataFormType: {
+    type: String,
+    required: true,
+    default: '',
+  },
 })
+
+const showPassword = ref(false)
 
 const getValue = (value) => {
   if (props.type === 'number') {

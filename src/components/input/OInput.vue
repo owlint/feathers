@@ -36,8 +36,9 @@
         "
         :disabled="disabled"
         :class="[
-          isIcon ? 'of-pl-8 of-pr-3' : 'of-px-3',
-          type === 'password' ? 'of-pr-8 of-pl-3' : 'of-px-3',
+          isIcon && type !== 'password' ? 'of-pl-8 of-pr-3' : 'of-px-3',
+          type === 'password' && !isIcon ? 'of-pr-8 of-pl-3' : 'of-px-3',
+          { 'of-px-8': type === 'password' && isIcon },
           {
             'of-bg-slate-100 of-placeholder-slate-400/50 dark:placeholder-slate-100/50 dark:of-bg-slate-900 of-border of-border-slate-100 dark:of-border-slate-900 focus:of-border-transparent  focus:of-outline-none of-cursor-text':
               !readonly,
@@ -69,12 +70,14 @@
         :class="getInputIconStyle(color)"
         class="of-absolute of-left-0 of-ml-3"
       >
-        <slot name="icon"></slot>
+        <slot name="icon">
+          <LoadingIcon />
+        </slot>
       </div>
       <div
         class="of-absolute of-mr-2 of-right-0 of-flex of-items-center of-gap-2"
         :class="getInputIconStyle(color)"
-        v-if="true || type === 'password'"
+        v-if="loading || type === 'password'"
       >
         <button
           v-if="type === 'password'"
@@ -84,7 +87,7 @@
           <EyeSlashIcon v-if="showPassword" />
           <EyeIcon v-else />
         </button>
-        <div v-if="true" :class="getInputIconStyle(color)">
+        <div v-if="loading" :class="getInputIconStyle(color)">
           <LoadingIcon />
         </div>
       </div>

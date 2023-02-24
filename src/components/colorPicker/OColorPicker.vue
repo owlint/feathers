@@ -49,7 +49,6 @@
           of-overflow-y-auto
           of-origin-top-left
           of-absolute
-          of-left-0
           of-mt-2
           of-w-64
           of-rounded-md
@@ -59,6 +58,12 @@
           of-ring-1 of-ring-black of-ring-opacity-5
           focus:of-outline-none
         "
+        :class="[
+          { 'of-right-0': placement === 'bottom-right' },
+          { 'of-left-0': placement === 'bottom-left' },
+          { 'of-right-0 of-bottom-10': placement === 'top-right' },
+          { 'of-left-0 of-bottom-10': placement === 'top-left' },
+        ]"
       >
         <MenuItem
           v-for="color in colors"
@@ -135,6 +140,11 @@ const props = defineProps({
   modelValue: {
     type: String,
     required: true,
+  },
+  placement: {
+    type: String,
+    required: false,
+    default: 'bottom-left',
   },
 })
 // reverse 2nd row of colors to preserve the gradient visually in the dropdown

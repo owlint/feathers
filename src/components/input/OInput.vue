@@ -188,7 +188,7 @@ const props = defineProps({
   },
   dataFormType: {
     type: String,
-    required: true,
+    required: false,
     default: '',
   },
 })

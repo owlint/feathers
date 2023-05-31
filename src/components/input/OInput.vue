@@ -44,7 +44,10 @@
               !readonly,
           },
 
-          { 'dark:of-bg-slate-800': readonly },
+          {
+            'dark:of-bg-slate-800 dark:focus-within:of-text-slate-50 focus-within:of-border-transparent focus-within:of-ring-transparent focus-within:outline-none':
+              readonly,
+          },
           { 'of-cursor-not-allowed': disabled },
           !readonly ? getInputStyle(color) : '',
         ]"

@@ -13,7 +13,7 @@
         <div
           class="
             of-fixed of-inset-0 of-bg-slate-400/60
-            dark:of-bg-slate-400/60
+            dark:of-bg-slate-800/60
             of-backdrop-blur of-transition-opacity
           "
         />

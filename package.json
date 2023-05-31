@@ -1,6 +1,6 @@
 {
   "name": "@owlint/feathers",
-  "version": "0.0.40",
+  "version": "0.0.42",
   "author": "owlint",
   "publishConfig": {
     "access": "public"

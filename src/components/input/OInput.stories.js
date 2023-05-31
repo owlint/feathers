@@ -139,3 +139,24 @@ export const Type = (args) => ({
   </div>
   `,
 })
+
+export const State = (args) => ({
+  components: { OInput },
+  data() {
+    return {
+      disabled: 'Disabled',
+      active: 'active',
+      readonly: 'readonly',
+    }
+  },
+  setup() {
+    return { args }
+  },
+  template: `
+  <div class="of-space-y-4">
+    <OInput type="text" label="Input" v-model="active" id="id-active-storybook"/>
+    <OInput type="text" disabled label="Input disabled" v-model="disabled" id="id-disabled-storybook"/>
+    <OInput type="text" readonly label="Input read only" v-model="readonly" id="id-readonly-storybook"/>
+  </div>
+  `,
+})

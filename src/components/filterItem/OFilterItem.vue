@@ -1,14 +1,19 @@
 <template>
+
+
   <div class="of-cursor-pointer">
+
+
     <input
       type="checkbox"
       class="of-peer of-absolute of-opacity-0 of-w-0 of-h-0"
       :id="id"
       :name="name"
       :value="value"
-      v-model="modelValue"
-      @change="$emit('input:modelValue', $event.target)"
+      v-model="model"
     />
+
+
     <label
       class="
         peer-checked:of-ring-2
@@ -25,10 +30,19 @@
       ]"
       :for="id"
     >
+
+
       <slot></slot>
+
+
     </label>
+
+
   </div>
+
+
 </template>
+
 
 <script>
 export default {
@@ -36,8 +50,8 @@ export default {
 }
 </script>
 
+
 <script setup>
-import { computed } from 'vue'
 import { COLORS } from '../../enums/colors'
 import { getFilterStyle } from '../../utils/colors'
 
@@ -63,14 +77,17 @@ const props = defineProps({
       return COLORS.indexOf(value) !== -1
     },
   },
-  modelValue: {
-    type: Array,
-    required: true,
-  },
   tile: {
     type: Boolean,
     required: false,
     default: false,
   },
 })
+
+const model = defineModel({
+  type: Array,
+  required: true,
+})
 </script>
+
+

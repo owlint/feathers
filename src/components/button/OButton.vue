@@ -1,4 +1,6 @@
 <template>
+
+
   <button
     :disabled="disabled"
     :type="buttonType"
@@ -6,80 +8,95 @@
     @click="onClick"
     class="of-rounded of-font-semibold disabled:of-opacity-50 of-outline-none"
   >
+
+
     <div class="of-flex of-items-center of-gap-2">
+
+
       <div v-if="loading">
+
+
         <LoadingIcon />
+
+
       </div>
 
+
       <slot v-else name="icon"></slot>
+
+
       <slot> {{ label }} </slot>
+
+
     </div>
+
+
   </button>
+
+
 </template>
 
-<script>
-import { reactive, computed } from 'vue'
-import { COLORS } from '../../enums/colors'
+
+<script setup>
+import { computed } from 'vue'
 import { LoadingIcon } from '../../components/svg/'
-export default {
+import { COLORS } from '../../enums/colors'
+
+defineOptions({
   name: 'OButton',
-  props: {
-    label: {
-      type: String,
-      required: true,
-    },
-    loading: {
-      type: Boolean,
-      required: false,
-      default: false,
-    },
-    disabled: {
-      type: Boolean,
-      required: false,
-      default: false,
-    },
-    buttonType: {
-      type: String,
-      required: false,
-      default: 'button',
-    },
-    type: {
-      type: String,
-      default: 'primary',
-      validator: function (value) {
-        return ['primary', 'secondary', 'tertiary'].indexOf(value) !== -1
-      },
-    },
-    size: {
-      type: String,
-      validator: function (value) {
-        return ['xs', 'sm', 'md', 'lg', 'xl'].indexOf(value) !== -1
-      },
-    },
-    color: {
-      type: String,
-      validator: function (value) {
-        return COLORS.indexOf(value) !== -1
-      },
+})
+
+const props = defineProps({
+  label: {
+    type: String,
+    required: true,
+  },
+  loading: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
+  disabled: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
+  buttonType: {
+    type: String,
+    required: false,
+    default: 'button',
+  },
+  type: {
+    type: String,
+    default: 'primary',
+    validator: function (value) {
+      return ['primary', 'secondary', 'tertiary'].indexOf(value) !== -1
     },
   },
-  emits: ['click'],
-  setup(props, { emit }) {
-    props = reactive(props)
-    return {
-      classes: computed(() => ({
-        [`button--${props.type || 'primary'}`]: true,
-        [`button--${props.color || 'indigo'}`]: true,
-        [`button--${props.size || 'md'}`]: true,
-      })),
-      onClick() {
-        if (!props.disabled && !props.loading) emit('click')
-      },
-    }
+  size: {
+    type: String,
+    validator: function (value) {
+      return ['xs', 'sm', 'md', 'lg', 'xl'].indexOf(value) !== -1
+    },
   },
-  components: { LoadingIcon },
+  color: {
+    type: String,
+    validator: function (value) {
+      return COLORS.indexOf(value) !== -1
+    },
+  },
+})
+const emit = defineEmits(['click'])
+const classes = computed(() => ({
+  [`button--${props.type || 'primary'}`]: true,
+  [`button--${props.color || 'indigo'}`]: true,
+  [`button--${props.size || 'md'}`]: true,
+}))
+const onClick = () => {
+  if (!props.disabled && !props.loading) emit('click')
 }
 </script>
+
 
 <style scoped>
 .button--xs {
@@ -317,3 +334,5 @@ export default {
   @apply dark:of-fill-white of-fill-rose-500 of-text-rose-500 dark:of-text-white enabled:hover:of-bg-rose-500/20 dark:enabled:hover:of-bg-rose-500/30 focus:of-ring-2 focus:of-ring-rose-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
 }
 </style>
+
+

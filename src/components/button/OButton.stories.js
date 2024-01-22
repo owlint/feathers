@@ -1,10 +1,11 @@
 import { COLORS } from '../../enums/colors'
-import OButton from './OButton.vue'
 import { BurgerIcon } from '../svg'
+import OButton from './OButton.vue'
 
 export default {
   title: 'Components/OButton',
   component: OButton,
+  tags: ['autodocs'],
   argTypes: {
     color: {
       control: { type: 'select' },

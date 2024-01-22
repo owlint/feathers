@@ -1,60 +1,34 @@
 {
-  "name": "@owlint/feathers",
-  "version": "0.0.42",
-  "author": "owlint",
-  "publishConfig": {
-    "access": "public"
-  },
-  "typings": "types/index.d.ts",
-  "files": [
-    "dist",
-    "types/*.d.ts",
-    "src"
-  ],
-  "main": "dist/feathers.umd.js",
-  "module": "dist/feathers.es.js",
-  "exports": {
-    "./dist/style.css": "./dist/style.css",
-    ".": {
-      "import": "./dist/feathers.es.js",
-      "require": "./dist/feathers.umd.js"
-    }
-  },
-  "sideEffects": [
-    "*.css"
-  ],
+  "name": "feathers",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".prettierrc.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && npx tailwindcss -i ./src/style.css -o ./dist/output.css && cat ./dist/output.css >> ./dist/style.css",
-    "build:watch": "vite build --watch",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
-  "peerDependencies": {
-    "vue": "3.2.25"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.18.5",
-    "@headlessui/vue": "^1.6.5",
-    "@popperjs/core": "^2.11.5",
-    "@storybook/addon-actions": "^6.5.9",
-    "@storybook/addon-docs": "^6.4.22",
-    "@storybook/addon-essentials": "^6.4.22",
-    "@storybook/addon-interactions": "^6.5.9",
-    "@storybook/addon-links": "^6.5.9",
-    "@storybook/builder-vite": "^0.1.36",
-    "@storybook/testing-library": "^0.0.13",
-    "@storybook/vue3": "^6.5.9",
-    "@vitejs/plugin-vue": "^2.3.3",
-    "autoprefixer": "^10.4.7",
-    "babel-loader": "^8.2.5",
-    "gsap": "^3.10.4",
-    "i": "^0.3.7",
-    "npm": "^8.12.1",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.6",
-    "vite": "^2.9.9",
-    "vue": "^3.2.25",
-    "vue-loader": "^16.8.3"
+    "@storybook/addon-essentials": "^7.6.10",
+    "@storybook/addon-interactions": "^7.6.10",
+    "@storybook/addon-links": "^7.6.10",
+    "@storybook/blocks": "^7.6.10",
+    "@storybook/test": "^7.6.10",
+    "@storybook/vue3": "^7.6.10",
+    "@storybook/vue3-vite": "^7.6.10",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.10",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.17",
+    "@popperjs/core": "^2.11.8",
+    "gsap": "^3.12.5"
   }
 }

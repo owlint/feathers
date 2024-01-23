@@ -1,45 +1,34 @@
 <template>
-
-
   <button
     :disabled="disabled"
     :type="buttonType"
-    :class="classes"
+    :class="[classes, getButtonSize(size)]"
     @click="onClick"
-    class="of-rounded of-font-semibold disabled:of-opacity-50 of-outline-none"
+    class="of-rounded of-font-semibold disabled:of-opacity-50 of-outline-none of-px-4 of-py-2.5"
   >
+    <div class="of-flex of-items-center of-gap-4">
+      <div class="of-flex of-items-center of-gap-2.5">
+        <slot name="iconLeft"></slot>
 
+        <slot> {{ label }} </slot>
 
-    <div class="of-flex of-items-center of-gap-2">
-
-
-      <div v-if="loading">
-
-
-        <LoadingIcon />
-
-
+        <slot name="iconRight"></slot>
       </div>
 
-
-      <slot v-else name="icon"></slot>
-
-
-      <slot> {{ label }} </slot>
-
-
+      <div v-if="loading"><LoadingIcon /></div>
     </div>
-
-
   </button>
-
-
 </template>
-
 
 <script setup>
 import { computed } from 'vue'
 import { LoadingIcon } from '../../components/svg/'
+import { getButtonSize } from '../../utils/sizes'
+import {
+  getPrimaryButton,
+  getSecondaryButton,
+  getTertiaryButton,
+} from '../../utils/colors'
 import { COLORS } from '../../enums/colors'
 
 defineOptions({
@@ -87,33 +76,42 @@ const props = defineProps({
   },
 })
 const emit = defineEmits(['click'])
-const classes = computed(() => ({
-  [`button--${props.type || 'primary'}`]: true,
-  [`button--${props.color || 'indigo'}`]: true,
-  [`button--${props.size || 'md'}`]: true,
-}))
+
+const classes = computed(() => {
+  // [`button--${props.type || 'primary'}`]: true,
+  // [`button--${props.color || 'indigo'}`]: true,
+  // [`button--${props.size || 'md'}`]: true,
+  if (props.type === 'primary') {
+    return getPrimaryButton(props.color)
+  } else if (props.type === 'secondary') {
+    return getSecondaryButton(props.color)
+  } else if (props.type === 'tertiary') {
+    return getTertiaryButton(props.color)
+  } else {
+    return getPrimaryButton(props.color)
+  }
+})
 const onClick = () => {
   if (!props.disabled && !props.loading) emit('click')
 }
 </script>
 
-
 <style scoped>
-.button--xs {
-  @apply of-text-xs of-px-2 of-py-1 of-font-normal;
+/* .button--xs {
+  @apply of-text-xs;
 }
 .button--sm {
-  @apply of-text-xs of-px-3 of-py-1.5;
+  @apply of-text-sm;
 }
 .button--md {
-  @apply of-text-sm of-px-4 of-py-1.5;
+  @apply of-text-base;
 }
 .button--lg {
-  @apply of-text-lg of-px-5 of-py-2;
+  @apply of-text-lg;
 }
 .button--xl {
-  @apply of-text-xl of-px-7 of-py-3;
-}
+  @apply of-text-xl;
+} */
 .button--primary.button--slate {
   @apply of-shadow-md of-fill-white dark:of-fill-slate-900 of-bg-slate-500 enabled:hover:of-bg-slate-600 of-text-white dark:of-text-slate-900 dark:of-bg-slate-500 hover:of-shadow-none focus:of-ring-2 focus:of-ring-slate-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
 }
@@ -274,7 +272,7 @@ const onClick = () => {
   @apply dark:of-fill-white of-fill-blue-500 of-text-blue-500 dark:of-text-white enabled:hover:of-bg-blue-500/20 dark:enabled:hover:of-bg-blue-500/30 focus:of-ring-2 focus:of-ring-blue-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800 dark:focus:of-ring-blue-400;
 }
 
-.button--primary.button--indigo {
+/* .button--primary.button--indigo {
   @apply of-shadow-md of-fill-white dark:of-fill-slate-900 of-bg-indigo-500 enabled:hover:of-bg-indigo-600 of-text-white dark:of-text-slate-900 hover:of-shadow-none focus:of-ring-2 focus:of-ring-indigo-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800 dark:of-bg-indigo-500  dark:hover:of-bg-indigo-600  dark:focus:of-ring-indigo-400;
 }
 .button--secondary.button--indigo {
@@ -282,7 +280,7 @@ const onClick = () => {
 }
 .button--tertiary.button--indigo {
   @apply dark:of-fill-white of-fill-indigo-500 of-text-indigo-500 dark:of-text-white enabled:hover:of-bg-indigo-500/20 focus:of-ring-2 focus:of-ring-indigo-400 of-ring-offset-2 of-ring-offset-slate-100 dark:enabled:hover:of-bg-indigo-500/30  dark:of-ring-offset-slate-800 dark:focus:of-ring-indigo-400;
-}
+} */
 
 .button--primary.button--violet {
   @apply of-shadow-md of-fill-white dark:of-fill-slate-900 of-bg-violet-500 enabled:hover:of-bg-violet-600 of-text-white dark:of-text-slate-900 dark:of-bg-violet-500 hover:of-shadow-none focus:of-ring-2 focus:of-ring-violet-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
@@ -334,5 +332,3 @@ const onClick = () => {
   @apply dark:of-fill-white of-fill-rose-500 of-text-rose-500 dark:of-text-white enabled:hover:of-bg-rose-500/20 dark:enabled:hover:of-bg-rose-500/30 focus:of-ring-2 focus:of-ring-rose-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
 }
 </style>
-
-

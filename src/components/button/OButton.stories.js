@@ -80,13 +80,22 @@ export const Icon = (args) => ({
   },
   template: `
   <div class="of-space-x-2">
-    <OButton label="Button with icon">
-      <template #icon>
+    <OButton label="Button with icon on the left">
+      <template #iconLeft>
         <BurgerIcon/>
       </template>
     </OButton>
-    <OButton loading label="Button with icon loading">
-      <template #icon>
+    <OButton label="Button with icon on both sides">
+    <template #iconLeft>
+    <BurgerIcon/>
+    </template>
+    <template #iconRight>
+    <BurgerIcon/>
+    </template>
+    </OButton>
+    
+    <OButton label="Button with icon on the right">
+      <template #iconRight>
         <BurgerIcon/>
       </template>
     </OButton>

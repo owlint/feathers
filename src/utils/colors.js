@@ -807,3 +807,155 @@ export const getIconButtonStyle = (color) => {
       return 'of-text-indigo-400 hover:of-text-indigo-500 hover:of-bg-indigo-600 focus:of-text-indigo-500 focus:of-bg-indigo-100 focus:of-ring-indigo-400 dark:hover:of-text-indigo-400 dark:focus:of-text-indigo-400 dark:focus:of-ring-indigo-400'
   }
 }
+export const getPrimaryButton = (color) => {
+  switch (color) {
+    case 'indigo':
+      return 'of-shadow-md of-fill-white dark:of-fill-slate-900 of-bg-indigo-500 enabled:hover:of-bg-indigo-600 of-text-white dark:of-text-slate-900 hover:of-shadow-none focus:of-ring-2 focus:of-ring-indigo-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800 dark:of-bg-indigo-500  dark:hover:of-bg-indigo-600  dark:focus:of-ring-indigo-400'
+    case 'slate':
+      return 'of-shadow-md of-fill-white dark:of-fill-slate-900 of-bg-slate-500 enabled:hover:of-bg-slate-600 of-text-white dark:of-text-slate-900 dark:of-bg-slate-500 hover:of-shadow-none focus:of-ring-2 focus:of-ring-slate-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800'
+    case 'gray':
+      return 'oui'
+    case 'zinc':
+      return 'oui'
+    case 'neutral':
+      return 'oui'
+    case 'stone':
+      return 'oui'
+    case 'red':
+      return 'oui'
+    case 'orange':
+      return 'oui'
+    case 'amber':
+      return 'oui'
+    case 'yellow':
+      return 'oui'
+    case 'lime':
+      return 'oui'
+    case 'green':
+      return 'oui'
+    case 'emerald':
+      return 'oui'
+    case 'teal':
+      return 'oui'
+    case 'cyan':
+      return 'oui'
+    case 'sky':
+      return 'oui'
+    case 'blue':
+      return 'oui'
+    case 'violet':
+      return 'oui'
+    case 'purple':
+      return 'oui'
+    case 'fuchsia':
+      return 'oui'
+    case 'pink':
+      return 'oui'
+    case 'rose':
+      return 'oui'
+    default:
+      return 'of-shadow-md of-fill-white dark:of-fill-slate-900 of-bg-indigo-500 enabled:hover:of-bg-indigo-600 of-text-white dark:of-text-slate-900 hover:of-shadow-none focus:of-ring-2 focus:of-ring-indigo-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800 dark:of-bg-indigo-500  dark:hover:of-bg-indigo-600  dark:focus:of-ring-indigo-400'
+  }
+}
+
+export const getSecondaryButton = (color) => {
+  switch (color) {
+    case 'indigo':
+      return 'dark:of-fill-white of-fill-indigo-500 of-text-indigo-500 of-bg-white of-border of-border-indigo-300 enabled:hover:of-shadow-sm enabled:hover:of-shadow-indigo-300 focus:of-ring-2 focus:of-ring-indigo-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800  dark:of-bg-white/10 dark:hover:of-bg-white/20 dark:focus:of-ring-indigo-400 dark:enabled:hover:of-shadow-none dark:of-text-white dark:of-border-none'
+    case 'slate':
+      return 'dark:of-fill-white of-fill-slate-500 of-text-slate-500 of-bg-white of-border of-border-slate-300 enabled:hover:of-shadow-sm enabled:hover:of-shadow-slate-300 dark:enabled:hover:of-shadow-none dark:of-text-white dark:of-bg-white/10 dark:hover:of-bg-white/20 dark:of-border-none focus:of-ring-2 focus:of-ring-slate-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800'
+    case 'gray':
+      return 'oui'
+    case 'zinc':
+      return 'oui'
+    case 'neutral':
+      return 'oui'
+    case 'stone':
+      return 'oui'
+    case 'red':
+      return 'oui'
+    case 'orange':
+      return 'oui'
+    case 'amber':
+      return 'oui'
+    case 'yellow':
+      return 'oui'
+    case 'lime':
+      return 'oui'
+    case 'green':
+      return 'oui'
+    case 'emerald':
+      return 'oui'
+    case 'teal':
+      return 'oui'
+    case 'cyan':
+      return 'oui'
+    case 'sky':
+      return 'oui'
+    case 'blue':
+      return 'oui'
+    case 'violet':
+      return 'oui'
+    case 'purple':
+      return 'oui'
+    case 'fuchsia':
+      return 'oui'
+    case 'pink':
+      return 'oui'
+    case 'rose':
+      return 'oui'
+    default:
+      return 'dark:of-fill-white of-fill-indigo-500 of-text-indigo-500 of-bg-white of-border of-border-indigo-300 enabled:hover:of-shadow-sm enabled:hover:of-shadow-indigo-300 focus:of-ring-2 focus:of-ring-indigo-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800  dark:of-bg-white/10 dark:hover:of-bg-white/20 dark:focus:of-ring-indigo-400 dark:enabled:hover:of-shadow-none dark:of-text-white dark:of-border-none'
+  }
+}
+
+export const getTertiaryButton = (color) => {
+  switch (color) {
+    case 'indigo':
+      return 'dark:of-fill-white of-fill-indigo-500 of-text-indigo-500 dark:of-text-white enabled:hover:of-bg-indigo-500/20 focus:of-ring-2 focus:of-ring-indigo-400 of-ring-offset-2 of-ring-offset-slate-100 dark:enabled:hover:of-bg-indigo-500/30  dark:of-ring-offset-slate-800 dark:focus:of-ring-indigo-400'
+    case 'slate':
+      return 'dark:of-fill-white of-fill-slate-500 of-text-slate-500 dark:of-text-white enabled:hover:of-bg-slate-500/20 dark:enabled:hover:of-bg-slate-500/30 focus:of-ring-2 focus:of-ring-slate-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800'
+    case 'gray':
+      return 'oui'
+    case 'zinc':
+      return 'oui'
+    case 'neutral':
+      return 'oui'
+    case 'stone':
+      return 'oui'
+    case 'red':
+      return 'oui'
+    case 'orange':
+      return 'oui'
+    case 'amber':
+      return 'oui'
+    case 'yellow':
+      return 'oui'
+    case 'lime':
+      return 'oui'
+    case 'green':
+      return 'oui'
+    case 'emerald':
+      return 'oui'
+    case 'teal':
+      return 'oui'
+    case 'cyan':
+      return 'oui'
+    case 'sky':
+      return 'oui'
+    case 'blue':
+      return 'oui'
+    case 'violet':
+      return 'oui'
+    case 'purple':
+      return 'oui'
+    case 'fuchsia':
+      return 'oui'
+    case 'pink':
+      return 'oui'
+    case 'rose':
+      return 'oui'
+    default:
+      return 'dark:of-fill-white of-fill-indigo-500 of-text-indigo-500 dark:of-text-white enabled:hover:of-bg-indigo-500/20 focus:of-ring-2 focus:of-ring-indigo-400 of-ring-offset-2 of-ring-offset-slate-100 dark:enabled:hover:of-bg-indigo-500/30  dark:of-ring-offset-slate-800 dark:focus:of-ring-indigo-400'
+  }
+}

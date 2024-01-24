@@ -4,7 +4,7 @@
     :type="buttonType"
     :class="[classes, getButtonSize(size)]"
     @click="onClick"
-    class="of-rounded of-font-semibold disabled:of-opacity-50 of-outline-none of-px-4 of-py-2.5"
+    class="of-rounded of-font-semibold disabled:of-opacity-50 disabled:hover:of-ring-0 disabled:of-cursor-not-allowed of-outline-none of-px-4 of-py-2.5 focus:of-ring-2"
   >
     <div class="of-flex of-items-center of-gap-4">
       <div class="of-flex of-items-center of-gap-2.5">
@@ -78,9 +78,6 @@ const props = defineProps({
 const emit = defineEmits(['click'])
 
 const classes = computed(() => {
-  // [`button--${props.type || 'primary'}`]: true,
-  // [`button--${props.color || 'indigo'}`]: true,
-  // [`button--${props.size || 'md'}`]: true,
   if (props.type === 'primary') {
     return getPrimaryButton(props.color)
   } else if (props.type === 'secondary') {
@@ -112,7 +109,7 @@ const onClick = () => {
 .button--xl {
   @apply of-text-xl;
 } */
-.button--primary.button--slate {
+/* .button--primary.button--slate {
   @apply of-shadow-md of-fill-white dark:of-fill-slate-900 of-bg-slate-500 enabled:hover:of-bg-slate-600 of-text-white dark:of-text-slate-900 dark:of-bg-slate-500 hover:of-shadow-none focus:of-ring-2 focus:of-ring-slate-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
 }
 .button--secondary.button--slate {
@@ -120,9 +117,9 @@ const onClick = () => {
 }
 .button--tertiary.button--slate {
   @apply dark:of-fill-white of-fill-slate-500 of-text-slate-500 dark:of-text-white enabled:hover:of-bg-slate-500/20 dark:enabled:hover:of-bg-slate-500/30 focus:of-ring-2 focus:of-ring-slate-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
-}
+} */
 
-.button--primary.button--gray {
+/* .button--primary.button--gray {
   @apply of-shadow-md of-fill-white dark:of-fill-slate-900 of-bg-gray-500 enabled:hover:of-bg-gray-600 of-text-white dark:of-text-slate-900 dark:of-bg-gray-500 hover:of-shadow-none focus:of-ring-2 focus:of-ring-gray-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
 }
 .button--secondary.button--gray {
@@ -130,7 +127,7 @@ const onClick = () => {
 }
 .button--tertiary.button--gray {
   @apply dark:of-fill-white of-fill-gray-500 of-text-gray-500 dark:of-text-white enabled:hover:of-bg-gray-500/20 dark:enabled:hover:of-bg-gray-500/30 focus:of-ring-2 focus:of-ring-gray-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
-}
+} 
 
 .button--primary.button--zinc {
   @apply of-shadow-md of-fill-white dark:of-fill-slate-900 of-bg-zinc-500 enabled:hover:of-bg-zinc-600 of-text-white dark:of-text-slate-900 dark:of-bg-zinc-500 hover:of-shadow-none focus:of-ring-2 focus:of-ring-zinc-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
@@ -272,7 +269,7 @@ const onClick = () => {
   @apply dark:of-fill-white of-fill-blue-500 of-text-blue-500 dark:of-text-white enabled:hover:of-bg-blue-500/20 dark:enabled:hover:of-bg-blue-500/30 focus:of-ring-2 focus:of-ring-blue-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800 dark:focus:of-ring-blue-400;
 }
 
-/* .button--primary.button--indigo {
+ .button--primary.button--indigo {
   @apply of-shadow-md of-fill-white dark:of-fill-slate-900 of-bg-indigo-500 enabled:hover:of-bg-indigo-600 of-text-white dark:of-text-slate-900 hover:of-shadow-none focus:of-ring-2 focus:of-ring-indigo-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800 dark:of-bg-indigo-500  dark:hover:of-bg-indigo-600  dark:focus:of-ring-indigo-400;
 }
 .button--secondary.button--indigo {
@@ -280,7 +277,7 @@ const onClick = () => {
 }
 .button--tertiary.button--indigo {
   @apply dark:of-fill-white of-fill-indigo-500 of-text-indigo-500 dark:of-text-white enabled:hover:of-bg-indigo-500/20 focus:of-ring-2 focus:of-ring-indigo-400 of-ring-offset-2 of-ring-offset-slate-100 dark:enabled:hover:of-bg-indigo-500/30  dark:of-ring-offset-slate-800 dark:focus:of-ring-indigo-400;
-} */
+} 
 
 .button--primary.button--violet {
   @apply of-shadow-md of-fill-white dark:of-fill-slate-900 of-bg-violet-500 enabled:hover:of-bg-violet-600 of-text-white dark:of-text-slate-900 dark:of-bg-violet-500 hover:of-shadow-none focus:of-ring-2 focus:of-ring-violet-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
@@ -330,5 +327,5 @@ const onClick = () => {
 }
 .button--tertiary.button--rose {
   @apply dark:of-fill-white of-fill-rose-500 of-text-rose-500 dark:of-text-white enabled:hover:of-bg-rose-500/20 dark:enabled:hover:of-bg-rose-500/30 focus:of-ring-2 focus:of-ring-rose-400 of-ring-offset-2 of-ring-offset-slate-100 dark:of-ring-offset-slate-800;
-}
+}*/
 </style>

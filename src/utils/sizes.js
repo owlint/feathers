@@ -112,3 +112,20 @@ export const getIconSize = (width) => {
       return 'of-w-4 of-h-4'
   }
 }
+export const getButtonSize = (width) => {
+  switch (width) {
+    case 'xs':
+      return 'of-text-xs'
+    case 'sm':
+      return 'of-text-sm'
+    case 'md':
+      return 'of-text-base'
+    case 'lg':
+      return 'of-text-lg'
+    case 'xl':
+      return 'of-text-xl'
+    default:
+      console.log(`Size ${width} not implemented yet`)
+      return 'of-text-base'
+  }
+}

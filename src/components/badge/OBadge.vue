@@ -20,7 +20,6 @@ export default {
 </script>
 
 <script setup>
-import { computed } from 'vue'
 import { COLORS } from '../../enums/colors'
 import { getBadgeStyle } from '../../utils/colors'
 import { SIZES } from '../../enums/sizes'

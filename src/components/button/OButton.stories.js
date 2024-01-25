@@ -60,8 +60,13 @@ export const Loading = (args) => ({
   setup() {
     return { args }
   },
-  template:
-    '<div class="of-flex of-gap-2 of-flex-wrap of-items-center"><OButton loading label="Loading button" type="primary" /><OButton loading label="Loading button" type="secondary" /><OButton loading label="Button" type="tertiary" /></div>',
+  template: `
+    <div class="of-flex of-gap-2 of-flex-wrap of-items-center">
+      <OButton loading label = "Loading button" type = "primary" />
+      <OButton loading label="Loading button" type= "secondary" />
+      <OButton loading label="Loading Button" type= "tertiary" />
+    </div>
+  `,
 })
 
 export const Sizes = (args) => ({
@@ -103,7 +108,7 @@ export const Icon = (args) => ({
 
     <OButton>
       <template #iconRight>
-        <EyeIcon/>
+        <BurgerIcon/>
       </template>
     </OButton>
 

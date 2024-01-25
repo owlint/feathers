@@ -807,44 +807,9 @@ export const getIconButtonStyle = (color) => {
       return 'of-text-indigo-400 hover:of-text-indigo-500 hover:of-bg-indigo-600 focus:of-text-indigo-500 focus:of-bg-indigo-100 focus:of-ring-indigo-400 dark:hover:of-text-indigo-400 dark:focus:of-text-indigo-400 dark:focus:of-ring-indigo-400'
   }
 }
-/*
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
- */
+
 export const getPrimaryButton = (color) => {
-  let style = 'of-text-white hover:of-ring-2 '
+  let style = 'of-text-white hover:of-ring-4 '
   switch (color) {
     case 'indigo':
       style +=
@@ -924,7 +889,7 @@ export const getPrimaryButton = (color) => {
       break
     case 'fuchsia':
       style +=
-        'of-bg-fuchsia-600 hover:of-ring-fuschia-200 focus:of-ring-fuschia-400 dark:hover:of-ring-fuschia-800 dark:focus:of-ring-fuschia-400'
+        'of-bg-fuchsia-600 hover:of-ring-fuchsia-200 focus:of-ring-fuchsia-400 dark:hover:of-ring-fuchsia-800 dark:focus:of-ring-fuchsia-400'
       break
     case 'pink':
       style +=
@@ -944,7 +909,7 @@ export const getPrimaryButton = (color) => {
 
 export const getSecondaryButton = (color) => {
   let style =
-    'dark:of-bg-slate-800 dark:hover:of-ring-slate-700 hover:of-ring-2'
+    'dark:of-bg-slate-800 dark:hover:of-ring-slate-700 hover:of-ring-4 '
   switch (color) {
     case 'indigo':
       style +=
@@ -952,96 +917,98 @@ export const getSecondaryButton = (color) => {
       break
     case 'slate':
       style +=
-        'of-text-slate-600 dark:of-text-slate-300 of-bg-slate-100 focus:of-ring-2 hover:of-ring-slate-200 dark:focus:of-ring-slate-600 focus:of-ring-slate-400'
+        'of-text-slate-600 dark:of-text-slate-300 of-bg-slate-100 hover:of-ring-slate-200 dark:focus:of-ring-slate-600 focus:of-ring-slate-400'
       break
     case 'gray':
       style +=
-        'of-text-gray-600 dark:of-text-gray-300 of-bg-gray-100 focus:of-ring-2 hover:of-ring-gray-200 dark:focus:of-ring-gray-600 focus:of-ring-gray-400'
+        'of-text-gray-600 dark:of-text-gray-300 of-bg-gray-100 hover:of-ring-gray-200 dark:focus:of-ring-gray-600 focus:of-ring-gray-400'
       break
     case 'zinc':
       style +=
-        'of-text-zinc-600 dark:of-text-zinc-300 of-bg-zinc-100 focus:of-ring-2 hover:of-ring-zinc-200 dark:focus:of-ring-zinc-600 focus:of-ring-zinc-400'
+        'of-text-zinc-600 dark:of-text-zinc-300 of-bg-zinc-100 hover:of-ring-zinc-200 dark:focus:of-ring-zinc-600 focus:of-ring-zinc-400'
       break
     case 'neutral':
       style +=
-        'of-text-neutral-600 dark:of-text-neutral-300 of-bg-neutral-100 focus:of-ring-2 hover:of-ring-neutral-200 dark:focus:of-ring-neutral-600 focus:of-ring-neutral-400'
+        'of-text-neutral-600 dark:of-text-neutral-300 of-bg-neutral-100 hover:of-ring-neutral-200 dark:focus:of-ring-neutral-600 focus:of-ring-neutral-400'
       break
     case 'stone':
       style +=
-        'of-text-stone-600 dark:of-text-stone-300 of-bg-stone-100 focus:of-ring-2 hover:of-ring-stone-200 dark:focus:of-ring-stone-600 focus:of-ring-stone-400'
+        'of-text-stone-600 dark:of-text-stone-300 of-bg-stone-100 hover:of-ring-stone-200 dark:focus:of-ring-stone-600 focus:of-ring-stone-400'
       break
     case 'red':
       style +=
-        'of-text-red-600 dark:of-text-red-500 of-bg-red-100 focus:of-ring-2 hover:of-ring-red-200 dark:focus:of-ring-red-600 focus:of-ring-red-400'
+        'of-text-red-600 dark:of-text-red-500 of-bg-red-100 hover:of-ring-red-200 dark:focus:of-ring-red-600 focus:of-ring-red-400'
       break
     case 'orange':
       style +=
-        'of-text-orange-600 dark:of-text-orange-500 of-bg-orange-100 focus:of-ring-2 hover:of-ring-orange-200 dark:focus:of-ring-orange-600 focus:of-ring-orange-400'
+        'of-text-orange-600 dark:of-text-orange-500 of-bg-orange-100 hover:of-ring-orange-200 dark:focus:of-ring-orange-600 focus:of-ring-orange-400'
       break
     case 'amber':
       style +=
-        'of-text-amber-600 dark:of-text-amber-500 of-bg-amber-100 focus:of-ring-2 hover:of-ring-amber-200 dark:focus:of-ring-amber-600 focus:of-ring-amber-400'
+        'of-text-amber-600 dark:of-text-amber-500 of-bg-amber-100 hover:of-ring-amber-200 dark:focus:of-ring-amber-600 focus:of-ring-amber-400'
       break
     case 'yellow':
       style +=
-        'of-text-yellow-600 dark:of-text-yellow-500 of-bg-yellow-100 focus:of-ring-2 hover:of-ring-yellow-200 dark:focus:of-ring-yellow-600 focus:of-ring-yellow-400'
+        'of-text-yellow-600 dark:of-text-yellow-500 of-bg-yellow-100 hover:of-ring-yellow-200 dark:focus:of-ring-yellow-600 focus:of-ring-yellow-400'
       break
     case 'lime':
       style +=
-        'of-text-lime-600 dark:of-text-lime-500 of-bg-lime-100 focus:of-ring-2 hover:of-ring-lime-200 dark:focus:of-ring-lime-600 focus:of-ring-lime-400'
+        'of-text-lime-600 dark:of-text-lime-500 of-bg-lime-100 hover:of-ring-lime-200 dark:focus:of-ring-lime-600 focus:of-ring-lime-400'
       break
     case 'green':
       style +=
-        'of-text-green-600 dark:of-text-green-500 of-bg-green-100 focus:of-ring-2 hover:of-ring-green-200 dark:focus:of-ring-green-600 focus:of-ring-green-400'
+        'of-text-green-600 dark:of-text-green-500 of-bg-green-100 hover:of-ring-green-200 dark:focus:of-ring-green-600 focus:of-ring-green-400'
       break
     case 'emerald':
       style +=
-        'of-text-emerald-600 dark:of-text-emerald-500 of-bg-emerald-100 focus:of-ring-2 hover:of-ring-emerald-200 dark:focus:of-ring-emerald-600 focus:of-ring-emerald-400'
+        'of-text-emerald-600 dark:of-text-emerald-500 of-bg-emerald-100 hover:of-ring-emerald-200 dark:focus:of-ring-emerald-600 focus:of-ring-emerald-400'
       break
     case 'teal':
       style +=
-        'of-text-teal-600 dark:of-text-teal-500 of-bg-teal-100 focus:of-ring-2 hover:of-ring-teal-200 dark:focus:of-ring-teal-600 focus:of-ring-teal-400'
+        'of-text-teal-600 dark:of-text-teal-500 of-bg-teal-100 hover:of-ring-teal-200 dark:focus:of-ring-teal-600 focus:of-ring-teal-400'
       break
     case 'cyan':
       style +=
-        'of-text-cyan-600 dark:of-text-cyan-500 of-bg-cyan-100 focus:of-ring-2 hover:of-ring-cyan-200 dark:focus:of-ring-cyan-600 focus:of-ring-cyan-400'
+        'of-text-cyan-600 dark:of-text-cyan-500 of-bg-cyan-100 hover:of-ring-cyan-200 dark:focus:of-ring-cyan-600 focus:of-ring-cyan-400'
       break
     case 'sky':
       style +=
-        'of-text-sky-600 dark:of-text-sky-500 of-bg-sky-100 focus:of-ring-2 hover:of-ring-sky-200 dark:focus:of-ring-sky-600 focus:of-ring-sky-400'
+        'of-text-sky-600 dark:of-text-sky-500 of-bg-sky-100 hover:of-ring-sky-200 dark:focus:of-ring-sky-600 focus:of-ring-sky-400'
       break
     case 'blue':
       style +=
-        'of-text-blue-600 dark:of-text-blue-500 of-bg-blue-100 focus:of-ring-2 hover:of-ring-blue-200 dark:focus:of-ring-blue-600 focus:of-ring-blue-400'
+        'of-text-blue-600 dark:of-text-blue-500 of-bg-blue-100 hover:of-ring-blue-200 dark:focus:of-ring-blue-600 focus:of-ring-blue-400'
       break
     case 'violet':
       style +=
-        'of-text-violet-600 dark:of-text-violet-500 of-bg-violet-100 focus:of-ring-2 hover:of-ring-violet-200 dark:focus:of-ring-violet-600 focus:of-ring-violet-400'
+        'of-text-violet-600 dark:of-text-violet-500 of-bg-violet-100 hover:of-ring-violet-200 dark:focus:of-ring-violet-600 focus:of-ring-violet-400'
       break
     case 'purple':
       style +=
-        'of-text-purple-600 dark:of-text-purple-500 of-bg-purple-100 focus:of-ring-2 hover:of-ring-purple-200 dark:focus:of-ring-purple-600 focus:of-ring-purple-400'
+        'of-text-purple-600 dark:of-text-purple-500 of-bg-purple-100 hover:of-ring-purple-200 dark:focus:of-ring-purple-600 focus:of-ring-purple-400'
       break
     case 'fuchsia':
       style +=
-        'of-text-fuchsia-600 dark:of-text-fuchsia-500 of-bg-fuchsia-100 focus:of-ring-2 hover:of-ring-fuchsia-200 dark:focus:of-ring-fuchsia-600 focus:of-ring-fuchsia-400'
+        'of-text-fuchsia-600 dark:of-text-fuchsia-500 of-bg-fuchsia-100 hover:of-ring-fuchsia-200 dark:focus:of-ring-fuchsia-600 focus:of-ring-fuchsia-400'
       break
     case 'pink':
       style +=
-        'of-text-pink-600 dark:of-text-pink-500 of-bg-pink-100 focus:of-ring-2 hover:of-ring-pink-200 dark:focus:of-ring-pink-600 focus:of-ring-pink-400'
+        'of-text-pink-600 dark:of-text-pink-500 of-bg-pink-100 hover:of-ring-pink-200 dark:focus:of-ring-pink-600 focus:of-ring-pink-400'
       break
     case 'rose':
       style +=
-        'of-text-rose-600 dark:of-text-rose-500 of-bg-rose-100 focus:of-ring-2 hover:of-ring-rose-200 dark:focus:of-ring-rose-600 focus:of-ring-rose-400'
+        'of-text-rose-600 dark:of-text-rose-500 of-bg-rose-100 hover:of-ring-rose-200 dark:focus:of-ring-rose-600 focus:of-ring-rose-400'
+      break
     default:
       style +=
-        'of-text-indigo-600 dark:of-text-indigo-500 of-bg-indigo-100 focus:of-ring-2 hover:of-ring-indigo-200 dark:focus:of-ring-indigo-600 focus:of-ring-indigo-400'
+        'of-text-indigo-600 dark:of-text-indigo-500 of-bg-indigo-100 hover:of-ring-indigo-200 dark:focus:of-ring-indigo-600 focus:of-ring-indigo-400'
+      break
   }
   return style
 }
 
 export const getTertiaryButton = (color) => {
-  let style = 'focus:of-ring-2 '
+  let style = ' '
   switch (color) {
     case 'indigo':
       style +=
@@ -1130,9 +1097,11 @@ export const getTertiaryButton = (color) => {
     case 'rose':
       style +=
         'of-text-rose-600 dark:of-text-rose-500 hover:of-bg-rose-50 dark:hover:of-bg-rose-950 focus:of-bg-rose-50 focus:of-ring-rose-400 dark:focus:of-bg-rose-950 dark:focus:of-ring-rose-600'
+      break
     default:
       style +=
         'of-text-indigo-600 dark:of-text-indigo-500 hover:of-bg-indigo-50 dark:hover:of-bg-indigo-950 focus:of-bg-indigo-50 focus:of-ring-indigo-400 dark:focus:of-bg-indigo-950 dark:focus:of-ring-indigo-600'
+      break
   }
   return style
 }

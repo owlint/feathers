@@ -38,7 +38,8 @@ defineOptions({
 const props = defineProps({
   label: {
     type: String,
-    required: true,
+    required: false,
+    dafault: '',
   },
   loading: {
     type: Boolean,
@@ -67,6 +68,7 @@ const props = defineProps({
     validator: function (value) {
       return ['xs', 'sm', 'md', 'lg', 'xl'].indexOf(value) !== -1
     },
+    default: 'md',
   },
   color: {
     type: String,

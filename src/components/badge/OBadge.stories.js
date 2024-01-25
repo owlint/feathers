@@ -1,7 +1,7 @@
 import OBadge from './OBadge.vue'
 import { COLORS } from '../../enums/colors'
 import { SIZES } from '../../enums/sizes'
-import { BurgerIcon } from '../svg'
+import { BurgerIcon, EyeIcon, CrossIcon } from '../svg'
 
 export default {
   component: OBadge,
@@ -28,15 +28,7 @@ export default {
       options: [true, false],
       control: { type: 'inline-radio' },
     },
-    text: {
-      type: { name: 'string', required: true },
-      description: 'Contenu du composant',
-    },
   },
-}
-
-const defaultArgs = {
-  text: 'Badge',
 }
 
 const Template = (args) => ({
@@ -45,11 +37,13 @@ const Template = (args) => ({
     //👇 The args will now be passed down to the template
     return { args }
   },
-  template: `<OBadge v-bind="args" > ${args.text} </OBadge>`,
+  template: `<OBadge v-bind="args" >`,
 })
 
-export const Default = Template.bind({})
-Default.args = defaultArgs
+export const Base = Template.bind({})
+Base.args = {
+  label: 'OBadge',
+}
 
 export const Tile = (args) => ({
   components: { OBadge },
@@ -62,9 +56,12 @@ export const Tile = (args) => ({
   `,
 })
 export const Icon = (args) => ({
-  components: { OBadge, BurgerIcon },
+  components: { OBadge, BurgerIcon, EyeIcon, CrossIcon },
   setup() {
-    return { args }
+    const action = () => {
+      console.log('oui')
+    }
+    return { args, action }
   },
   template: `
     <OBadge> Badge Default </OBadge>
@@ -73,6 +70,16 @@ export const Icon = (args) => ({
 
       <span> Burger </span>
     </OBadge>
+
+     <OBadge label="Badge with icons on both sides" is-clickable @action="action">
+      <template #iconLeft>
+        <BurgerIcon/>
+      </template>
+      <template #iconRight>
+        <EyeIcon/>
+      </template>
+    </OBadge>
+    
   `,
 })
 

@@ -42,8 +42,13 @@ export const Types = (args) => ({
   setup() {
     return { args }
   },
-  template:
-    '<div class="of-flex of-gap-2 of-flex-wrap of-items-center"><OButton label="Button" type="primary" /><OButton label="Button" type="secondary" /><OButton label="Button" type="tertiary" /></div>',
+  template: `
+    <div class="of-flex of-gap-2 of-flex-wrap of-items-center">
+      <OButton label="Button" type="primary" />
+      <OButton label="Button" type="secondary" />
+      <OButton label="Button" type="tertiary" />
+    </div>
+  `,
 })
 
 export const Disabled = (args) => ({
@@ -51,8 +56,13 @@ export const Disabled = (args) => ({
   setup() {
     return { args }
   },
-  template:
-    '<div class="of-flex of-gap-2 of-flex-wrap of-items-center"><OButton disabled label="Button" type="primary" /><OButton disabled label="Button" type="secondary" /><OButton disabled label="Button" type="tertiary" /></div>',
+  template: `
+    <div class="of-flex of-gap-2 of-flex-wrap of-items-center">
+      <OButton disabled label="Button" type="primary" />
+      <OButton disabled label="Button" type="secondary" />
+      <OButton disabled label="Button" type="tertiary" />
+    </div>
+  `,
 })
 
 export const Loading = (args) => ({
@@ -62,7 +72,7 @@ export const Loading = (args) => ({
   },
   template: `
     <div class="of-flex of-gap-2 of-flex-wrap of-items-center">
-      <OButton loading label = "Loading button" type = "primary" />
+      <OButton loading label="Loading button" type ="primary" />
       <OButton loading label="Loading button" type= "secondary" />
       <OButton loading label="Loading Button" type= "tertiary" />
     </div>
@@ -74,8 +84,15 @@ export const Sizes = (args) => ({
   setup() {
     return { args }
   },
-  template:
-    '<div class="of-flex of-gap-2 of-flex-wrap of-items-center"><OButton label="Button" size="xs" /><OButton label="Button" size="sm" /><OButton label="Button" size="md"/><OButton label="Button" size="lg"/><OButton label="Button" size="xl"/></div>',
+  template: `
+    <div class="of-flex of-gap-2 of-flex-wrap of-items-center">
+      <OButton label="Button" size="xs" />
+      <OButton label="Button" size="sm" />
+      <OButton label="Button" size="md"/>
+      <OButton label="Button" size="lg"/>
+      <OButton label="Button" size="xl"/>
+    </div>
+  `,
 })
 
 export const Icon = (args) => ({
@@ -129,7 +146,11 @@ export const Colors = (args) => ({
   },
   template: `
     <div class="of-flex of-gap-2 of-flex-wrap of-items-center"  v-for="color in colors" :key="color">
-      <div class="of-flex of-gap-2 of-flex-wrap of-items-center of-my-2"><OButton :label="color" :color="color" type="primary" /><OButton :label="color" :color="color" type="secondary" /><OButton :color="color" :label="color" type="tertiary" /></div>
+      <div class="of-flex of-gap-2 of-flex-wrap of-items-center of-my-2">
+        <OButton :label="color" :color="color" type="primary" />
+        <OButton :label="color" :color="color" type="secondary" />
+        <OButton :label="color" :color="color" type="tertiary" />
+      </div>
     </div>
   `,
 })

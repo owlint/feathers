@@ -51,8 +51,11 @@ export const Tile = (args) => ({
     return { args }
   },
   template: `
-    <OBadge > Badge Default </OBadge>
-    <OBadge tile > Badge Tile </OBadge>
+    <OBadge label="Badge Default"></OBadge>
+    <OBadge tile label="Badge Tile"></OBadge>
+    <OBadge label="Badge Default" is-clickable @action="action"></OBadge>
+    <OBadge tile label="Badge Tile" is-clickable @action="action"></OBadge>
+    
   `,
 })
 export const Icon = (args) => ({
@@ -64,11 +67,37 @@ export const Icon = (args) => ({
     return { args, action }
   },
   template: `
-    <OBadge> Badge Default </OBadge>
-    <OBadge> 
-      <BurgerIcon/>
+    <OBadge label="Badge Default"></OBadge>
+    
+    <OBadge label="Burger on the left">
+      <template #iconLeft>
+        <BurgerIcon/>
+      </template>
+    </OBadge>
+    <OBadge label="Eye on the right">
+      <template #iconRight>
+        <EyeIcon/>
+      </template>
+    </OBadge>
 
-      <span> Burger </span>
+     <OBadge label="Badge with icons on both sides">
+      <template #iconLeft>
+        <BurgerIcon/>
+      </template>
+      <template #iconRight>
+        <EyeIcon/>
+      </template>
+    </OBadge>
+
+     <OBadge label="Burger on the left" is-clickable @action="action">
+      <template #iconLeft>
+        <BurgerIcon/>
+      </template>
+    </OBadge>
+    <OBadge label="Eye on the right" is-clickable @action="action">
+      <template #iconRight>
+        <EyeIcon/>
+      </template>
     </OBadge>
 
      <OBadge label="Badge with icons on both sides" is-clickable @action="action">
@@ -88,9 +117,17 @@ export const Sizes = (args) => ({
   setup() {
     return { args }
   },
-  template: `<OBadge v-for="size in ['xs', 'sm', 'md', 'lg', 'xl']" :key="size" :size="size" >
+  template: `<div class="of-flex of-gap-2 of-items-center" >
+                <OBadge v-for="size in ['xs', 'sm', 'md', 'lg', 'xl']" :key="size" :size="size">
+                  Badge {{size}}
+                </OBadge>
+            </div>
+            <div class="of-flex of-gap-2 of-items-center" >
+            <OBadge v-for="size in ['xs', 'sm', 'md', 'lg', 'xl']" :key="size" :size="size" is-clickable @action="action">
                 Badge {{size}}
-            </OBadge>`,
+            </OBadge>
+            </div>
+            `,
 })
 export const Colors = (args) => ({
   components: { OBadge },

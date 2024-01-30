@@ -1,6 +1,6 @@
 <template>
   <div
-    class="of-flex of-items-center of-font-medium dark:of-border of-px-2.5 of-py-1"
+    class="of-flex of-items-center of-font-medium dark:of-border of-px-2.5 of-py-1.5"
     :class="[
       getBadgeStyle(color),
       getBadgeSize(size),
@@ -51,7 +51,7 @@ defineProps({
   size: {
     type: String,
     required: false,
-    default: 'md',
+    default: 'xs',
     validator: (value) => {
       return SIZES.indexOf(value) !== -1
     },

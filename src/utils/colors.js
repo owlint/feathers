@@ -52,51 +52,51 @@ export const getIconStyle = (color) => {
 export const getBadgeStyle = (color) => {
   switch (color) {
     case 'indigo':
-      return 'of-text-indigo-900 of-bg-indigo-100 dark:of-bg-slate-900 dark:of-text-indigo-400 dark:of-border-indigo-400'
+      return 'of-text-indigo-600 of-bg-indigo-100 dark:of-bg-slate-800 dark:of-text-indigo-400 dark:of-border-slate-600'
     case 'slate':
-      return 'of-text-salte-900 of-bg-slate-100 dark:of-bg-slate-900 dark:of-text-slate-400 dark:of-border-slate-400'
+      return 'of-text-slate-600 of-bg-slate-100 dark:of-bg-slate-800 dark:of-text-slate-300 dark:of-border-slate-600'
     case 'gray':
-      return 'of-text-gray-900 of-bg-gray-100 dark:of-bg-slate-900 dark:of-text-gray-400 dark:of-border-gray-400'
+      return 'of-text-gray-600 of-bg-gray-100 dark:of-bg-slate-800 dark:of-text-gray-300 dark:of-border-slate-600'
     case 'zinc':
-      return 'of-text-zinc-900 of-bg-zinc-100 dark:of-bg-slate-900 dark:of-text-zinc-400/80 dark:of-border-zinc-400'
+      return 'of-text-zinc-600 of-bg-zinc-100 dark:of-bg-slate-800 dark:of-text-zinc-300 dark:of-border-slate-600'
     case 'neutral':
-      return 'of-text-neutral-900 of-bg-neutral-100 dark:of-bg-slate-900 dark:of-text-neutral-400/80 dark:of-border-neutral-400'
+      return 'of-text-neutral-600 of-bg-neutral-100 dark:of-bg-slate-800 dark:of-text-neutral-300 dark:of-border-slate-600'
     case 'stone':
-      return 'of-text-stone-900 of-bg-stone-100 dark:of-bg-slate-900 dark:of-text-stone-400/80 dark:of-border-stone-400'
+      return 'of-text-stone-600 of-bg-stone-100 dark:of-bg-slate-800 dark:of-text-stone-300 dark:of-border-slate-600'
     case 'red':
-      return 'of-text-red-900 of-bg-red-100 dark:of-bg-slate-900 dark:of-text-red-400 dark:of-border-red-400'
+      return 'of-text-red-600 of-bg-red-100 dark:of-bg-slate-800 dark:of-text-red-400 dark:of-border-slate-600'
     case 'orange':
-      return 'of-text-orange-900 of-bg-orange-100 dark:of-bg-slate-900 dark:of-text-orange-400 dark:of-border-orange-400'
+      return 'of-text-orange-600 of-bg-orange-100 dark:of-bg-slate-800 dark:of-text-orange-400 dark:of-border-slate-600'
     case 'amber':
-      return 'of-text-amber-900 of-bg-amber-100 dark:of-bg-slate-900 dark:of-text-amber-400/80 dark:of-border-amber-400'
+      return 'of-text-amber-600 of-bg-amber-100 dark:of-bg-slate-800 dark:of-text-amber-400 dark:of-border-slate-600'
     case 'yellow':
-      return 'of-text-yellow-900 of-bg-yellow-100 dark:of-bg-slate-900 dark:of-text-yellow-400 dark:of-border-yellow-400'
+      return 'of-text-yellow-600 of-bg-yellow-100 dark:of-bg-slate-800 dark:of-text-yellow-400 dark:of-border-slate-600'
     case 'lime':
-      return 'of-text-lime-900 of-bg-lime-100 dark:of-bg-slate-900 dark:of-text-lime-400/80 dark:of-border-lime-400'
+      return 'of-text-lime-600 of-bg-lime-100 dark:of-bg-slate-800 dark:of-text-lime-400 dark:of-border-slate-600'
     case 'green':
-      return 'of-text-green-900 of-bg-green-100 dark:of-bg-slate-900 dark:of-text-green-400 dark:of-border-green-400'
+      return 'of-text-green-600 of-bg-green-100 dark:of-bg-slate-800 dark:of-text-green-400 dark:of-border-slate-600'
     case 'emerald':
-      return 'of-text-emerald-900 of-bg-emerald-100 dark:of-bg-slate-900 dark:of-text-emerald-400/80 dark:of-border-emerald-400'
+      return 'of-text-emerald-600 of-bg-emerald-100 dark:of-bg-slate-800 dark:of-text-emerald-400 dark:of-border-slate-600'
     case 'teal':
-      return 'of-text-teal-900 of-bg-teal-100 dark:of-bg-slate-900 dark:of-text-teal-400/80 dark:of-border-teal-400'
+      return 'of-text-teal-600 of-bg-teal-100 dark:of-bg-slate-800 dark:of-text-teal-400 dark:of-border-slate-600'
     case 'cyan':
-      return 'of-text-cyan-900 of-bg-cyan-100 dark:of-bg-slate-900 dark:of-text-cyan-400/80 dark:of-border-cyan-400'
+      return 'of-text-cyan-600 of-bg-cyan-100 dark:of-bg-slate-800 dark:of-text-cyan-400 dark:of-border-slate-600'
     case 'sky':
-      return 'of-text-sky-900 of-bg-sky-100 dark:of-bg-slate-900 dark:of-text-sky-400/80 dark:of-border-sky-400'
+      return 'of-text-sky-600 of-bg-sky-100 dark:of-bg-slate-800 dark:of-text-sky-400 dark:of-border-slate-600'
     case 'blue':
-      return 'of-text-blue-900 of-bg-blue-100 dark:of-bg-slate-900 dark:of-text-blue-400 dark:of-border-blue-400'
+      return 'of-text-blue-600 of-bg-blue-100 dark:of-bg-slate-800 dark:of-text-blue-400 dark:of-border-slate-600'
     case 'violet':
-      return 'of-text-violet-900 of-bg-violet-100 dark:of-bg-slate-900 dark:of-text-violet-400/80 dark:of-border-violet-400'
+      return 'of-text-violet-600 of-bg-violet-100 dark:of-bg-slate-800 dark:of-text-violet-400 dark:of-border-slate-600'
     case 'purple':
-      return 'of-text-purple-900 of-bg-purple-100 dark:of-bg-slate-900 dark:of-text-purple-400 dark:of-border-purple-400'
+      return 'of-text-purple-600 of-bg-purple-100 dark:of-bg-slate-800 dark:of-text-purple-400 dark:of-border-slate-600'
     case 'fuchsia':
-      return 'of-text-fuchsia-900 of-bg-fuchsia-100 dark:of-bg-slate-900 dark:of-text-fuchsia-400/80 dark:of-border-fuchsia-400'
+      return 'of-text-fuchsia-600 of-bg-fuchsia-100 dark:of-bg-slate-800 dark:of-text-fuchsia-400 dark:of-border-slate-600'
     case 'pink':
-      return 'of-text-pink-900 of-bg-pink-100 dark:of-bg-slate-900 dark:of-text-pink-400/80 dark:of-border-pink-400'
+      return 'of-text-pink-600 of-bg-pink-100 dark:of-bg-slate-800 dark:of-text-pink-400 dark:of-border-slate-600'
     case 'rose':
-      return 'of-text-rose-900 of-bg-rose-100 dark:of-bg-slate-900 dark:of-text-rose-400/80 dark:of-border-rose-400'
+      return 'of-text-rose-600 of-bg-rose-100 dark:of-bg-slate-800 dark:of-text-rose-400 dark:of-border-slate-600'
     default:
-      return 'of-text-indigo-900 of-bg-indigo-100 dark:of-bg-slate-900 dark:of-text-indigo-400 dark:of-border-indigo-400'
+      return 'of-text-indigo-600 of-bg-indigo-100 dark:of-bg-slate-800 dark:of-text-indigo-400 dark:of-border-slate-600'
   }
 }
 

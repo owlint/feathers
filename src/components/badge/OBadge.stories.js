@@ -1,7 +1,7 @@
 import OBadge from './OBadge.vue'
 import { COLORS } from '../../enums/colors'
 import { SIZES } from '../../enums/sizes'
-import { BurgerIcon } from '../svg'
+import { BurgerIcon, EyeIcon, CrossIcon } from '../svg'
 
 export default {
   component: OBadge,
@@ -28,15 +28,7 @@ export default {
       options: [true, false],
       control: { type: 'inline-radio' },
     },
-    text: {
-      type: { name: 'string', required: true },
-      description: 'Contenu du composant',
-    },
   },
-}
-
-const defaultArgs = {
-  text: 'Badge',
 }
 
 const Template = (args) => ({
@@ -45,11 +37,13 @@ const Template = (args) => ({
     //👇 The args will now be passed down to the template
     return { args }
   },
-  template: `<OBadge v-bind="args" > ${args.text} </OBadge>`,
+  template: `<OBadge v-bind="args" >`,
 })
 
-export const Default = Template.bind({})
-Default.args = defaultArgs
+export const Base = Template.bind({})
+Base.args = {
+  label: 'OBadge',
+}
 
 export const Tile = (args) => ({
   components: { OBadge },
@@ -57,22 +51,64 @@ export const Tile = (args) => ({
     return { args }
   },
   template: `
-    <OBadge > Badge Default </OBadge>
-    <OBadge tile > Badge Tile </OBadge>
+    <OBadge label="Badge Default"></OBadge>
+    <OBadge tile label="Badge Tile"></OBadge>
+    <OBadge label="Badge Default" is-clickable @action="action"></OBadge>
+    <OBadge tile label="Badge Tile" is-clickable @action="action"></OBadge>
+    
   `,
 })
 export const Icon = (args) => ({
-  components: { OBadge, BurgerIcon },
+  components: { OBadge, BurgerIcon, EyeIcon, CrossIcon },
   setup() {
-    return { args }
+    const action = () => {
+      console.log('oui')
+    }
+    return { args, action }
   },
   template: `
-    <OBadge> Badge Default </OBadge>
-    <OBadge> 
-      <BurgerIcon/>
-
-      <span> Burger </span>
+    <OBadge label="Badge Default"></OBadge>
+    
+    <OBadge label="Burger on the left">
+      <template #iconLeft>
+        <BurgerIcon/>
+      </template>
     </OBadge>
+    <OBadge label="Eye on the right">
+      <template #iconRight>
+        <EyeIcon/>
+      </template>
+    </OBadge>
+
+     <OBadge label="Badge with icons on both sides">
+      <template #iconLeft>
+        <BurgerIcon/>
+      </template>
+      <template #iconRight>
+        <EyeIcon/>
+      </template>
+    </OBadge>
+
+     <OBadge label="Burger on the left" is-clickable @action="action">
+      <template #iconLeft>
+        <BurgerIcon/>
+      </template>
+    </OBadge>
+    <OBadge label="Eye on the right" is-clickable @action="action">
+      <template #iconRight>
+        <EyeIcon/>
+      </template>
+    </OBadge>
+
+     <OBadge label="Badge with icons on both sides" is-clickable @action="action">
+      <template #iconLeft>
+        <BurgerIcon/>
+      </template>
+      <template #iconRight>
+        <EyeIcon/>
+      </template>
+    </OBadge>
+    
   `,
 })
 
@@ -81,9 +117,17 @@ export const Sizes = (args) => ({
   setup() {
     return { args }
   },
-  template: `<OBadge v-for="size in ['xs', 'sm', 'md', 'lg', 'xl']" :key="size" :size="size" >
+  template: `<div class="of-flex of-gap-2 of-items-center" >
+                <OBadge v-for="size in ['xs', 'sm', 'md', 'lg', 'xl']" :key="size" :size="size">
+                  Badge {{size}}
+                </OBadge>
+            </div>
+            <div class="of-flex of-gap-2 of-items-center" >
+            <OBadge v-for="size in ['xs', 'sm', 'md', 'lg', 'xl']" :key="size" :size="size" is-clickable @action="action">
                 Badge {{size}}
-            </OBadge>`,
+            </OBadge>
+            </div>
+            `,
 })
 export const Colors = (args) => ({
   components: { OBadge },

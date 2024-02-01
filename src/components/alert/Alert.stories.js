@@ -1,5 +1,5 @@
 import OAlert from './OAlert.vue'
-import { COLORS } from '../../enums/colors'
+import { ALERT_COLORS } from '../../enums/colors'
 import { BurgerIcon } from '../../components/svg'
 
 export default {
@@ -15,7 +15,7 @@ export default {
   ],
   argTypes: {
     color: {
-      options: COLORS,
+      options: ALERT_COLORS,
       control: { type: 'select' },
     },
     title: {
@@ -89,6 +89,11 @@ export const Description = (args) => ({
                 </template>
             </OAlert>
             <OAlert  title="Alert Description Action Title" action="Action" @click="" v-bind="args" />
+            <OAlert  title="Alert Custom Description Action Title" action="Action" @click="" :description="true">
+              <template #description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet perspiciatis,
+              reiciendis eos ullam voluptates inventore deleniti! Distinctio reiciendis facilis voluptates,
+              eaque, eius tempore debitis labore earum similique facere minima molestiae. (to customize with anything)</template>
+            </OAlert>
             `,
 })
 Description.args = {
@@ -99,12 +104,20 @@ Description.args = {
 export const Colors = (args) => ({
   components: { OAlert, BurgerIcon },
   setup() {
-    const colors = COLORS
-    return { args, colors }
+    const colors = ALERT_COLORS
+    const titles = [
+      'Error Alert',
+      'Warning Alert',
+      'Success Alert',
+      'Info_Owlint Alert',
+      'Info_Pandora Alert',
+      'Nicouleur Alert',
+    ]
+    return { args, colors, titles }
   },
   template: `<div class="of-space-y-8 of-w-full">
-                <OAlert v-for="color in colors" isIcon action="Action" title="Alert Color Title" loading :key="color" :color="color" v-bind="args">
-                    <template #icon>
+                <OAlert v-for="(color, index) in colors" :color="color" isIcon action="Action" :title="titles[index]" loading v-bind="args">
+                <template #icon>
                         <BurgerIcon/>
                     </template>
                 </OAlert>

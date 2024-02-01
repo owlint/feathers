@@ -557,206 +557,25 @@ export const getInputIconStyle = (color) => {
   }
 }
 
-export const getAlertIconStyle = (color) => {
+export const getAlertStyle = (color) => {
   switch (color) {
     case 'indigo':
-      return 'of-text-indigo-500  dark:of-text-indigo-400'
-    case 'slate':
-      return 'of-text-slate-500  dark:of-text-slate-400'
-    case 'gray':
-      return 'of-text-gray-500  dark:of-text-gray-400'
-    case 'zinc':
-      return 'of-text-zinc-500  dark:of-text-zinc-400'
-    case 'neutral':
-      return 'of-text-neutral-500  dark:of-text-neutral-400'
-    case 'stone':
-      return 'of-text-stone-500  dark:of-text-stone-400'
+      return 'of-bg-indigo-100 dark:of-bg-indigo-950 of-text-indigo-700  dark:of-text-indigo-400'
     case 'red':
-      return 'of-text-red-500  dark:of-text-red-400'
+      return 'of-bg-red-100 dark:of-bg-red-950 of-text-red-700  dark:of-text-red-400'
     case 'orange':
-      return 'of-text-orange-500  dark:of-text-orange-400'
-    case 'amber':
-      return 'of-text-amber-500  dark:of-text-amber-400'
-    case 'yellow':
-      return 'of-text-yellow-500  dark:of-text-yellow-400'
-    case 'lime':
-      return 'of-text-lime-500  dark:of-text-lime-400'
+      return 'of-bg-orange-100 dark:of-bg-orange-950 of-text-orange-700  dark:of-text-orange-400'
     case 'green':
-      return 'of-text-green-500  dark:of-text-green-400'
-    case 'emerald':
-      return 'of-text-emerald-500  dark:of-text-emerald-400'
-    case 'teal':
-      return 'of-text-teal-500  dark:of-text-teal-400'
-    case 'cyan':
-      return 'of-text-cyan-500  dark:of-text-cyan-400'
-    case 'sky':
-      return 'of-text-sky-500  dark:of-text-sky-400'
-    case 'blue':
-      return 'of-text-blue-500  dark:of-text-blue-400'
-    case 'violet':
-      return 'of-text-violet-500  dark:of-text-violet-400'
+      return 'of-bg-green-100 dark:of-bg-green-950 of-text-green-700  dark:of-text-green-400'
     case 'purple':
-      return 'of-text-purple-500  dark:of-text-purple-400'
-    case 'fuchsia':
-      return 'of-text-fuchsia-500  dark:of-text-fuchsia-400'
-    case 'pink':
-      return 'of-text-pink-500  dark:of-text-pink-400'
+      return 'of-bg-purple-100 dark:of-bg-purple-950 of-text-purple-700  dark:of-text-purple-400'
     case 'rose':
-      return 'of-text-rose-500  dark:of-text-rose-400'
+      return 'of-bg-rose-100 dark:of-bg-rose-950 of-text-rose-700  dark:of-text-rose-400'
     default:
-      return 'of-text-indigo-500  dark:of-text-indigo-400'
+      return 'of-bg-indigo-100 dark:of-bg-indigo-950 of-text-indigo-700  dark:of-text-indigo-400'
   }
 }
-export const getAlertTitleStyle = (color) => {
-  switch (color) {
-    case 'indigo':
-      return 'of-text-indigo-800  dark:of-text-indigo-400'
-    case 'slate':
-      return 'of-text-slate-800  dark:of-text-slate-400'
-    case 'gray':
-      return 'of-text-gray-800  dark:of-text-gray-400'
-    case 'zinc':
-      return 'of-text-zinc-800  dark:of-text-zinc-400'
-    case 'neutral':
-      return 'of-text-neutral-800  dark:of-text-neutral-400'
-    case 'stone':
-      return 'of-text-stone-800  dark:of-text-stone-400'
-    case 'red':
-      return 'of-text-red-800  dark:of-text-red-400'
-    case 'orange':
-      return 'of-text-orange-800  dark:of-text-orange-400'
-    case 'amber':
-      return 'of-text-amber-800  dark:of-text-amber-400'
-    case 'yellow':
-      return 'of-text-yellow-800  dark:of-text-yellow-400'
-    case 'lime':
-      return 'of-text-lime-800  dark:of-text-lime-400'
-    case 'green':
-      return 'of-text-green-800  dark:of-text-green-400'
-    case 'emerald':
-      return 'of-text-emerald-800  dark:of-text-emerald-400'
-    case 'teal':
-      return 'of-text-teal-800  dark:of-text-teal-400'
-    case 'cyan':
-      return 'of-text-cyan-800  dark:of-text-cyan-400'
-    case 'sky':
-      return 'of-text-sky-800  dark:of-text-sky-400'
-    case 'blue':
-      return 'of-text-blue-800  dark:of-text-blue-400'
-    case 'violet':
-      return 'of-text-violet-800  dark:of-text-violet-400'
-    case 'purple':
-      return 'of-text-purple-800  dark:of-text-purple-400'
-    case 'fuchsia':
-      return 'of-text-fuchsia-800  dark:of-text-fuchsia-400'
-    case 'pink':
-      return 'of-text-pink-800  dark:of-text-pink-400'
-    case 'rose':
-      return 'of-text-rose-800  dark:of-text-rose-400'
-    default:
-      return 'of-text-indigo-800  dark:of-text-indigo-400'
-  }
-}
-export const getAlertDescriptionStyle = (color) => {
-  switch (color) {
-    case 'indigo':
-      return 'of-text-indigo-800/70  dark:of-text-indigo-300'
-    case 'slate':
-      return 'of-text-slate-800/70  dark:of-text-slate-300'
-    case 'gray':
-      return 'of-text-gray-800/70  dark:of-text-gray-300'
-    case 'zinc':
-      return 'of-text-zinc-800/70  dark:of-text-zinc-300'
-    case 'neutral':
-      return 'of-text-neutral-800/70  dark:of-text-neutral-300'
-    case 'stone':
-      return 'of-text-stone-800/70  dark:of-text-stone-300'
-    case 'red':
-      return 'of-text-red-800/70  dark:of-text-red-300'
-    case 'orange':
-      return 'of-text-orange-800/70  dark:of-text-orange-300'
-    case 'amber':
-      return 'of-text-amber-800/70  dark:of-text-amber-300'
-    case 'yellow':
-      return 'of-text-yellow-800/70  dark:of-text-yellow-300'
-    case 'lime':
-      return 'of-text-lime-800/70  dark:of-text-lime-300'
-    case 'green':
-      return 'of-text-green-800/70  dark:of-text-green-300'
-    case 'emerald':
-      return 'of-text-emerald-800/70  dark:of-text-emerald-300'
-    case 'teal':
-      return 'of-text-teal-800/70  dark:of-text-teal-300'
-    case 'cyan':
-      return 'of-text-cyan-800/70  dark:of-text-cyan-300'
-    case 'sky':
-      return 'of-text-sky-800/70  dark:of-text-sky-300'
-    case 'blue':
-      return 'of-text-blue-800/70  dark:of-text-blue-300'
-    case 'violet':
-      return 'of-text-violet-800/70  dark:of-text-violet-300'
-    case 'purple':
-      return 'of-text-purple-800/70  dark:of-text-purple-300'
-    case 'fuchsia':
-      return 'of-text-fuchsia-800/70  dark:of-text-fuchsia-300'
-    case 'pink':
-      return 'of-text-pink-800/70  dark:of-text-pink-300'
-    case 'rose':
-      return 'of-text-rose-800/70  dark:of-text-rose-300'
-    default:
-      return 'of-text-indigo-800/70  dark:of-text-indigo-300'
-  }
-}
-export const getAlertBgStyle = (color) => {
-  switch (color) {
-    case 'indigo':
-      return 'of-bg-indigo-500/20 dark:of-bg-indigo-400/5 dark:of-bg-slate-900 of-ring-indigo-500/20  dark:of-ring-indigo-500/80'
-    case 'slate':
-      return 'of-bg-slate-500/20 dark:of-bg-slate-400/5 dark:of-bg-slate-900 of-ring-slate-500/20  dark:of-ring-slate-500/80'
-    case 'gray':
-      return 'of-bg-gray-500/20 dark:of-bg-gray-400/5 dark:of-bg-slate-900 of-ring-gray-500/20  dark:of-ring-gray-500/80'
-    case 'zinc':
-      return 'of-bg-zinc-500/20 dark:of-bg-zinc-400/5 dark:of-bg-slate-900 of-ring-zinc-500/20  dark:of-ring-zinc-500/80'
-    case 'neutral':
-      return 'of-bg-neutral-500/20 dark:of-bg-neutral-400/5 dark:of-bg-slate-900 of-ring-neutral-500/20  dark:of-ring-neutral-500/80'
-    case 'stone':
-      return 'of-bg-stone-500/20 dark:of-bg-stone-400/5 dark:of-bg-slate-900 of-ring-stone-500/20  dark:of-ring-stone-500/80'
-    case 'red':
-      return 'of-bg-red-500/20 dark:of-bg-red-400/5 dark:of-bg-slate-900 of-ring-red-500/20  dark:of-ring-red-500/80'
-    case 'orange':
-      return 'of-bg-orange-500/20 dark:of-bg-orange-400/5 dark:of-bg-slate-900 of-ring-orange-500/20  dark:of-ring-orange-500/80'
-    case 'amber':
-      return 'of-bg-amber-500/20 dark:of-bg-amber-400/5 dark:of-bg-slate-900 of-ring-amber-500/20  dark:of-ring-amber-500/80'
-    case 'yellow':
-      return 'of-bg-yellow-500/20 dark:of-bg-yellow-400/5 dark:of-bg-slate-900 of-ring-yellow-500/20  dark:of-ring-yellow-500/80'
-    case 'lime':
-      return 'of-bg-lime-500/20 dark:of-bg-lime-400/5 dark:of-bg-slate-900 of-ring-lime-500/20  dark:of-ring-lime-500/80'
-    case 'green':
-      return 'of-bg-green-500/20 dark:of-bg-green-400/5 dark:of-bg-slate-900 of-ring-green-500/20  dark:of-ring-green-500/80'
-    case 'emerald':
-      return 'of-bg-emerald-500/20 dark:of-bg-emerald-400/5 dark:of-bg-slate-900 of-ring-emerald-500/20  dark:of-ring-emerald-500/80'
-    case 'teal':
-      return 'of-bg-teal-500/20 dark:of-bg-teal-400/5 dark:of-bg-slate-900 of-ring-teal-500/20  dark:of-ring-teal-500/80'
-    case 'cyan':
-      return 'of-bg-cyan-500/20 dark:of-bg-cyan-400/5 dark:of-bg-slate-900 of-ring-cyan-500/20  dark:of-ring-cyan-500/80'
-    case 'sky':
-      return 'of-bg-sky-500/20 dark:of-bg-sky-400/5 dark:of-bg-slate-900 of-ring-sky-500/20  dark:of-ring-sky-500/80'
-    case 'blue':
-      return 'of-bg-blue-500/20 dark:of-bg-blue-400/5 dark:of-bg-slate-900 of-ring-blue-500/20  dark:of-ring-blue-500/80'
-    case 'violet':
-      return 'of-bg-violet-500/20 dark:of-bg-violet-400/5 dark:of-bg-slate-900 of-ring-violet-500/20  dark:of-ring-violet-500/80'
-    case 'purple':
-      return 'of-bg-purple-500/20 dark:of-bg-purple-400/5 dark:of-bg-slate-900 of-ring-purple-500/20  dark:of-ring-purple-500/80'
-    case 'fuchsia':
-      return 'of-bg-fuchsia-500/20 dark:of-bg-fuchsia-400/5 dark:of-bg-slate-900 of-ring-fuchsia-500/20  dark:of-ring-fuchsia-500/80'
-    case 'pink':
-      return 'of-bg-pink-500/20 dark:of-bg-pink-400/5 dark:of-bg-slate-900 of-ring-pink-500/20  dark:of-ring-pink-500/80'
-    case 'rose':
-      return 'of-bg-rose-500/20 dark:of-bg-rose-400/5 dark:of-bg-slate-900 of-ring-rose-500/20  dark:of-ring-rose-500/80'
-    default:
-      return 'of-bg-indigo-500/20 dark:of-bg-indigo-400/5 dark:of-bg-slate-900 of-ring-indigo-500/20  dark:of-ring-indigo-500/80'
-  }
-}
+
 export const getIconButtonStyle = (color) => {
   switch (color) {
     case 'indigo':

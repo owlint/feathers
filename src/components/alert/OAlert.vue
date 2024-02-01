@@ -1,61 +1,38 @@
 <template>
   <div
-    class="
-      of-rounded-md
-      of-py-4
-      of-px-6
-      of-w-full
-      of-ring-4
-      of-ring-offset-4
-      of-ring-offset-slate-50
-      dark:of-ring-offset-slate-800
-    "
-    :class="getAlertBgStyle(color)"
+    class="of-rounded-md of-p-5 of-w-full of-flex of-gap-5"
+    :class="[
+      description ? 'of-items-start' : 'of-items-center',
+      getAlertStyle(color),
+    ]"
   >
-    <div class="of-flex of-items-center of-space-x-3">
-      <div v-if="isIcon" :class="getAlertIconStyle(color)" class="of-shrink-0">
-        <slot name="icon">
-          <CircleCheckIcon v-if="color === 'green'" />
-          <CircleExclamationIcon v-if="color === 'orange'" />
-          <CircleXmarkIcon v-if="color === 'red'" />
+    <div class="of-grow" :class="description ? 'of-space-y-2.5' : ''">
+      <div class="of-flex of-items-center of-gap-2.5">
+        <div v-if="isIcon" class="of-shrink-0">
+          <slot name="icon"> </slot>
+        </div>
+        <h3 class="of-text-base of-font-bold">
+          {{ title }}
+        </h3>
+      </div>
+
+      <div class="of-flex of-items-center of-grow">
+        <slot name="description">
+          <div v-if="description">
+            <p class="of-text-sm of-font-medium">
+              {{ description }}
+            </p>
+          </div>
         </slot>
       </div>
-      <div class="of-grow">
-        <div
-          class="of-flex of-items-center of-justify-between of-gap-2 of-h-full"
-        >
-          <div>
-            <h3
-              class="of-text-base of-font-medium"
-              :class="getAlertTitleStyle(color)"
-            >
-              {{ title }}
-            </h3>
-            <slot name="description">
-              <div v-if="description">
-                <p
-                  class="of-text-sm dark:of-text-opacity-70"
-                  :class="getAlertDescriptionStyle(color)"
-                >
-                  {{ description }}
-                </p>
-              </div>
-            </slot>
-          </div>
-
-          <!-- <div class="of-my-1.5 of-flex of-justify-end"> -->
-          <OButton
-            v-if="action"
-            :color="color"
-            :label="action"
-            :loading="loading"
-            class="of-relative"
-            @click="loading ? null : $emit('click')"
-          />
-          <!-- </div> -->
-        </div>
-      </div>
     </div>
+    <OButton
+      v-if="action"
+      :color="color"
+      :label="action"
+      :loading="loading"
+      @click="loading ? null : $emit('click')"
+    />
   </div>
 </template>
 
@@ -66,22 +43,15 @@ export default {
 </script>
 
 <script setup>
-import { CircleCheckIcon, CircleExclamationIcon, CircleXmarkIcon } from '../svg'
 import OButton from '../button/OButton.vue'
-import { COLORS } from '../../enums/colors'
-import {
-  getAlertIconStyle,
-  getAlertBgStyle,
-  getAlertTitleStyle,
-  getAlertDescriptionStyle,
-} from '../../utils/colors'
+import { ALERT_COLORS } from '../../enums/colors'
+import { getAlertStyle } from '../../utils/colors'
+
 const props = defineProps({
   color: {
     type: String,
-    required: false,
-    default: 'indigo',
     validator(value) {
-      return COLORS.indexOf(value) !== -1
+      return ALERT_COLORS.indexOf(value) !== -1
     },
   },
   title: {
@@ -100,9 +70,9 @@ const props = defineProps({
     default: null,
   },
   description: {
-    type: String,
+    type: [String, Boolean],
     required: false,
-    default: '',
+    default: false,
   },
   loading: {
     type: Boolean,

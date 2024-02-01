@@ -1,5 +1,5 @@
 import OAlert from './OAlert.vue'
-import { COLORS } from '../../enums/colors'
+import { ALERT_COLORS } from '../../enums/colors'
 import { BurgerIcon } from '../../components/svg'
 
 export default {
@@ -15,7 +15,7 @@ export default {
   ],
   argTypes: {
     color: {
-      options: COLORS,
+      options: ALERT_COLORS,
       control: { type: 'select' },
     },
     title: {
@@ -104,36 +104,19 @@ Description.args = {
 export const Colors = (args) => ({
   components: { OAlert, BurgerIcon },
   setup() {
-    const colors = COLORS
-    return { args, colors }
+    const colors = ALERT_COLORS
+    const titles = [
+      'Error Alert',
+      'Warning Alert',
+      'Success Alert',
+      'Info_Owlint Alert',
+      'Info_Pandora Alert',
+      'Nicouleur Alert',
+    ]
+    return { args, colors, titles }
   },
   template: `<div class="of-space-y-8 of-w-full">
-                <OAlert color="red" isIcon action="Action" title="Error Alert" loading v-bind="args">
-                <template #icon>
-                        <BurgerIcon/>
-                    </template>
-                </OAlert>
-                <OAlert color="orange" isIcon action="Action" title="Warning Alert" loading v-bind="args">
-                <template #icon>
-                        <BurgerIcon/>
-                    </template>
-                </OAlert>
-                <OAlert color="green" isIcon action="Action" title="Success Alert" loading v-bind="args">
-                <template #icon>
-                        <BurgerIcon/>
-                    </template>
-                </OAlert>
-                <OAlert color="indigo" isIcon action="Action" title="Info_Owlint Alert" loading v-bind="args">
-                <template #icon>
-                        <BurgerIcon/>
-                    </template>
-                </OAlert>
-                <OAlert color="purple" isIcon action="Action" title="Info_Pandora Alert" loading v-bind="args">
-                <template #icon>
-                        <BurgerIcon/>
-                    </template>
-                </OAlert>
-                <OAlert color="rose" isIcon action="Action" title="Nicouleur Alert" loading v-bind="args">
+                <OAlert v-for="(color, index) in colors" :color="color" isIcon action="Action" :title="titles[index]" loading v-bind="args">
                 <template #icon>
                         <BurgerIcon/>
                     </template>

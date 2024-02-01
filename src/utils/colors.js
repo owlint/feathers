@@ -558,57 +558,22 @@ export const getInputIconStyle = (color) => {
 }
 
 export const getAlertStyle = (color) => {
-  const style = {
-    icon: '',
-    title: '',
-    description: '',
-    background: '',
-  }
   switch (color) {
     case 'indigo':
-      style.icon = 'of-text-indigo-700  dark:of-text-indigo-400'
-      style.title = 'of-text-indigo-700  dark:of-text-indigo-400'
-      style.description = 'of-text-indigo-700  dark:of-text-indigo-400'
-      style.background = 'of-bg-indigo-100 dark:of-bg-indigo-950'
-      break
+      return 'of-bg-indigo-100 dark:of-bg-indigo-950 of-text-indigo-700  dark:of-text-indigo-400'
     case 'red':
-      style.icon = 'of-text-red-700  dark:of-text-red-400'
-      style.title = 'of-text-red-700  dark:of-text-red-400'
-      style.description = 'of-text-red-700  dark:of-text-red-400'
-      style.background = 'of-bg-red-100 dark:of-bg-red-950'
-      break
+      return 'of-bg-red-100 dark:of-bg-red-950 of-text-red-700  dark:of-text-red-400'
     case 'orange':
-      style.icon = 'of-text-orange-700  dark:of-text-orange-400'
-      style.title = 'of-text-orange-700  dark:of-text-orange-400'
-      style.description = 'of-text-orange-700  dark:of-text-orange-400'
-      style.background = 'of-bg-orange-100 dark:of-bg-orange-950'
-      break
+      return 'of-bg-orange-100 dark:of-bg-orange-950 of-text-orange-700  dark:of-text-orange-400'
     case 'green':
-      style.icon = 'of-text-green-700  dark:of-text-green-400'
-      style.title = 'of-text-green-700  dark:of-text-green-400'
-      style.description = 'of-text-green-700  dark:of-text-green-400'
-      style.background = 'of-bg-green-100 dark:of-bg-green-950'
-      break
+      return 'of-bg-green-100 dark:of-bg-green-950 of-text-green-700  dark:of-text-green-400'
     case 'purple':
-      style.icon = 'of-text-purple-700  dark:of-text-purple-400'
-      style.title = 'of-text-purple-700  dark:of-text-purple-400'
-      style.description = 'of-text-purple-700  dark:of-text-purple-400'
-      style.background = 'of-bg-purple-100 dark:of-bg-purple-950'
-      break
+      return 'of-bg-purple-100 dark:of-bg-purple-950 of-text-purple-700  dark:of-text-purple-400'
     case 'rose':
-      style.icon = 'of-text-rose-700  dark:of-text-rose-400'
-      style.title = 'of-text-rose-700  dark:of-text-rose-400'
-      style.description = 'of-text-rose-700  dark:of-text-rose-400'
-      style.background = 'of-bg-rose-100 dark:of-bg-rose-950'
-      break
+      return 'of-bg-rose-100 dark:of-bg-rose-950 of-text-rose-700  dark:of-text-rose-400'
     default:
-      style.icon = 'of-text-indigo-700  dark:of-text-indigo-400'
-      style.title = 'of-text-indigo-700  dark:of-text-indigo-400'
-      style.description = 'of-text-indigo-700  dark:of-text-indigo-400'
-      style.background = 'of-bg-indigo-100 dark:of-bg-indigo-950'
-      break
+      return 'of-bg-indigo-100 dark:of-bg-indigo-950 of-text-indigo-700  dark:of-text-indigo-400'
   }
-  return style
 }
 
 export const getIconButtonStyle = (color) => {

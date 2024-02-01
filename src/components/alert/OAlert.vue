@@ -3,22 +3,15 @@
     class="of-rounded-md of-p-5 of-w-full of-flex of-gap-5"
     :class="[
       description ? 'of-items-start' : 'of-items-center',
-      getAlertStyle(color).background,
+      getAlertStyle(color),
     ]"
   >
     <div class="of-grow" :class="description ? 'of-space-y-2.5' : ''">
       <div class="of-flex of-items-center of-gap-2.5">
-        <div
-          v-if="isIcon"
-          :class="getAlertStyle(color).icon"
-          class="of-shrink-0"
-        >
+        <div v-if="isIcon" class="of-shrink-0">
           <slot name="icon"> </slot>
         </div>
-        <h3
-          class="of-text-base of-font-bold"
-          :class="getAlertStyle(color).title"
-        >
+        <h3 class="of-text-base of-font-bold">
           {{ title }}
         </h3>
       </div>
@@ -26,10 +19,7 @@
       <div class="of-flex of-items-center of-grow">
         <slot name="description">
           <div v-if="description">
-            <p
-              class="of-text-sm of-font-medium"
-              :class="getAlertStyle(color).description"
-            >
+            <p class="of-text-sm of-font-medium">
               {{ description }}
             </p>
           </div>
@@ -54,14 +44,14 @@ export default {
 
 <script setup>
 import OButton from '../button/OButton.vue'
-import { COLORS } from '../../enums/colors'
+import { ALERT_COLORS } from '../../enums/colors'
 import { getAlertStyle } from '../../utils/colors'
 
 const props = defineProps({
   color: {
     type: String,
     validator(value) {
-      return COLORS.indexOf(value) !== -1
+      return ALERT_COLORS.indexOf(value) !== -1
     },
   },
   title: {

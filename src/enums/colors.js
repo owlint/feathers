@@ -22,3 +22,12 @@ export const COLORS = [
   'pink',
   'rose',
 ]
+
+export const ALERT_COLORS = [
+  'red',
+  'orange',
+  'green',
+  'indigo',
+  'purple',
+  'rose',
+]

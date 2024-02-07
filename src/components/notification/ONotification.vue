@@ -4,10 +4,7 @@
     class="of-flex of-items-end of-pointer-events-none sm:of-items-start"
   >
     <div
-      class="
-        of-w-full of-flex of-flex-col of-items-center of-space-y-4
-        sm:of-items-end
-      "
+      class="of-w-full of-flex of-flex-col of-items-center of-space-y-4 sm:of-items-end"
     >
       <transition
         enter-active-class="of-transform of-ease-out of-duration-300 of-transition"
@@ -18,50 +15,45 @@
         leave-to-class="of-opacity-0"
       >
         <div
-          class="
-            of-max-w-sm of-w-full of-bg-white
-            dark:of-bg-slate-800
-            of-shadow-lg
-            of-rounded-lg
-            of-pointer-events-auto
-            of-ring-2
-            of-ring-black
-            dark:of-ring-indigo-400
-            of-ring-opacity-5 of-overflow-hidden
-          "
+          class="of-max-w-lg of-w-full of-bg-white dark:of-bg-slate-800 of-rounded-md of-pointer-events-auto of-ring-2 of-ring-slate-200 of-shadow-md of-p-5 of-flex of-items-center of-gap-5"
+          :class="getNotificationStyleV2(color).border"
         >
-          <div class="of-p-4">
+          <div class="of-grow">
             <div
-              class="of-flex"
-              :class="description ? 'of-items-start' : ' of-items-center'"
+              class="of-flex of-gap-2.5"
+              :class="description ? ' of-items-start' : ' of-items-center'"
             >
               <div
-                class="of-w-6 of-h-6"
-                v-if="type"
-                :class="getNotificationStyle(color)"
+                class="of-w-6 of-h-6 of-shrink-0 of-rounded-full dark:of-text-slate-50 of-flex of-items-center of-justify-center"
+                v-if="isIcon"
+                :class="getNotificationStyleV2(color).icon"
               >
-                <CircleCheckIcon v-if="type === 'success'" />
-                <CircleExclamationIcon v-if="type === 'warning'" />
-                <CircleXmarkIcon v-if="type === 'error'" />
+                <slot name="icon"> </slot>
               </div>
-              <div class="of-w-0 of-flex-1" :class="{ 'of-ml-3': type }">
-                <p
-                  class="
-                    of-text-sm of-font-medium of-text-slate-900
-                    dark:of-text-white
-                  "
+
+              <div class="of-flex of-flex-col of-gap-1">
+                <h3
+                  class="of-text-base of-font-bold"
+                  :class="getNotificationStyleV2(color).title"
                 >
                   {{ title }}
-                </p>
+                </h3>
                 <p
                   v-if="description"
-                  class="of-text-xs of-text-slate-500 dark:of-text-slate-200"
+                  class="of-text-xs of-font-medium of-text-slate-500 dark:of-text-slate-400"
                 >
                   {{ description }}
                 </p>
               </div>
             </div>
           </div>
+          <button
+            v-if="canExit"
+            class=""
+            :class="getNotificationStyleV2(color).exit"
+          >
+            <CrossIcon @click="onClick" />
+          </button>
         </div>
       </transition>
     </div>
@@ -75,10 +67,9 @@ export default {
 </script>
 
 <script setup>
-import { ref } from 'vue'
 import { COLORS } from '../../enums/colors'
-import { getNotificationStyle } from '../../utils/colors'
-import { CircleCheckIcon, CircleExclamationIcon, CircleXmarkIcon } from '../svg'
+import { getNotificationStyleV2 } from '../../utils/colors'
+import { CrossIcon } from '../svg'
 const props = defineProps({
   title: {
     type: String,
@@ -88,12 +79,15 @@ const props = defineProps({
     type: String,
     required: false,
   },
-  type: {
-    type: String,
+  isIcon: {
+    type: Boolean,
     required: false,
-    validator: (value) => {
-      return ['warning', 'error', 'success'].indexOf(value) !== -1
-    },
+    default: false,
+  },
+  canExit: {
+    type: Boolean,
+    required: false,
+    default: false,
   },
   color: {
     type: String,

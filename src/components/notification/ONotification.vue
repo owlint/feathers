@@ -16,7 +16,7 @@
       >
         <div
           class="of-max-w-lg of-w-full of-bg-white dark:of-bg-slate-800 of-rounded-md of-pointer-events-auto of-ring-2 of-ring-slate-200 of-shadow-md of-p-5 of-flex of-items-center of-gap-5"
-          :class="getNotificationStyleV2(color).border"
+          :class="getNotificationStyle(color).border"
         >
           <div class="of-grow">
             <div
@@ -26,7 +26,7 @@
               <div
                 class="of-w-6 of-h-6 of-shrink-0 of-rounded-full dark:of-text-slate-50 of-flex of-items-center of-justify-center"
                 v-if="isIcon"
-                :class="getNotificationStyleV2(color).icon"
+                :class="getNotificationStyle(color).icon"
               >
                 <slot name="icon"> </slot>
               </div>
@@ -34,7 +34,7 @@
               <div class="of-flex of-flex-col of-gap-1">
                 <h3
                   class="of-text-base of-font-bold"
-                  :class="getNotificationStyleV2(color).title"
+                  :class="getNotificationStyle(color).title"
                 >
                   {{ title }}
                 </h3>
@@ -50,9 +50,10 @@
           <button
             v-if="canExit"
             class=""
-            :class="getNotificationStyleV2(color).exit"
+            :class="getNotificationStyle(color).exit"
+            @click="emit('close')"
           >
-            <CrossIcon @click="onClick" />
+            <CrossIcon />
           </button>
         </div>
       </transition>
@@ -68,7 +69,7 @@ export default {
 
 <script setup>
 import { COLORS } from '../../enums/colors'
-import { getNotificationStyleV2 } from '../../utils/colors'
+import { getNotificationStyle } from '../../utils/colors'
 import { CrossIcon } from '../svg'
 const props = defineProps({
   title: {
@@ -81,13 +82,9 @@ const props = defineProps({
   },
   isIcon: {
     type: Boolean,
-    required: false,
-    default: false,
   },
   canExit: {
     type: Boolean,
-    required: false,
-    default: false,
   },
   color: {
     type: String,
@@ -97,4 +94,6 @@ const props = defineProps({
     },
   },
 })
+
+const emit = defineEmits(['close'])
 </script>

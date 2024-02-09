@@ -100,62 +100,12 @@ export const getBadgeStyle = (color) => {
   }
 }
 
-export const getyleificationStyle = (color) => {
-  switch (color) {
-    case 'indigo':
-      return 'of-text-indigo-400 dark:of-text-indigo-400'
-    case 'slate':
-      return 'of-text-slate-400 dark:of-text-slate-400'
-    case 'gray':
-      return 'of-text-gray-400 dark:of-text-gray-400'
-    case 'zinc':
-      return 'of-text-zinc-400 dark:of-text-zinc-400/80'
-    case 'neutral':
-      return 'of-text-neutral-400 dark:of-text-neutral-400/80'
-    case 'stone':
-      return 'of-text-stone-400 dark:of-text-stone-400/80'
-    case 'red':
-      return 'of-text-red-400 dark:of-text-red-400'
-    case 'orange':
-      return 'of-text-orange-400 dark:of-text-orange-400'
-    case 'amber':
-      return 'of-text-amber-400 dark:of-text-amber-400/80'
-    case 'yellow':
-      return 'of-text-yellow-400 dark:of-text-yellow-400'
-    case 'lime':
-      return 'of-text-lime-400 dark:of-text-lime-400/80'
-    case 'green':
-      return 'of-text-green-400 dark:of-text-green-400'
-    case 'emerald':
-      return 'of-text-emerald-400 dark:of-text-emerald-400/80'
-    case 'teal':
-      return 'of-text-teal-400 dark:of-text-teal-400/80'
-    case 'cyan':
-      return 'of-text-cyan-400 dark:of-text-cyan-400/80'
-    case 'sky':
-      return 'of-text-sky-400 dark:of-text-sky-400/80'
-    case 'blue':
-      return 'of-text-blue-400 dark:of-text-blue-400'
-    case 'violet':
-      return 'of-text-violet-400 dark:of-text-violet-400/80'
-    case 'purple':
-      return 'of-text-purple-400 dark:of-text-purple-400'
-    case 'fuchsia':
-      return 'of-text-fuchsia-400 dark:of-text-fuchsia-400/80'
-    case 'pink':
-      return 'of-text-pink-400 dark:of-text-pink-400/80'
-    case 'rose':
-      return 'of-text-rose-400 dark:of-text-rose-400/80'
-    default:
-      return 'of-text-indigo-400 dark:of-text-indigo-400'
-  }
-}
-
-export const getNotificationStyleV2 = (color) => {
+export const getNotificationStyle = (color) => {
   const style = {
     icon: '',
     title: '',
     border: '',
+    exit: '',
   }
   switch (color) {
     case 'indigo':

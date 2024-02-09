@@ -49,20 +49,23 @@ Base.args = defaultArgs
 export const Exit = (args) => ({
   components: { ONotification, BurgerIcon },
   setup() {
-    return { args }
+    const close = () => {
+      console.log('closing')
+    }
+    return { args, close }
   },
   template: ` <div class="of-space-y-4">
-                <ONotification color="green" title='With description' :description='args.description' >
+                <ONotification title='With description' :description='args.description' >
        
                 </ONotification>
-                <ONotification color="green" title='Without description' >
+                <ONotification title='Without description' >
       
                 </ONotification>
 
-                <ONotification canExit color="green" title='With description with exit button' :description='args.description' >
+                <ONotification canExit @close="close" title='With description with exit button' :description='args.description' >
 
                 </ONotification>
-                <ONotification canExit color="green" title='Without description with exit button' >
+                <ONotification canExit @close="close" title='Without description with exit button' >
 
                 </ONotification>
               </div>
@@ -78,23 +81,23 @@ export const Icon = (args) => ({
     return { args }
   },
   template: ` <div class="of-space-y-4">
-                <ONotification isIcon color="green" title='With description' :description='args.description' >
+                <ONotification isIcon title='With description' :description='args.description' >
                 <template #icon>
                   <BurgerIcon/>
                 </template>
                 </ONotification>
-                <ONotification isIcon color="green" title='Without description' >
+                <ONotification isIcon title='Without description' >
                 <template #icon>
                   <BurgerIcon/>
                 </template>
                 </ONotification>
 
-                <ONotification isIcon canExit color="green" title='With description with exit button' :description='args.description' >
+                <ONotification isIcon canExit title='With description with exit button' :description='args.description' >
                 <template #icon>
                   <BurgerIcon/>
                 </template>
                 </ONotification>
-                <ONotification isIcon canExit color="green" title='Without description with exit button' >
+                <ONotification isIcon canExit title='Without description with exit button' >
                 <template #icon>
                   <BurgerIcon/>
                 </template>

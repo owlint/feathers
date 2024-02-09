@@ -1,5 +1,6 @@
 import ONotification from './ONotification.vue'
 import { COLORS } from '../../enums/colors'
+import { BurgerIcon } from '../svg'
 
 export default {
   title: 'Components/ONotification',
@@ -19,10 +20,6 @@ export default {
     },
     description: {
       type: { name: 'string', required: false },
-    },
-    type: {
-      control: { type: 'select' },
-      options: ['warning', 'error', 'success'],
     },
   },
 }
@@ -49,32 +46,62 @@ const Template = (args) => ({
 export const Base = Template.bind({})
 Base.args = defaultArgs
 
-export const Types = (args) => ({
-  components: { ONotification },
+export const Exit = (args) => ({
+  components: { ONotification, BurgerIcon },
   setup() {
-    return { args }
+    const close = () => {
+      console.log('closing')
+    }
+    return { args, close }
   },
   template: ` <div class="of-space-y-4">
-                <ONotification v-bind="args" />
-                <ONotification type="success" color="green" v-bind="args" />
-                <ONotification title="Solo ONotification title" />
-                <ONotification type="error" color="red" title="Solo ONotification title" />
+                <ONotification title='With description' :description='args.description' >
+       
+                </ONotification>
+                <ONotification title='Without description' >
+      
+                </ONotification>
+
+                <ONotification canExit @close="close" title='With description with exit button' :description='args.description' >
+
+                </ONotification>
+                <ONotification canExit @close="close" title='Without description with exit button' >
+
+                </ONotification>
               </div>
             `,
 })
-Types.args = {
+Exit.args = {
   ...defaultArgs,
 }
 
 export const Icon = (args) => ({
-  components: { ONotification },
+  components: { ONotification, BurgerIcon },
   setup() {
     return { args }
   },
   template: ` <div class="of-space-y-4">
-                <ONotification type="success" color="green" v-bind="args" />
-                <ONotification type="error" color="red" v-bind="args" />
-                <ONotification type="warning" color="orange" v-bind="args" />
+                <ONotification isIcon title='With description' :description='args.description' >
+                <template #icon>
+                  <BurgerIcon/>
+                </template>
+                </ONotification>
+                <ONotification isIcon title='Without description' >
+                <template #icon>
+                  <BurgerIcon/>
+                </template>
+                </ONotification>
+
+                <ONotification isIcon canExit title='With description with exit button' :description='args.description' >
+                <template #icon>
+                  <BurgerIcon/>
+                </template>
+                </ONotification>
+                <ONotification isIcon canExit title='Without description with exit button' >
+                <template #icon>
+                  <BurgerIcon/>
+                </template>
+                </ONotification>
               </div>
             `,
 })
@@ -82,13 +109,17 @@ Icon.args = {
   ...defaultArgs,
 }
 export const Colors = (args) => ({
-  components: { ONotification },
+  components: { ONotification, BurgerIcon },
   setup() {
     const colors = COLORS
     return { args, colors }
   },
   template: ` <div class="of-space-y-4">
-                <ONotification v-for="color in colors" :key="color" type="success" :color="color" v-bind="args" />
+                <ONotification isIcon canExit v-for="color in colors" :key="color" :color="color" v-bind="args">
+                <template #icon>
+                  <BurgerIcon/>
+                </template>
+                </ONotification>
               </div>
             `,
 })

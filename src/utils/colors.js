@@ -101,55 +101,159 @@ export const getBadgeStyle = (color) => {
 }
 
 export const getNotificationStyle = (color) => {
+  const style = {
+    icon: '',
+    title: '',
+    border: '',
+    exit: '',
+  }
   switch (color) {
     case 'indigo':
-      return 'of-text-indigo-400 dark:of-text-indigo-400'
+      style.icon = 'of-bg-indigo-100 of-text-indigo-500 dark:of-bg-indigo-500'
+      style.title = 'of-text-indigo-600 dark:of-text-indigo-400'
+      style.exit = 'of-text-indigo-600 dark:of-text-indigo-500'
+      style.border = 'dark:of-ring-indigo-500'
+      break
     case 'slate':
-      return 'of-text-salte-400 dark:of-text-slate-400'
+      style.icon =
+        'of-bg-slate-100 of-text-slate-500 dark:of-bg-slate-500 of-text-opacity-100'
+      style.title = 'of-text-slate-600 dark:of-text-slate-300'
+      style.exit = 'of-text-slate-600 dark:of-text-slate-500'
+      style.border = 'dark:of-ring-slate-500'
+      break
     case 'gray':
-      return 'of-text-gray-400 dark:of-text-gray-400'
+      style.icon = 'of-bg-gray-100 of-text-gray-500 dark:of-bg-gray-500'
+      style.title = 'of-text-gray-600 dark:of-text-gray-300'
+      style.exit = 'of-text-gray-600 dark:of-text-gray-500'
+      style.border = 'dark:of-ring-gray-500'
+      break
     case 'zinc':
-      return 'of-text-zinc-400 dark:of-text-zinc-400/80'
+      style.icon = 'of-bg-zinc-100 of-text-zinc-500 dark:of-bg-zinc-500'
+      style.title = 'of-text-zinc-600 dark:of-text-zinc-300'
+      style.exit = 'of-text-zinc-600 dark:of-text-zinc-500'
+      style.border = 'dark:of-ring-zinc-500'
+      break
     case 'neutral':
-      return 'of-text-neutral-400 dark:of-text-neutral-400/80'
+      style.icon =
+        'of-bg-neutral-100 of-text-neutral-500 dark:of-bg-neutral-500'
+      style.title = 'of-text-neutral-600 dark:of-text-neutral-300'
+      style.exit = 'of-text-neutral-600 dark:of-text-neutral-500'
+      style.border = 'dark:of-ring-neutral-500'
+      break
     case 'stone':
-      return 'of-text-stone-400 dark:of-text-stone-400/80'
+      style.icon = 'of-bg-stone-100 of-text-stone-500 dark:of-bg-stone-500'
+      style.title = 'of-text-stone-600 dark:of-text-stone-300'
+      style.exit = 'of-text-stone-600 dark:of-text-stone-500'
+      style.border = 'dark:of-ring-stone-500'
+      break
     case 'red':
-      return 'of-text-red-400 dark:of-text-red-400'
+      style.icon = 'of-bg-red-100 of-text-red-500 dark:of-bg-red-500'
+      style.title = 'of-text-red-600 dark:of-text-red-400'
+      style.exit = 'of-text-red-600 dark:of-text-red-500'
+      style.border = 'dark:of-ring-red-500'
+      break
     case 'orange':
-      return 'of-text-orange-400 dark:of-text-orange-400'
+      style.icon = 'of-bg-orange-100 of-text-orange-500 dark:of-bg-orange-500'
+      style.title = 'of-text-orange-600 dark:of-text-orange-400'
+      style.exit = 'of-text-orange-600 dark:of-text-orange-500'
+      style.border = 'dark:of-ring-orange-500'
+      break
     case 'amber':
-      return 'of-text-amber-400 dark:of-text-amber-400/80'
+      style.icon = 'of-bg-amber-100 of-text-amber-500 dark:of-bg-amber-500'
+      style.title = 'of-text-amber-600 dark:of-text-amber-400'
+      style.exit = 'of-text-amber-600 dark:of-text-amber-500'
+      style.border = 'dark:of-ring-amber-500'
+      break
     case 'yellow':
-      return 'of-text-yellow-400 dark:of-text-yellow-400'
+      style.icon = 'of-bg-yellow-100 of-text-yellow-500 dark:of-bg-yellow-500'
+      style.title = 'of-text-yellow-600 dark:of-text-yellow-400'
+      style.exit = 'of-text-yellow-600 dark:of-text-yellow-500'
+      style.border = 'dark:of-ring-yellow-500'
+      break
     case 'lime':
-      return 'of-text-lime-400 dark:of-text-lime-400/80'
+      style.icon = 'of-bg-lime-100 of-text-lime-500 dark:of-bg-lime-500'
+      style.title = 'of-text-lime-600 dark:of-text-lime-400'
+      style.exit = 'of-text-lime-600 dark:of-text-lime-500'
+      style.border = 'dark:of-ring-lime-500'
+      break
     case 'green':
-      return 'of-text-green-400 dark:of-text-green-400'
+      style.icon = 'of-bg-green-100 of-text-green-500 dark:of-bg-green-500'
+      style.title = 'of-text-green-600 dark:of-text-green-400'
+      style.exit = 'of-text-green-600 dark:of-text-green-500'
+      style.border = 'dark:of-ring-green-500'
+      break
     case 'emerald':
-      return 'of-text-emerald-400 dark:of-text-emerald-400/80'
+      style.icon =
+        'of-bg-emerald-100 of-text-emerald-500 dark:of-bg-emerald-500'
+      style.title = 'of-text-emerald-600 dark:of-text-emerald-400'
+      style.exit = 'of-text-emerald-600 dark:of-text-emerald-500'
+      style.border = 'dark:of-ring-emerald-500'
+      break
     case 'teal':
-      return 'of-text-teal-400 dark:of-text-teal-400/80'
+      style.icon = 'of-bg-teal-100 of-text-teal-500 dark:of-bg-teal-500'
+      style.title = 'of-text-teal-600 dark:of-text-teal-400'
+      style.exit = 'of-text-teal-600 dark:of-text-teal-500'
+      style.border = 'dark:of-ring-teal-500'
+      break
     case 'cyan':
-      return 'of-text-cyan-400 dark:of-text-cyan-400/80'
+      style.icon = 'of-bg-cyan-100 of-text-cyan-500 dark:of-bg-cyan-500'
+      style.title = 'of-text-cyan-600 dark:of-text-cyan-400'
+      style.exit = 'of-text-cyan-600 dark:of-text-cyan-500'
+      style.border = 'dark:of-ring-cyan-500'
+      break
     case 'sky':
-      return 'of-text-sky-400 dark:of-text-sky-400/80'
+      style.icon = 'of-bg-sky-100 of-text-sky-500 dark:of-bg-sky-500'
+      style.title = 'of-text-sky-600 dark:of-text-sky-400'
+      style.exit = 'of-text-sky-600 dark:of-text-sky-500'
+      style.border = 'dark:of-ring-sky-500'
+      break
     case 'blue':
-      return 'of-text-blue-400 dark:of-text-blue-400'
+      style.icon = 'of-bg-blue-100 of-text-blue-500 dark:of-bg-blue-500'
+      style.title = 'of-text-blue-600 dark:of-text-blue-400'
+      style.exit = 'of-text-blue-600 dark:of-text-blue-500'
+      style.border = 'dark:of-ring-blue-500'
+      break
     case 'violet':
-      return 'of-text-violet-400 dark:of-text-violet-400/80'
+      style.icon = 'of-bg-violet-100 of-text-violet-500 dark:of-bg-violet-500'
+      style.title = 'of-text-violet-600 dark:of-text-violet-400'
+      style.exit = 'of-text-violet-600 dark:of-text-violet-500'
+      style.border = 'dark:of-ring-violet-500'
+      break
     case 'purple':
-      return 'of-text-purple-400 dark:of-text-purple-400'
+      style.icon = 'of-bg-purple-100 of-text-purple-500 dark:of-bg-purple-500'
+      style.title = 'of-text-purple-600 dark:of-text-purple-400'
+      style.exit = 'of-text-purple-600 dark:of-text-purple-500'
+      style.border = 'dark:of-ring-purple-500'
+      break
     case 'fuchsia':
-      return 'of-text-fuchsia-400 dark:of-text-fuchsia-400/80'
+      style.icon =
+        'of-bg-fuchsia-100 of-text-fuchsia-500 dark:of-bg-fuchsia-500'
+      style.title = 'of-text-fuchsia-600 dark:of-text-fuchsia-400'
+      style.exit = 'of-text-fuchsia-600 dark:of-text-fuchsia-500'
+      style.border = 'dark:of-ring-fuchsia-500'
+      break
     case 'pink':
-      return 'of-text-pink-400 dark:of-text-pink-400/80'
+      style.icon = 'of-bg-pink-100 of-text-pink-500 dark:of-bg-pink-500'
+      style.title = 'of-text-pink-600 dark:of-text-pink-400'
+      style.exit = 'of-text-pink-600 dark:of-text-pink-500'
+      style.border = 'dark:of-ring-pink-500'
+      break
     case 'rose':
-      return 'of-text-rose-400 dark:of-text-rose-400/80'
+      style.icon = 'of-bg-rose-100 of-text-rose-500 dark:of-bg-rose-500'
+      style.title = 'of-text-rose-600 dark:of-text-rose-400'
+      style.exit = 'of-text-rose-600 dark:of-text-rose-500'
+      style.border = 'dark:of-ring-rose-500'
+      break
     default:
-      return 'of-text-indigo-400 dark:of-text-indigo-400'
+      style.icon = 'of-bg-indigo-100 of-text-indigo-500 dark:of-bg-indigo-500'
+      style.title = 'of-text-indigo-600 dark:of-text-indigo-400'
+      style.exit = 'of-text-indigo-600 dark:of-text-indigo-500'
+      style.border = 'dark:of-ring-indigo-500'
+      break
   }
+  return style
 }
+
 export const getFilterStyle = (color) => {
   switch (color) {
     case 'indigo':

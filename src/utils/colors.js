@@ -1028,3 +1028,102 @@ export const getTertiaryButton = (color) => {
   }
   return style
 }
+
+export const getModalStyle = (color) => {
+  let style = 'of-text-white hover:of-ring-4 '
+  switch (color) {
+    case 'indigo':
+      style +=
+        'of-bg-indigo-600 hover:of-ring-indigo-200 focus:of-ring-indigo-400 dark:hover:of-ring-indigo-800 dark:focus:of-ring-indigo-400'
+      break
+    case 'slate':
+      style +=
+        'of-bg-slate-600 hover:of-ring-slate-200 focus:of-ring-slate-400 dark:hover:of-ring-slate-800 dark:focus:of-ring-slate-400'
+      break
+    case 'gray':
+      style +=
+        'of-bg-gray-600 hover:of-ring-gray-200 focus:of-ring-gray-400 dark:hover:of-ring-gray-800 dark:focus:of-ring-gray-400'
+      break
+    case 'zinc':
+      style +=
+        'of-bg-zinc-600 hover:of-ring-zinc-200 focus:of-ring-zinc-400 dark:hover:of-ring-zinc-800 dark:focus:of-ring-zinc-400'
+      break
+    case 'neutral':
+      style +=
+        'of-bg-neutral-600 hover:of-ring-neutral-200 focus:of-ring-neutral-400 dark:hover:of-ring-neutral-800 dark:focus:of-ring-neutral-400'
+      break
+    case 'stone':
+      style +=
+        'of-bg-stone-600 hover:of-ring-stone-200 focus:of-ring-stone-400 dark:hover:of-ring-stone-800 dark:focus:of-ring-stone-400'
+      break
+    case 'red':
+      style +=
+        'of-bg-red-600 hover:of-ring-red-200 focus:of-ring-red-400 dark:hover:of-ring-red-800 dark:focus:of-ring-red-400'
+      break
+    case 'orange':
+      style +=
+        'of-bg-orange-600 hover:of-ring-orange-200 focus:of-ring-orange-400 dark:hover:of-ring-orange-800 dark:focus:of-ring-orange-400'
+      break
+    case 'amber':
+      style +=
+        'of-bg-amber-600 hover:of-ring-amber-200 focus:of-ring-amber-400 dark:hover:of-ring-amber-800 dark:focus:of-ring-amber-400'
+      break
+    case 'yellow':
+      style +=
+        'of-bg-yellow-600 hover:of-ring-yellow-200 focus:of-ring-yellow-400 dark:hover:of-ring-yellow-800 dark:focus:of-ring-yellow-400'
+      break
+    case 'lime':
+      style +=
+        'of-bg-lime-600 hover:of-ring-lime-200 focus:of-ring-lime-400 dark:hover:of-ring-lime-800 dark:focus:of-ring-lime-400'
+      break
+    case 'green':
+      style +=
+        'of-bg-green-600 hover:of-ring-green-200 focus:of-ring-green-400 dark:hover:of-ring-green-800 dark:focus:of-ring-green-400'
+      break
+    case 'emerald':
+      style +=
+        'of-bg-emerald-600 hover:of-ring-emerald-200 focus:of-ring-emerald-400 dark:hover:of-ring-emerald-800 dark:focus:of-ring-emerald-400'
+      break
+    case 'teal':
+      style +=
+        'of-bg-teal-600 hover:of-ring-teal-200 focus:of-ring-teal-400 dark:hover:of-ring-teal-800 dark:focus:of-ring-teal-400'
+      break
+    case 'cyan':
+      style +=
+        'of-bg-cyan-600 hover:of-ring-cyan-200 focus:of-ring-cyan-400 dark:hover:of-ring-cyan-800 dark:focus:of-ring-cyan-400'
+      break
+    case 'sky':
+      style +=
+        'of-bg-sky-600 hover:of-ring-sky-200 focus:of-ring-sky-400 dark:hover:of-ring-sky-800 dark:focus:of-ring-sky-400'
+      break
+    case 'blue':
+      style +=
+        'of-bg-blue-600 hover:of-ring-blue-200 focus:of-ring-blue-400 dark:hover:of-ring-blue-800 dark:focus:of-ring-blue-400'
+      break
+    case 'violet':
+      style +=
+        'of-bg-violet-600 hover:of-ring-violet-200 focus:of-ring-violet-400 dark:hover:of-ring-violet-800 dark:focus:of-ring-violet-400'
+      break
+    case 'purple':
+      style +=
+        'of-bg-purple-600 hover:of-ring-purple-200 focus:of-ring-purple-400 dark:hover:of-ring-purple-800 dark:focus:of-ring-purple-400'
+      break
+    case 'fuchsia':
+      style +=
+        'of-bg-fuchsia-600 hover:of-ring-fuchsia-200 focus:of-ring-fuchsia-400 dark:hover:of-ring-fuchsia-800 dark:focus:of-ring-fuchsia-400'
+      break
+    case 'pink':
+      style +=
+        'of-bg-pink-600 hover:of-ring-pink-200 focus:of-ring-pink-400 dark:hover:of-ring-pink-800 dark:focus:of-ring-pink-400'
+      break
+    case 'rose':
+      style +=
+        'of-bg-rose-600 hover:of-ring-rose-200 focus:of-ring-rose-400 dark:hover:of-ring-rose-800 dark:focus:of-ring-rose-400'
+      break
+    default:
+      style +=
+        'of-bg-indigo-600 hover:of-ring-indigo-200 focus:of-ring-indigo-400 dark:hover:of-ring-indigo-800 dark:focus:of-ring-indigo-400'
+      break
+  }
+  return style
+}

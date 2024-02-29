@@ -11,22 +11,13 @@
         leave-to="of-opacity-0"
       >
         <div
-          class="
-            of-fixed of-inset-0 of-bg-slate-400/60
-            dark:of-bg-slate-800/60
-            of-backdrop-blur of-transition-opacity
-          "
+          class="of-fixed of-inset-0 of-bg-slate-400/60 dark:of-bg-slate-800/60 of-backdrop-blur of-transition-opacity"
         />
       </TransitionChild>
 
       <div class="of-fixed of-z-10 of-inset-0 of-overflow-y-auto">
         <div
-          class="
-            of-flex of-items-end
-            sm:of-items-center
-            of-justify-center of-min-h-full of-p-4 of-text-center
-            sm:of-p-0
-          "
+          class="of-flex of-items-end sm:of-items-center of-justify-center of-min-h-full of-p-4 of-text-center sm:of-p-0"
         >
           <TransitionChild
             as="template"
@@ -39,85 +30,80 @@
           >
             <DialogPanel
               :class="getMaxWidth(size)"
-              class="
-                of-relative of-bg-white
-                dark:of-bg-slate-900
-                of-rounded-lg
-                of-text-left
-                of-shadow-xl
-                of-transform
-                of-transition-all
-                sm:of-my-8 sm:of-w-full
-              "
+              class="of-relative of-bg-white dark:of-bg-slate-900 of-rounded-lg of-text-left of-shadow-xl of-transform of-transition-all sm:of-my-8 sm:of-w-full"
             >
+              <!-- 
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                 -->
               <div class="of-px-4 of-pt-5 of-pb-4 sm:of-p-6 sm:of-pb-4">
-                <div class="sm:of-flex sm:of-items-start">
+                <div class="of-flex of-items-center">
                   <div
                     v-if="!hideIcon"
                     :class="getIconStyle(color)"
-                    class="
-                      of-mx-auto
-                      of-flex-shrink-0
-                      of-flex
-                      of-items-center
-                      of-justify-center
-                      of-h-12
-                      of-w-12
-                      of-rounded-full
-                      sm:of-mx-0 sm:of-h-10 sm:of-w-10
-                      of-text-3xl
-                      sm:of-text-2xl
-                    "
+                    class="of-p-1 of-flex-shrink-0 of-flex of-items-center of-justify-center of-size-6 of-rounded-full of-text-3xl sm:of-text-2xl"
                   >
                     <slot name="icon">
                       <QuestionIcon />
                     </slot>
                   </div>
-
-                  <div
-                    class="
-                      of-mt-3 of-text-center
-                      sm:of-mt-0 sm:of-ml-4 sm:of-text-left
-                      of-grow
-                    "
-                  >
+                  <div class="sm:of-mt-0 sm:of-ml-4 sm:of-text-left of-grow">
                     <slot name="title">
                       <DialogTitle
                         as="h3"
-                        class="
-                          of-text-lg
-                          of-leading-6
-                          of-font-medium
-                          of-text-slate-900
-                          dark:of-text-slate-100
-                        "
+                        class="of-text-lg of-leading-6 of-font-medium of-text-slate-900 dark:of-text-slate-100"
                       >
                         {{ title }}
                       </DialogTitle>
                     </slot>
-                    <div class="of-mt-2">
-                      <slot name="description">
-                        <p
-                          class="
-                            of-text-sm of-text-slate-500
-                            dark:of-text-slate-300
-                          "
-                        >
-                          {{ description }}
-                        </p>
-                      </slot>
-                    </div>
                   </div>
+                </div>
+                <!-- 
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                  -
+                 -->
+                <div class="of-mt-2">
+                  <slot name="description">
+                    <p
+                      class="of-text-sm of-text-slate-500 dark:of-text-slate-300"
+                    >
+                      {{ description }}
+                    </p>
+                  </slot>
                 </div>
               </div>
               <div
-                class="
-                  of-bg-slate-50
-                  dark:of-bg-slate-800
-                  of-px-4 of-py-3
-                  sm:of-px-6 sm:of-flex sm:of-flex-row-reverse
-                  of-gap-4 of-rounded-b-lg
-                "
+                class="of-bg-slate-50 dark:of-bg-slate-800 of-px-4 of-py-3 sm:of-px-6 sm:of-flex sm:of-flex-row-reverse of-gap-4 of-rounded-b-lg"
               >
                 <slot name="footer" />
               </div>
@@ -129,14 +115,7 @@
   </TransitionRoot>
 </template>
 
-<script>
-export default {
-  name: 'OModal',
-}
-</script>
-
 <script setup>
-import { ref } from 'vue'
 import {
   Dialog,
   DialogPanel,
@@ -144,13 +123,15 @@ import {
   TransitionChild,
   TransitionRoot,
 } from '@headlessui/vue'
-
 import { COLORS } from '../../enums/colors'
 import { SIZES } from '../../enums/sizes'
 import { getIconStyle } from '../../utils/colors'
 import { getMaxWidth } from '../../utils/sizes'
 import { QuestionIcon } from '../svg'
 
+defineOptions({
+  name: 'OModal',
+})
 defineEmits(['close'])
 
 defineProps({
@@ -169,7 +150,6 @@ defineProps({
   color: {
     type: String,
     required: false,
-    default: 'indigo',
     validator: (value) => {
       return COLORS.indexOf(value) !== -1
     },

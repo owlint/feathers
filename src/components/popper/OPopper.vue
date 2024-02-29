@@ -17,26 +17,14 @@
       @mouseleave="hover ? hide() : null"
     >
       <div
-        :class="class"
-        class="
-          of-mx-2 of-px-3 of-py-2 of-w-max of-shadow-xs
-          dark:of-shadow-md
-          of-rounded-md
-        "
+        :class="getPopperStyle(color)"
+        class="of-mx-2 of-p-2.5 of-w-max of-rounded of-text-white of-font-bold of-text-xs"
       >
         <slot name="tooltip"></slot>
         <div
           v-if="arrow"
           id="arrow"
-          class="
-            of-absolute of-invisible
-            before:of-visible before:of-absolute
-            of-w-3 of-h-3
-            before:of-w-3
-            before:of-h-3
-            before:of-content-['']
-            before:of-rotate-45
-          "
+          class="of-absolute of-invisible before:of-visible before:of-absolute of-w-3 of-h-3 before:of-w-3 before:of-h-3 before:of-content-[''] before:of-rotate-45"
           data-popper-arrow
         />
       </div>
@@ -53,6 +41,7 @@ export default {
 <script setup>
 import { createPopper } from '@popperjs/core'
 import { ref } from 'vue'
+import { getPopperStyle } from '../../utils/colors'
 
 let popperInstance
 const tooltip = ref('')
@@ -64,12 +53,9 @@ const props = defineProps({
     required: false,
     default: true,
   },
-  class: {
+  color: {
     type: String,
     required: false,
-    default: `of-bg-slate-200
-          dark:of-bg-slate-600
-          dark:of-text-white`,
   },
   hover: {
     type: Boolean,

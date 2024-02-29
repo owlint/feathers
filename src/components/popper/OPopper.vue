@@ -32,17 +32,14 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'OPopper',
-}
-</script>
-
 <script setup>
 import { createPopper } from '@popperjs/core'
 import { ref } from 'vue'
 import { getPopperStyle } from '../../utils/colors'
 
+defineOptions({
+  name: 'OPopper',
+})
 let popperInstance
 const tooltip = ref('')
 const button = ref('')

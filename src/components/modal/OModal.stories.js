@@ -96,51 +96,33 @@ Icon.args = {
   color: 'fuchsia',
 }
 
-export const ColorsIcon = (args) => ({
-  components: { OModal, OButton },
+export const Content = (args) => ({
+  components: { OModal, OButton, BurgerIcon },
   data() {
     return {
+      displayModalContent: false,
       displayModal: false,
-      displayOModalGreen: false,
-      displayOModalRed: false,
-      displayOModalOrange: false,
     }
   },
   setup() {
     return { args }
   },
-  template: `<OButton @click="displayModal = true" label="Dialog"/> 
-            <OModal @close="displayModal = false" :display-modal="displayModal" v-bind="args" >
+  template: `<OButton @click="displayModal = true" label="Open Dialog"/> 
+            <OModal @close="displayModal = false" :display-modal="displayModal"  v-bind="args" title="OModal default">
               <template #footer>
-                <OButton @click="displayModal = false"  label="Close Dialog"/> 
-                <OButton  @click="displayModal = false"  type="tertiary" label="Close"/> 
+                <OButton @click="displayModal = false" label="Close Dialog"/> 
+                <OButton  @click="displayModal = false" type="tertiary" label="Close"/> 
               </template>
             </OModal>
-            <OButton @click="displayOModalGreen = true" label="Dialog Green" color="green" /> 
-            <OModal @close="displayOModalGreen = false" color="green" :display-modal="displayOModalGreen" v-bind="args"  >
-              <template #footer>
-                <OButton @click="displayOModalGreen = false" color="green" label="Close Dialog"/> 
-                <OButton  @click="displayOModalGreen = false" color="green" type="tertiary" label="Close"/> 
-              </template>
-            </OModal>
-            <OButton @click="displayOModalRed = true" label="Dialog Red" color="red" /> 
-            <OModal @close="displayOModalRed = false" color="red" :display-modal="displayOModalRed" v-bind="args"  >
-              <template #footer>
-                <OButton @click="displayOModalRed = false" color="red" label="Close Dialog "/> 
-                <OButton  @click="displayOModalRed = false" color="red" type="tertiary" label="Close"/> 
-              </template>
-            </OModal>
-            <OButton @click="displayOModalOrange = true" label="Dialog Orange" color="orange" /> 
-            <OModal @close="displayOModalOrange = false" color="orange" :display-modal="displayOModalOrange" v-bind="args"  >
-              <template #footer>
-                <OButton @click="displayOModalOrange = false" color="orange" label="Close Dialog No Icon"/> 
-                <OButton  @click="displayOModalOrange = false" color="orange" type="tertiary" label="Close"/> 
-              </template>
+            <OButton @click="displayModalContent = true" label="Open Dialog Content"/> 
+            <OModal @close="displayModalContent = false" :display-modal="displayModalContent" v-bind="args" content>
             </OModal>
             `,
 })
-ColorsIcon.args = {
+Content.args = {
   ...defaultArgs,
+  title: 'OModal With Content',
+  color: 'indigo',
 }
 
 export const Sizes = (args) => ({
@@ -189,33 +171,50 @@ export const Sizes = (args) => ({
 Sizes.args = {
   ...defaultArgs,
 }
-export const Dark = (args) => ({
+
+export const ColorsIcon = (args) => ({
   components: { OModal, OButton },
   data() {
     return {
       displayModal: false,
+      displayOModalGreen: false,
+      displayOModalRed: false,
+      displayOModalOrange: false,
     }
   },
   setup() {
     return { args }
   },
-  template: `<div class="dark">
-              <OButton @click="displayModal = true" label="Dialog Dark Mode"/> 
-              <OModal class="dark" @close="displayModal = false" :display-modal="displayModal" v-bind="args" >
-                <template #footer>
-                  <OButton @click="displayModal = false" label="Close Dialog"/> 
-                  <OButton  @click="displayModal = false" type="tertiary" label="Close"/> 
-                </template>
-              </OModal>
-            </div>
+  template: `<OButton @click="displayModal = true" label="Dialog"/> 
+            <OModal @close="displayModal = false" :display-modal="displayModal" v-bind="args" >
+              <template #footer>
+                <OButton @click="displayModal = false"  label="Close Dialog"/> 
+                <OButton  @click="displayModal = false"  type="tertiary" label="Close"/> 
+              </template>
+            </OModal>
+            <OButton @click="displayOModalGreen = true" label="Dialog Green" color="green" /> 
+            <OModal @close="displayOModalGreen = false" color="green" :display-modal="displayOModalGreen" v-bind="args"  >
+              <template #footer>
+                <OButton @click="displayOModalGreen = false" color="green" label="Close Dialog"/> 
+                <OButton  @click="displayOModalGreen = false" color="green" type="tertiary" label="Close"/> 
+              </template>
+            </OModal>
+            <OButton @click="displayOModalRed = true" label="Dialog Red" color="red" /> 
+            <OModal @close="displayOModalRed = false" color="red" :display-modal="displayOModalRed" v-bind="args"  >
+              <template #footer>
+                <OButton @click="displayOModalRed = false" color="red" label="Close Dialog "/> 
+                <OButton  @click="displayOModalRed = false" color="red" type="tertiary" label="Close"/> 
+              </template>
+            </OModal>
+            <OButton @click="displayOModalOrange = true" label="Dialog Orange" color="orange" /> 
+            <OModal @close="displayOModalOrange = false" color="orange" :display-modal="displayOModalOrange" v-bind="args"  >
+              <template #footer>
+                <OButton @click="displayOModalOrange = false" color="orange" label="Close Dialog No Icon"/> 
+                <OButton  @click="displayOModalOrange = false" color="orange" type="tertiary" label="Close"/> 
+              </template>
+            </OModal>
             `,
 })
-Dark.args = {
+ColorsIcon.args = {
   ...defaultArgs,
-}
-Dark.parameters = {
-  backgrounds: {
-    values: [{ name: 'slate-900', value: '#373a4d' }],
-    default: 'slate-900',
-  },
 }

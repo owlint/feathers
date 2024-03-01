@@ -30,69 +30,40 @@
           >
             <DialogPanel
               :class="getMaxWidth(size)"
-              class="of-relative of-bg-white dark:of-bg-slate-900 of-rounded-lg of-text-left of-shadow-xl of-transform of-transition-all sm:of-my-8 sm:of-w-full"
+              class="of-relative of-bg-white dark:of-bg-slate-700 of-rounded-lg of-text-left of-shadow-xl of-transform of-transition-all sm:of-my-8 sm:of-w-full"
             >
-              <!-- 
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                 -->
-              <div class="of-px-4 of-pt-5 of-pb-4 sm:of-p-6 sm:of-pb-4">
-                <div class="of-flex of-items-center">
+              <div
+                class="of-p-5 of-divide-y of-divide-slate-200 dark:of-divide-slate-500"
+              >
+                <div class="of-flex of-items-center of-mb-2.5 of-gap-2.5">
                   <div
                     v-if="!hideIcon"
-                    :class="getIconStyle(color)"
-                    class="of-p-1 of-flex-shrink-0 of-flex of-items-center of-justify-center of-size-6 of-rounded-full of-text-3xl sm:of-text-2xl"
+                    :class="getModalIconStyle(color)"
+                    class="of-p-1 of-flex-shrink-0 of-flex of-items-center of-justify-center of-size-6 of-rounded-full of-text-3xl sm:of-text-2xl dark:of-bg-slate-800"
                   >
                     <slot name="icon">
                       <QuestionIcon />
                     </slot>
                   </div>
-                  <div class="sm:of-mt-0 sm:of-ml-4 sm:of-text-left of-grow">
+                  <div class="of-grow">
                     <slot name="title">
                       <DialogTitle
                         as="h3"
-                        class="of-text-lg of-leading-6 of-font-medium of-text-slate-900 dark:of-text-slate-100"
+                        class="of-text-lg of-leading-6 of-font-medium of-text-black dark:of-text-white"
                       >
                         {{ title }}
                       </DialogTitle>
                     </slot>
                   </div>
+                  <OButton
+                    v-if="content"
+                    type="tertiary"
+                    @click="$emit('close')"
+                    ><CrossIcon
+                  /></OButton>
                 </div>
-                <!-- 
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                  -
-                 -->
-                <div class="of-mt-2">
+
+                <div class="of-pt-5">
                   <slot name="description">
                     <p
                       class="of-text-sm of-text-slate-500 dark:of-text-slate-300"
@@ -103,7 +74,8 @@
                 </div>
               </div>
               <div
-                class="of-bg-slate-50 dark:of-bg-slate-800 of-px-4 of-py-3 sm:of-px-6 sm:of-flex sm:of-flex-row-reverse of-gap-4 of-rounded-b-lg"
+                v-if="!content"
+                class="of-bg-slate-50 dark:of-bg-slate-800 of-px-5 of-py-2.5 of-flex of-flex-row-reverse of-gap-5 of-rounded-b-lg"
               >
                 <slot name="footer" />
               </div>
@@ -125,9 +97,10 @@ import {
 } from '@headlessui/vue'
 import { COLORS } from '../../enums/colors'
 import { SIZES } from '../../enums/sizes'
-import { getIconStyle } from '../../utils/colors'
+import { getModalIconStyle } from '../../utils/colors'
 import { getMaxWidth } from '../../utils/sizes'
-import { QuestionIcon } from '../svg'
+import { QuestionIcon, CrossIcon } from '../svg'
+import OButton from '../button/OButton.vue'
 
 defineOptions({
   name: 'OModal',
@@ -164,8 +137,9 @@ defineProps({
   },
   hideIcon: {
     type: Boolean,
-    required: false,
-    default: false,
+  },
+  content: {
+    type: Boolean,
   },
 })
 </script>

@@ -1,5 +1,6 @@
 import OPopper from './OPopper.vue'
 import OButton from '../button/OButton.vue'
+import { COLORS } from '../../enums/colors'
 
 export default {
   component: OPopper,
@@ -70,10 +71,6 @@ export const Types = (args) => ({
                     <OButton label="Tooltip Placement" color="indigo"/>
                     <template #tooltip> Tooltip </template>
                 </OPopper>
-                <OPopper class="of-bg-pink-400 dark:of-bg-pink-600 of-text-white dark:of-text-slate-900" > 
-                    <OButton label="Tooltip Custom"  color="pink"/>
-                    <template #tooltip> Tooltip </template>
-                </OPopper>
             </div>`,
 })
 
@@ -98,6 +95,22 @@ export const Placements = (args) => ({
                 <OPopper placement="right"> 
                     <OButton label="Placement Right"  color="indigo"/>
                     <template #tooltip> Tooltip Right </template>
+                </OPopper>
+            </div>`,
+})
+
+export const Colors = (args) => ({
+  components: { OPopper, OButton },
+  setup() {
+    const colors = COLORS
+    return { args, colors }
+  },
+  template: `<div class="of-space-y-8 of-w-full">
+                <OPopper v-for="(color, index) in colors" :color="color" v-bind="args">
+                  <OButton :color="color">
+                    Tooltip {{color}}
+                  </OButton>
+                  <template #tooltip> Tooltip {{color}} </template>
                 </OPopper>
             </div>`,
 })

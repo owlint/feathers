@@ -254,6 +254,57 @@ export const getNotificationStyle = (color) => {
   return style
 }
 
+export const getPopperStyle = (color) => {
+  switch (color) {
+    case 'indigo':
+      return 'of-bg-indigo-600 dark:of-bg-indigo-700'
+    case 'slate':
+      return 'of-bg-slate-950 dark:of-bg-slate-700'
+    case 'gray':
+      return 'of-bg-gray-600 dark:of-bg-gray-700'
+    case 'zinc':
+      return 'of-bg-zinc-600 dark:of-bg-zinc-700'
+    case 'neutral':
+      return 'of-bg-neutral-600 dark:of-bg-neutral-700'
+    case 'stone':
+      return 'of-bg-stone-600 dark:of-bg-stone-700'
+    case 'red':
+      return 'of-bg-red-600 dark:of-bg-red-700'
+    case 'orange':
+      return 'of-bg-orange-600 dark:of-bg-orange-700'
+    case 'amber':
+      return 'of-bg-amber-600 dark:of-bg-amber-700'
+    case 'yellow':
+      return 'of-bg-yellow-600 dark:of-bg-yellow-700'
+    case 'lime':
+      return 'of-bg-lime-600 dark:of-bg-lime-700'
+    case 'green':
+      return 'of-bg-green-600 dark:of-bg-green-700'
+    case 'emerald':
+      return 'of-bg-emerald-600 dark:of-bg-emerald-700'
+    case 'teal':
+      return 'of-bg-teal-600'
+    case 'cyan':
+      return 'of-bg-cyan-600 dark:of-bg-cyan-700'
+    case 'sky':
+      return 'of-bg-sky-600 dark:of-bg-sky-700'
+    case 'blue':
+      return 'of-bg-blue-600 dark:of-bg-blue-700'
+    case 'violet':
+      return 'of-bg-violet-600 dark:of-bg-violet-700'
+    case 'purple':
+      return 'of-bg-purple-600 dark:of-bg-purple-700'
+    case 'fuchsia':
+      return 'of-bg-fuchsia-600 dark:of-bg-fuchsia-700'
+    case 'pink':
+      return 'of-bg-pink-600 dark:of-bg-pink-700'
+    case 'rose':
+      return 'of-bg-rose-600 dark:of-bg-rose-700'
+    default:
+      return 'of-bg-slate-950 dark:of-bg-slate-700'
+  }
+}
+
 export const getFilterStyle = (color) => {
   switch (color) {
     case 'indigo':

@@ -47,16 +47,15 @@ const button = ref('')
 const props = defineProps({
   arrow: {
     type: Boolean,
-    required: false,
     default: true,
   },
   color: {
     type: String,
     required: false,
+    default: 'slate',
   },
   hover: {
     type: Boolean,
-    required: false,
     default: true,
   },
   placement: {

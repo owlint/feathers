@@ -23,18 +23,16 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'OBadge',
-}
-</script>
-
 <script setup>
 import { COLORS } from '../../enums/colors'
 import { getBadgeStyle } from '../../utils/colors'
 import { SIZES } from '../../enums/sizes'
 import { getBadgeSize } from '../../utils/sizes'
 import { CrossIcon } from '../svg'
+
+defineOptions({
+  name: 'OBadge',
+})
 defineProps({
   label: {
     type: String,
@@ -58,7 +56,6 @@ defineProps({
   },
   tile: {
     type: Boolean,
-    required: false,
     default: false,
   },
   isClickable: {

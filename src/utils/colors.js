@@ -1,51 +1,51 @@
-export const getIconStyle = (color) => {
+export const getModalIconStyle = (color) => {
   switch (color) {
     case 'indigo':
-      return 'of-text-indigo-500 of-bg-indigo-100 dark:of-bg-slate-800 dark:of-text-indigo-500/80'
+      return 'of-text-indigo-500 of-bg-indigo-100 dark:of-text-indigo-400'
     case 'slate':
-      return 'of-text-slate-500 of-bg-slate-100 dark:of-bg-slate-800 dark:of-text-slate-500/80'
+      return 'of-text-slate-500 of-bg-slate-100 dark:of-text-slate-400'
     case 'gray':
-      return 'of-text-gray-500 of-bg-gray-100 dark:of-bg-slate-800 dark:of-text-gray-500/80'
+      return 'of-text-gray-500 of-bg-gray-100 dark:of-text-gray-400'
     case 'zinc':
-      return 'of-text-zinc-500 of-bg-zinc-100 dark:of-bg-slate-800 dark:of-text-zinc-500/80'
+      return 'of-text-zinc-500 of-bg-zinc-100 dark:of-text-zinc-400'
     case 'neutral':
-      return 'of-text-neutral-500 of-bg-neutral-100 dark:of-bg-slate-800 dark:of-text-neutral-500/80'
+      return 'of-text-neutral-500 of-bg-neutral-100 dark:of-text-neutral-400'
     case 'stone':
-      return 'of-text-stone-500 of-bg-stone-100 dark:of-bg-slate-800 dark:of-text-stone-500/80'
+      return 'of-text-stone-500 of-bg-stone-100 dark:of-text-stone-400'
     case 'red':
-      return 'of-text-red-500 of-bg-red-100 dark:of-bg-slate-800 dark:of-text-red-500/80'
+      return 'of-text-red-500 of-bg-red-100 dark:of-text-red-400'
     case 'orange':
-      return 'of-text-orange-500 of-bg-orange-100 dark:of-bg-slate-800 dark:of-text-orange-500/80'
+      return 'of-text-orange-500 of-bg-orange-100 dark:of-text-orange-400'
     case 'amber':
-      return 'of-text-amber-500 of-bg-amber-100 dark:of-bg-slate-800 dark:of-text-amber-500/80'
+      return 'of-text-amber-500 of-bg-amber-100 dark:of-text-amber-400'
     case 'yellow':
-      return 'of-text-yellow-500 of-bg-yellow-100 dark:of-bg-slate-800 dark:of-text-yellow-500/80'
+      return 'of-text-yellow-500 of-bg-yellow-100 dark:of-text-yellow-400'
     case 'lime':
-      return 'of-text-lime-500 of-bg-lime-100 dark:of-bg-slate-800 dark:of-text-lime-500/80'
+      return 'of-text-lime-500 of-bg-lime-100 dark:of-text-lime-400'
     case 'green':
-      return 'of-text-green-500 of-bg-green-100 dark:of-bg-slate-800 dark:of-text-green-500/80'
+      return 'of-text-green-500 of-bg-green-100 dark:of-text-green-400'
     case 'emerald':
-      return 'of-text-emerald-500 of-bg-emerald-100 dark:of-bg-slate-800 dark:of-text-emerald-500/80'
+      return 'of-text-emerald-500 of-bg-emerald-100 dark:of-text-emerald-400'
     case 'teal':
-      return 'of-text-teal-500 of-bg-teal-100 dark:of-bg-slate-800 dark:of-text-teal-500/80'
+      return 'of-text-teal-500 of-bg-teal-100 dark:of-text-teal-400'
     case 'cyan':
-      return 'of-text-cyan-500 of-bg-cyan-100 dark:of-bg-slate-800 dark:of-text-cyan-500/80'
+      return 'of-text-cyan-500 of-bg-cyan-100 dark:of-text-cyan-400'
     case 'sky':
-      return 'of-text-sky-500 of-bg-sky-100 dark:of-bg-slate-800 dark:of-text-sky-500/80'
+      return 'of-text-sky-500 of-bg-sky-100 dark:of-text-sky-400'
     case 'blue':
-      return 'of-text-blue-500 of-bg-blue-100 dark:of-bg-slate-800 dark:of-text-blue-500/80'
+      return 'of-text-blue-500 of-bg-blue-100 dark:of-text-blue-400'
     case 'violet':
-      return 'of-text-violet-500 of-bg-violet-100 dark:of-bg-slate-800 dark:of-text-violet-500/80'
+      return 'of-text-violet-500 of-bg-violet-100 dark:of-text-violet-400'
     case 'purple':
-      return 'of-text-purple-500 of-bg-purple-100 dark:of-bg-slate-800 dark:of-text-purple-500/80'
+      return 'of-text-purple-500 of-bg-purple-100 dark:of-text-purple-400'
     case 'fuchsia':
-      return 'of-text-fuchsia-500 of-bg-fuchsia-100 dark:of-bg-slate-800 dark:of-text-fuchsia-500/80'
+      return 'of-text-fuchsia-500 of-bg-fuchsia-100 dark:of-text-fuchsia-400'
     case 'pink':
-      return 'of-text-pink-500 of-bg-pink-100 dark:of-bg-slate-800 dark:of-text-pink-500/80'
+      return 'of-text-pink-500 of-bg-pink-100 dark:of-text-pink-400'
     case 'rose':
-      return 'of-text-rose-500 of-bg-rose-100 dark:of-bg-slate-800 dark:of-text-rose-500/80'
+      return 'of-text-rose-500 of-bg-rose-100 dark:of-text-rose-400'
     default:
-      return 'of-text-indigo-500 of-bg-indigo-100 dark:of-bg-slate-800 dark:of-text-indigo-500/80'
+      return 'of-text-indigo-500 of-bg-indigo-100 dark:of-text-indigo-400'
   }
 }
 

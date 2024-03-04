@@ -176,44 +176,50 @@ export const ColorsIcon = (args) => ({
   components: { OModal, OButton },
   data() {
     return {
-      displayModal: false,
-      displayOModalGreen: false,
-      displayOModalRed: false,
-      displayOModalOrange: false,
+      displayModal: {
+        slate: false,
+        gray: false,
+        zinc: false,
+        neutral: false,
+        stone: false,
+        red: false,
+        orange: false,
+        amber: false,
+        yellow: false,
+        lime: false,
+        green: false,
+        emerald: false,
+        teal: false,
+        cyan: false,
+        sky: false,
+        blue: false,
+        indigo: false,
+        violet: false,
+        purple: false,
+        fuchsia: false,
+        pink: false,
+        rose: false,
+      },
     }
   },
   setup() {
-    return { args }
+    const colors = COLORS
+    return { args, colors }
   },
-  template: `<OButton @click="displayModal = true" label="Dialog"/> 
-            <OModal @close="displayModal = false" :display-modal="displayModal" v-bind="args" >
-              <template #footer>
-                <OButton @click="displayModal = false"  label="Close Dialog"/> 
-                <OButton  @click="displayModal = false"  type="tertiary" label="Close"/> 
-              </template>
-            </OModal>
-            <OButton @click="displayOModalGreen = true" label="Dialog Green" color="green" /> 
-            <OModal @close="displayOModalGreen = false" color="green" :display-modal="displayOModalGreen" v-bind="args"  >
-              <template #footer>
-                <OButton @click="displayOModalGreen = false" color="green" label="Close Dialog"/> 
-                <OButton  @click="displayOModalGreen = false" color="green" type="tertiary" label="Close"/> 
-              </template>
-            </OModal>
-            <OButton @click="displayOModalRed = true" label="Dialog Red" color="red" /> 
-            <OModal @close="displayOModalRed = false" color="red" :display-modal="displayOModalRed" v-bind="args"  >
-              <template #footer>
-                <OButton @click="displayOModalRed = false" color="red" label="Close Dialog "/> 
-                <OButton  @click="displayOModalRed = false" color="red" type="tertiary" label="Close"/> 
-              </template>
-            </OModal>
-            <OButton @click="displayOModalOrange = true" label="Dialog Orange" color="orange" /> 
-            <OModal @close="displayOModalOrange = false" color="orange" :display-modal="displayOModalOrange" v-bind="args"  >
-              <template #footer>
-                <OButton @click="displayOModalOrange = false" color="orange" label="Close Dialog No Icon"/> 
-                <OButton  @click="displayOModalOrange = false" color="orange" type="tertiary" label="Close"/> 
-              </template>
-            </OModal>
-            `,
+  template: `
+            <div class="of-flex of-gap-2 of-flex-wrap of-items-center">
+            <div class=""  v-for="color in colors" :key="color">
+                      <OButton @click="displayModal[color] = true" :color='color'>
+                      Dialog {{color}}
+                      </OButton>
+                      <OModal @close="displayModal[color] = false" :color='color' :display-modal="displayModal[color]" v-bind="args" >
+                        <template #footer>
+                          <OButton @click="displayModal[color] = false" :color='color' label="Close Dialog"/> 
+                          <OButton  @click="displayModal[color] = false" :color='color' type="tertiary" label="Close"/> 
+                        </template>
+                      </OModal>
+                  </div>
+            </div>`,
 })
 ColorsIcon.args = {
   ...defaultArgs,

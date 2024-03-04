@@ -110,19 +110,21 @@ defineEmits(['close'])
 defineProps({
   displayModal: {
     type: Boolean,
-    required: true,
   },
   title: {
     type: String,
     required: false,
+    default: '',
   },
   description: {
     type: String,
     required: false,
+    default: '',
   },
   color: {
     type: String,
     required: false,
+    default: 'indigo',
     validator: (value) => {
       return COLORS.indexOf(value) !== -1
     },

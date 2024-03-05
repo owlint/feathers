@@ -18,25 +18,13 @@
     >
       <div
         :class="class"
-        class="
-          of-mx-2 of-px-3 of-py-2 of-w-max of-shadow-xs
-          dark:of-shadow-md
-          of-rounded-md
-        "
+        class="of-mx-2 of-px-3 of-py-2 of-w-max of-shadow-xs dark:of-shadow-md of-rounded-md"
       >
         <slot name="tooltip"></slot>
         <div
           v-if="arrow"
           id="arrow"
-          class="
-            of-absolute of-invisible
-            before:of-visible before:of-absolute
-            of-w-3 of-h-3
-            before:of-w-3
-            before:of-h-3
-            before:of-content-['']
-            before:of-rotate-45
-          "
+          class="of-absolute of-invisible before:of-visible before:of-absolute of-w-3 of-h-3 before:of-w-3 before:of-h-3 before:of-content-[''] before:of-rotate-45"
           data-popper-arrow
         />
       </div>
@@ -61,7 +49,6 @@ const button = ref('')
 const props = defineProps({
   arrow: {
     type: Boolean,
-    required: false,
     default: true,
   },
   class: {
@@ -73,7 +60,6 @@ const props = defineProps({
   },
   hover: {
     type: Boolean,
-    required: false,
     default: true,
   },
   placement: {

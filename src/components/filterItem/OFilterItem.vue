@@ -1,9 +1,5 @@
 <template>
-
-
   <div class="of-cursor-pointer">
-
-
     <input
       type="checkbox"
       class="of-peer of-absolute of-opacity-0 of-w-0 of-h-0"
@@ -13,43 +9,24 @@
       v-model="model"
     />
 
-
     <label
-      class="
-        peer-checked:of-ring-2
-        of-flex
-        of-p-2
-        of-items-center
-        of-transition
-        of-duration-300
-        of-cursor-pointer
-      "
+      class="peer-checked:of-ring-2 of-flex of-p-2 of-items-center of-transition of-duration-300 of-cursor-pointer"
       :class="[
         getFilterStyle(color),
         tile ? ' of-rounded ' : ' of-rounded-full ',
       ]"
       :for="id"
     >
-
-
       <slot></slot>
-
-
     </label>
-
-
   </div>
-
-
 </template>
-
 
 <script>
 export default {
   name: 'OFilterItem',
 }
 </script>
-
 
 <script setup>
 import { COLORS } from '../../enums/colors'
@@ -79,8 +56,6 @@ const props = defineProps({
   },
   tile: {
     type: Boolean,
-    required: false,
-    default: false,
   },
 })
 
@@ -89,5 +64,3 @@ const model = defineModel({
   required: true,
 })
 </script>
-
-

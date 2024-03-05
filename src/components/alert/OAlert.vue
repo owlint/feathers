@@ -58,7 +58,6 @@ const props = defineProps({
   },
   isIcon: {
     type: Boolean,
-    default: false,
   },
   action: {
     type: String,
@@ -72,7 +71,6 @@ const props = defineProps({
   },
   loading: {
     type: Boolean,
-    default: false,
   },
 })
 defineEmits(['click'])

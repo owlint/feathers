@@ -9,13 +9,7 @@
       {{ label }}
     </label>
     <div
-      class="
-        of-mt-1 of-flex of-items-center of-relative
-        focus-within:of-text-slate-700
-        of-text-slate-700
-        dark:of-text-slate-100
-        dark:focus-within:of-text-slate-700
-      "
+      class="of-mt-1 of-flex of-items-center of-relative focus-within:of-text-slate-700 of-text-slate-700 dark:of-text-slate-100 dark:focus-within:of-text-slate-700"
     >
       <input
         :id="id"
@@ -51,22 +45,7 @@
           { 'of-cursor-not-allowed': disabled },
           !readonly ? getInputStyle(color) : '',
         ]"
-        class="
-          of-border
-          of-border-transparent
-          of-font-medium
-          of-appearance-none
-          of-block
-          of-peer
-          of-w-full
-          of-px-3
-          of-py-2
-          focus:of-ring-offset-2 focus:of-ring-offset-slate-50
-          dark:focus:of-ring-offset-slate-800
-          focus:of-ring
-          of-rounded-md of-cursor-auto
-          sm:of-text-sm
-        "
+        class="of-border of-border-transparent of-font-medium of-appearance-none of-block of-peer of-w-full of-px-3 of-py-2 focus:of-ring-offset-2 focus:of-ring-offset-slate-50 dark:focus:of-ring-offset-slate-800 focus:of-ring of-rounded-md of-cursor-auto sm:of-text-sm"
       />
       <div
         v-if="isIcon"
@@ -122,7 +101,6 @@ const props = defineProps({
   },
   isIcon: {
     type: Boolean,
-    required: false,
   },
   id: {
     type: String,
@@ -140,7 +118,6 @@ const props = defineProps({
   },
   required: {
     type: Boolean,
-    required: false,
   },
   step: {
     type: Number,
@@ -166,13 +143,9 @@ const props = defineProps({
   },
   disabled: {
     type: Boolean,
-    required: false,
-    default: false,
   },
   readonly: {
     type: Boolean,
-    required: false,
-    default: false,
   },
   type: {
     type: String,
@@ -187,7 +160,6 @@ const props = defineProps({
   },
   loading: {
     type: Boolean,
-    required: false,
   },
   dataFormType: {
     type: String,

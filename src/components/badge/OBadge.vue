@@ -56,7 +56,6 @@ defineProps({
   },
   tile: {
     type: Boolean,
-    default: false,
   },
   isClickable: {
     type: Boolean,

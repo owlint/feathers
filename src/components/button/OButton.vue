@@ -43,13 +43,9 @@ const props = defineProps({
   },
   loading: {
     type: Boolean,
-    required: false,
-    default: false,
   },
   disabled: {
     type: Boolean,
-    required: false,
-    default: false,
   },
   buttonType: {
     type: String,

@@ -36,17 +36,14 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'OAlert',
-}
-</script>
-
 <script setup>
 import OButton from '../button/OButton.vue'
 import { ALERT_COLORS } from '../../enums/colors'
 import { getAlertStyle } from '../../utils/colors'
 
+defineOptions({
+  name: 'OAlert',
+})
 const props = defineProps({
   color: {
     type: String,
@@ -61,8 +58,6 @@ const props = defineProps({
   },
   isIcon: {
     type: Boolean,
-    required: false,
-    default: false,
   },
   action: {
     type: String,
@@ -76,8 +71,6 @@ const props = defineProps({
   },
   loading: {
     type: Boolean,
-    required: false,
-    default: false,
   },
 })
 defineEmits(['click'])

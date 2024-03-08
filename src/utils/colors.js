@@ -1079,3 +1079,34 @@ export const getTertiaryButton = (color) => {
   }
   return style
 }
+
+export const getTableStyle = (color) => {
+  const style = {
+    head: '',
+    body: '',
+    border: '',
+  }
+  switch (color) {
+    case 'default':
+      style.head = 'of-bg-slate-50 dark:of-bg-slate-700'
+      style.body = 'of-bg-white dark:of-bg-slate-800'
+      style.border = 'of-border-slate-200 dark:of-border-transparent'
+      break
+    case 'head-transparent':
+      style.head = 'of-bg-transparent'
+      style.body = 'of-bg-white dark:of-bg-slate-800'
+      style.border = 'of-border-slate-200 dark:of-border-transparent'
+      break
+    case 'transparent':
+      style.head = 'of-bg-transparent'
+      style.body = 'of-bg-transparent'
+      style.border = 'of-border-transparent'
+      break
+    default:
+      style.head = 'of-bg-slate-50 dark:of-bg-slate-700'
+      style.body = 'of-bg-white dark:of-bg-slate-800'
+      style.border = 'of-border-slate-200 dark:of-border-transparent'
+      break
+  }
+  return style
+}
